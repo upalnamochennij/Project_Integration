@@ -1,0 +1,70 @@
+//
+// Created by bloom on 18.05.2025.
+//
+
+#include "LightSensor.h"
+
+void LightSensor::initComponent() {
+    if (!lightSensor.begin()) {
+        Serial.println("VEML not found");
+        while (1);
+    }
+    Serial.println("VEML was found");
+    lightSensor.enable(true);
+
+    lightSensor.setGain(VEML7700_GAIN_1);
+    lightSensor.setIntegrationTime(VEML7700_IT_100MS);
+
+    lightSensor.interruptEnable(true);
+    lightSensor.setLowThreshold(800);
+    lightSensor.setHighThreshold(10000);
+    _isCompActive = true;
+    Serial.println("VEML initialized");
+}
+
+void LightSensor::calibrateComponent() {
+
+}
+
+void LightSensor::goSleepMode() {
+    lightSensor.enable(false);
+    _isCompActive = false;
+    Serial.println("VEML put to sleep mode");
+}
+
+bool LightSensor::isActive() {
+    if (_isCompActive == true) {
+        Serial.println("VEML currently is initialized");
+        return true;
+    }
+    Serial.println("VEML currently is not initialized");
+    return false;
+}
+
+bool LightSensor::withinLimits() {
+    return true;
+}
+
+void LightSensor::readLight() {
+    while (1) {
+        _lightValues.push_back(lightSensor.readLux(VEML_LUX_CORRECTED));
+
+        //debugging purposes
+        for (auto &current : _lightValues) {
+            Serial.println("Values from lux array: ");
+            Serial.print(current);
+        }
+        delay(1000);
+    }
+}
+
+void LightSensor::wakeUp() {
+    lightSensor.enable(true);
+    _isCompActive = true;
+    Serial.println("VEML woken up");
+}
+
+
+
+
+
