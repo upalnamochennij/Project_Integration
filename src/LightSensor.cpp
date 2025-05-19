@@ -45,17 +45,16 @@ bool LightSensor::withinLimits() {
     return true;
 }
 
-void LightSensor::readLight() {
-    while (1) {
-        _lightValues.push_back(lightSensor.readLux(VEML_LUX_CORRECTED));
+float LightSensor::readLight() {
+    float lux_val = lightSensor.readLux(VEML_LUX_CORRECTED);
+    _lightValues.push_back(lux_val);
 
-        //debugging purposes
-        for (auto &current : _lightValues) {
-            Serial.println("Values from lux array: ");
-            Serial.print(current);
-        }
-        delay(1000);
+    //debugging purposes
+    for (auto &current: _lightValues) {
+        Serial.println("Values from lux array: ");
+        Serial.print(current);
     }
+    return lux_val;
 }
 
 void LightSensor::wakeUp() {

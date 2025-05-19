@@ -14,12 +14,13 @@ class HeartrateSensor : public IComponent{
     bool isActive() override;
     void goSleepMode() override;
     void wakeUp();
-    void readSPO2();
-    void readPulse();
+
+    uint32_t readSPO2();
+    double readPulse(); //reads raw data (pulse), calculates BPM and then returns it
 
     private:
     MAX30105 _heartSensor;
-    std::vector<uint32_t> _pulseData;
+    std::vector<double> _pulseData;
     std::vector<uint32_t> _sp02Data;
     bool _isCompActive = false;
 

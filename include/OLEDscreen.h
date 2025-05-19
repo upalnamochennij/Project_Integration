@@ -14,9 +14,14 @@ class OLEDscreen : public IComponent{
     void initComponent() override;
     bool isActive() override;
     void goSleepMode() override;
+    void wakeUp();
+    void showTestBS();
+    void calibrateComponent() override;
+    bool withinLimits() override;
 
     private:
     Adafruit_SSD1306 oled_display;
+    bool _isActive = false;
 };
 
 #endif //OLEDSCREEN_H

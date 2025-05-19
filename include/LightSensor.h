@@ -17,7 +17,7 @@ class LightSensor : public IComponent {
     bool withinLimits() override;
     bool isActive() override; // checks if VEML7700 is currently active
     void goSleepMode() override; // put VEML7700 into sleep mode (configurations and settings still remained)
-    void readLight(); //reads LUX values from VEML7700
+    float readLight(); //reads LUX values from VEML7700
     void wakeUp(); // wakes VEML7700 from temporary sleep (configurations and settings still saved)
 
     private:

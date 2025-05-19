@@ -11,9 +11,9 @@ void HeartrateSensor::initComponent(){
     //The LEDs are very low power and won't affect the temp reading much but
     //you may want to turn off the LEDs to avoid any local heating
     _heartSensor.setup(); //Configure sensor. Turn off LEDs
-    _heartSensor.enableDIETEMPRDY(); //Enable the temp ready interrupt. This is required
+    //_heartSensor.enableDIETEMPRDY(); //Enable the temp ready interrupt. This is required
 
-    _heartSensor.setPulseAmplitudeRed(0x0A);
+    _heartSensor.setPulseAmplitudeRed(0);
     _heartSensor.setPulseAmplitudeGreen(0);
 
     _isCompActive = true;
@@ -32,46 +32,45 @@ void HeartrateSensor::wakeUp() {
     _isCompActive = true;
 }
 
-void HeartrateSensor::readSPO2() {
-    //_heartSensor.setLEDMode(1); //1 for red
-    _sp02Data.push_back(_heartSensor.getRed());
+uint32_t HeartrateSensor::readSPO2() {
+    uint32_t sp02 = _heartSensor.getRed();
+    _sp02Data.push_back(sp02);
 
     for (const uint32_t &data : _sp02Data) {
         Serial.print("Max30102 sp02 reading: " + data);
     }
+    return sp02;
 }
 
-void HeartrateSensor::readPulse() {
-    while (1) {
-        int lastbeat = 0;
-        long delta = 0;
-        double bpm = 0;
-        //_heartSensor.setLEDMode(0);
-        auto RawValue = _heartSensor.getIR();
+double HeartrateSensor::readPulse() {
+    unsigned long lastbeat = 0;
+    unsigned long delta = 0;
+    double bpm = 0;
+    //_heartSensor.setLEDMode(0);
+    auto RawValue = _heartSensor.getIR();
 
-        if (checkForBeat(RawValue) == true) {
-            // check for beat kakogo to huja daet false
-            //lastbeat = millis();
-            delta = millis() - lastbeat;
-            bpm = 60 / (delta / 1000.0);
+    if (checkForBeat(RawValue) == true) {
+        // check for beat kakogo to huja daet false
+        lastbeat = millis();
+        delta = millis() - lastbeat;
+        bpm = 60 / (delta / 1000.0);
 
-            Serial.print("bpm made from Max30102 raw reading: ");
-            Serial.println(bpm);
+        Serial.print("bpm made from Max30102 raw reading: ");
+        Serial.println(bpm);
 
-            _pulseData.push_back(RawValue);
+        _pulseData.push_back(bpm);
 
-            //debugging purposes
-            for (const auto &data: _pulseData) {
-                Serial.print("Max30102 pulse reading: \n");
-                Serial.println(data);
-            }
-        } else {
-            Serial.println("No beat detected");
+        //debugging purposes
+        for (const auto &data: _pulseData) {
+            Serial.print("Max30102 pulse bpm: \n");
+            Serial.println(data);
         }
-
-        delay(1000);
+    } else {
+        Serial.println("No beat detected");
     }
+    return bpm;
 }
+
 
 bool HeartrateSensor::isActive() {
     if (_isCompActive == true) {
