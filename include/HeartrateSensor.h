@@ -1,9 +1,7 @@
 #pragma once
 #include <vector>
-
 #include "IComponent.h"
 #include "MAX30105.h"
-
 
 class HeartrateSensor : public IComponent{
     public:
@@ -16,7 +14,7 @@ class HeartrateSensor : public IComponent{
     void wakeUp();
 
     uint32_t readSPO2();
-    double readPulse(); //reads raw data (pulse), calculates BPM and then returns it
+    double readBPM(); //reads raw data (pulse), calculates BPM and then returns it
 
     private:
     MAX30105 _heartSensor;
@@ -24,4 +22,17 @@ class HeartrateSensor : public IComponent{
     std::vector<uint32_t> _sp02Data;
     bool _isCompActive = false;
 
+    long lastbeat = 0; //maybe useless
+    float bpm = 0; // maybee useless
+
+    char bufferLength[100] = {};
+    char RBuffer[100] = {}; // buffer for red light values. 4 seconds
+    char IRBuffer[100] = {}; // buffer for IR light values
+
+    byte _ledBrightness = 0;
+    byte _sampleAverage = 4;
+    byte _ledMode = 2;
+    byte _sampleRate = 100;
+    byte _pulseWidth = 411;
+    int _adcRange = 2048;
 };

@@ -8,7 +8,7 @@
 #ifndef LIGHTSENSOR_H
 #define LIGHTSENSOR_H
 
-class LightSensor : public IComponent {
+class LightSensor : public IComponent{
 
     public:
     LightSensor() = default;

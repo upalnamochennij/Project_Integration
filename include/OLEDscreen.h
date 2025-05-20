@@ -11,11 +11,11 @@
 class OLEDscreen : public IComponent{
     public:
     OLEDscreen();
-    void initComponent() override;
-    bool isActive() override;
-    void goSleepMode() override;
-    void wakeUp();
-    void showTestBS();
+    void initComponent() override; // first initialization of component
+    bool isActive() override; // checks whether OLED is currently active
+    void goSleepMode() override; //put oled to a sleep mode (all the settings are saved)
+    void wakeUp(); // wake oled from sleep (all the settings are saved)
+    void showTestBS(); // function to test input on oled
     void calibrateComponent() override;
     bool withinLimits() override;
 
