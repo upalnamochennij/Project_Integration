@@ -15,13 +15,6 @@
 
 #define buzzerPin 2
 
-const byte RATE_SIZE = 4; //Increase this for more averaging. 4 is good.
-byte rates[RATE_SIZE]; //Array of heart rates
-byte rateSpot = 0;
-long lastBeat = 0; //Time at which the last beat occurred
-float beatsPerMinute;
-int beatAvg;
-
 HeartrateSensor obj_heart;
 OLEDscreen obj_oled;
 LightSensor obj_light;
@@ -32,12 +25,12 @@ void setup() {
   obj_heart.initComponent();
   bool heart_init_status = obj_heart.isActive();
 
-  obj_oled.initComponent();
-  obj_oled.showTestBS();
-  delay(2000);
-  obj_oled.goSleepMode();
-  delay(2000);
-  obj_oled.wakeUp();
+  // obj_oled.initComponent();
+  // obj_oled.showTestBS();
+  // delay(2000);
+  // obj_oled.goSleepMode();
+  // delay(2000);
+  // obj_oled.wakeUp();
 
 
   // LightSensor obj_light;
@@ -62,5 +55,5 @@ void setup() {
 }
 
 void loop() {
-  obj_heart.readBPM();
+  obj_heart.readSPO2();
 }

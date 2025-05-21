@@ -11,7 +11,8 @@ void HeartrateSensor::initComponent(){
     }
     //The LEDs are very low power and won't affect the temp reading much but
     //you may want to turn off the LEDs to avoid any local heating
-    _heartSensor.setup(_ledBrightness, _sampleAverage, _ledMode, _sampleRate, _pulseWidth, _adcRange); //Configure sensor.
+    _heartSensor.setup(ledBrightness,sampleAverage,
+        ledMode,sampleRate, pulseWidth, adcRange); //Configure sensor.
     //_heartSensor.enableDIETEMPRDY(); //Enable the temp ready interrupt. This is required
 
     _heartSensor.setPulseAmplitudeRed(0x0A);
@@ -32,14 +33,48 @@ void HeartrateSensor::wakeUp() {
     _isCompActive = true;
 }
 
-uint32_t HeartrateSensor::readSPO2() {
-    uint32_t RawValue = _heartSensor.getRed();
-    _sp02Data.push_back(RawValue);
+void HeartrateSensor::readSPO2() { //actually reads both bpm and heartrate
+    for (char i = 0; i < bufferLength; i++) {
+        while (!_heartSensor.available()) {
+            _heartSensor.check();
+        }
 
-    for (const uint32_t &data : _sp02Data) {
-        Serial.print("Max30102 sp02 reading: ");
+        RBuffer[i] = _heartSensor.getRed();
+        IRBuffer[i] = _heartSensor.getIR();
+        //_heartSensor.nextSample();
     }
-    return RawValue;
+    maxim_heart_rate_and_oxygen_saturation(IRBuffer,bufferLength,RBuffer,
+        &_sp02_value,&_sp02_valid,
+        &_heartRate,&_heartRateValid);
+
+    while (1) {
+
+        for (auto i = 25; i < 100; i++) {
+            RBuffer[i - 25] = RBuffer[i];
+            IRBuffer[i - 25] = IRBuffer[i];
+        }
+
+        for (int i = 75; i < 100; i++) {
+            while (_heartSensor.available() == false) //do we have new data?
+                _heartSensor.check(); //Check the sensor for new data
+
+            RBuffer[i] = _heartSensor.getRed();
+            IRBuffer[i] = _heartSensor.getIR();
+            _heartSensor.nextSample();
+        }
+
+        maxim_heart_rate_and_oxygen_saturation(IRBuffer,bufferLength,RBuffer,
+        &_sp02_value,&_sp02_valid,
+        &_heartRate,&_heartRateValid);
+
+        Serial.println("BPM: ");
+        Serial.print(_heartRate);
+        Serial.println("\n");
+        Serial.print("SPO2: ");
+        Serial.print(_sp02_value);
+        Serial.println("\n");
+    }
+
 }
 
 double HeartrateSensor::readBPM() {

@@ -13,7 +13,7 @@ class HeartrateSensor : public IComponent{
     void goSleepMode() override;
     void wakeUp();
 
-    uint32_t readSPO2();
+    void readSPO2();
     double readBPM(); //reads raw data (pulse), calculates BPM and then returns it
 
     private:
@@ -25,14 +25,20 @@ class HeartrateSensor : public IComponent{
     long lastbeat = 0; //maybe useless
     float bpm = 0; // maybee useless
 
-    char bufferLength[100] = {};
-    char RBuffer[100] = {}; // buffer for red light values. 4 seconds
-    char IRBuffer[100] = {}; // buffer for IR light values
+    // for maxim_heart_rate_and_oxygen_saturation() method
+    byte bufferLength = 100;
+    uint32_t RBuffer[100] = {}; // buffer for red light values. 4 seconds
+    uint32_t IRBuffer[100] = {}; // buffer for IR light values
+    int32_t _sp02_value = 0;
+    int8_t  _sp02_valid = false;
+    int32_t _heartRate = 0;
+    int8_t  _heartRateValid = false;
 
-    byte _ledBrightness = 0;
-    byte _sampleAverage = 4;
-    byte _ledMode = 2;
-    byte _sampleRate = 100;
-    byte _pulseWidth = 411;
-    int _adcRange = 2048;
+    byte ledBrightness = 60; //Options: 0=Off to 255=50mA
+    byte sampleAverage = 2; //Options: 1, 2, 4, 8, 16, 32
+    byte ledMode = 2; //Options: 1 = Red only, 2 = Red + IR, 3 = Red + IR + Green
+    byte sampleRate = 100; //Options: 50, 100, 200, 400, 800, 1000, 1600, 3200
+    int pulseWidth = 411; //Options: 69, 118, 215, 411
+    int adcRange = 4096; //Options: 2048, 4096, 8192, 16384
+
 };
