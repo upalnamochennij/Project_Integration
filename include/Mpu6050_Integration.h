@@ -10,22 +10,25 @@
 
 class Mpu6050_Integration : public IComponent {
 
-public:
+    public:
     Mpu6050_Integration() = default;
     void initComponent() override;
     void calibrateComponent() override;
     bool withinLimits() override;
     bool isActive() override;
     void goSleepMode() override;
-    void wakeUp();
-    void readData();
+    void wakeUp() override;
 
-private:
+    void readData();
+    sensors_event_t readAccel(); //returns accelaration with x,y,z options values
+    sensors_event_t readGyro();
+
+    private:
     Adafruit_MPU6050 _mpu;
-    sensors_event_t accel_reading,gyro_reading,temp_reading;
-    std::vector<sensors_event_t> accel_values;
-    std::vector<sensors_event_t> gyro_values;
-    std::vector<sensors_event_t> temp_values;
+    sensors_event_t _accelValue,_gyroValue,_tempValue;
+    std::vector<sensors_event_t> _accelArray;
+    std::vector<sensors_event_t> _gyroArray;
+    //std::vector<sensors_event_t> temp_values;
     bool _isCompActive = false;
 };
 

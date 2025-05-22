@@ -18,10 +18,10 @@ class LightSensor : public IComponent{
     bool isActive() override; // checks if VEML7700 is currently active
     void goSleepMode() override; // put VEML7700 into sleep mode (configurations and settings still remained)
     float readLight(); //reads LUX values from VEML7700
-    void wakeUp(); // wakes VEML7700 from temporary sleep (configurations and settings still saved)
+    void wakeUp() override; // wakes VEML7700 from temporary sleep (configurations and settings still saved)
 
     private:
-    Adafruit_VEML7700 lightSensor;
+    Adafruit_VEML7700 _lightSensor;
     std::vector<float> _lightValues;
     bool _isCompActive = false;
 };

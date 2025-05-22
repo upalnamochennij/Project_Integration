@@ -9,20 +9,23 @@
 #include <Adafruit_GFX.h>
 #include <ios>
 #include "OLEDscreen.h"
-#include "heartRate.h"
 #include "HeartrateSensor.h"
 #include "LightSensor.h"
+#include "Mpu6050_Integration.h"
+#include <memory>
 
 #define buzzerPin 2
 
 HeartrateSensor obj_heart;
 OLEDscreen obj_oled;
 LightSensor obj_light;
+Mpu6050_Integration obj_mpu;
 
 void setup() {
   Serial.begin(9600);
 
-  obj_heart.initComponent();
+  //obj_heart.initComponent();
+  obj_mpu.initComponent();
   bool heart_init_status = obj_heart.isActive();
 
   // obj_oled.initComponent();
@@ -31,7 +34,6 @@ void setup() {
   // obj_oled.goSleepMode();
   // delay(2000);
   // obj_oled.wakeUp();
-
 
   // LightSensor obj_light;
   // obj_light.initComponent();
@@ -55,5 +57,11 @@ void setup() {
 }
 
 void loop() {
-  obj_heart.readSPO2();
+  //obj_heart.readSPO2();
+  //obj_mpu.readData();
+  auto acc = obj_mpu.readAccel();
+  Serial.print("Accel X: ");
+  Serial.print(acc.acceleration.x);
+  Serial.print("\n");
+  delay(1000);
 }

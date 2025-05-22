@@ -7,11 +7,10 @@ class HeartrateSensor : public IComponent{
     public:
     void calibrateComponent() override;
     void initComponent() override;
-    //bool componentStatus() override;
     bool withinLimits() override;
     bool isActive() override;
     void goSleepMode() override;
-    void wakeUp();
+    void wakeUp() override;
 
     void readSPO2();
     double readBPM(); //reads raw data (pulse), calculates BPM and then returns it

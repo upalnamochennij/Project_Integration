@@ -41,14 +41,13 @@ void HeartrateSensor::readSPO2() { //actually reads both bpm and heartrate
 
         RBuffer[i] = _heartSensor.getRed();
         IRBuffer[i] = _heartSensor.getIR();
-        //_heartSensor.nextSample();
+        _heartSensor.nextSample();
     }
     maxim_heart_rate_and_oxygen_saturation(IRBuffer,bufferLength,RBuffer,
         &_sp02_value,&_sp02_valid,
         &_heartRate,&_heartRateValid);
 
     while (1) {
-
         for (auto i = 25; i < 100; i++) {
             RBuffer[i - 25] = RBuffer[i];
             IRBuffer[i - 25] = IRBuffer[i];

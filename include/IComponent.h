@@ -9,7 +9,8 @@ public:
   virtual bool withinLimits(); // true if value is within the certain range, threshold. false otherwise
   virtual bool isActive();
   virtual void goSleepMode(); // if device is inactive for 30 seconds, goes to sleep mode (OLED screen for example)
-  
+  virtual void wakeUp(); // wake the device up (all the settings are saved)
+
   virtual ~IComponent() = default;
 
 
