@@ -1,0 +1,43 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/root/python_script/fastapi-env/bin/uvicorn", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/click/core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/click/core.py", line 1363, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/click/core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/click/core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/uvicorn/main.py", line 413, in main
+    run(
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/uvicorn/main.py", line 580, in run
+    server.run()
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/uvicorn/config.py", line 401, in load
+    self.ssl: ssl.SSLContext | None = create_ssl_context(
+                                      ^^^^^^^^^^^^^^^^^^^
+  File "/root/python_script/fastapi-env/lib/python3.12/site-packages/uvicorn/config.py", line 114, in create_ssl_context
+    ctx.load_cert_chain(certfile, keyfile, get_password)
+FileNotFoundError: [Errno 2] No such file or directory

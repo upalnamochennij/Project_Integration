@@ -1,0 +1,1159 @@
+INFO:     Started server process [98078]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 443): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Started server process [98084]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:443 (Press CTRL+C to quit)
+INFO:     145.76.217.126:56256 - "GET /Log_in/ HTTP/1.1" 200 OK
+INFO:     145.76.217.126:56256 - "GET /Log_in/ HTTP/1.1" 200 OK
+INFO:     145.76.217.126:56261 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     145.76.217.126:56265 - "GET /users/insert HTTP/1.1" 405 Method Not Allowed
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [98084]
+INFO:     Started server process [99288]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:443 (Press CTRL+C to quit)
+INFO:     145.76.221.178:35744 - "GET /devices/ HTTP/1.1" 200 OK
+INFO:     145.76.221.178:35744 - "GET /devices/ HTTP/1.1" 200 OK
+INFO:     145.76.221.178:35744 - "GET /devices/ HTTP/1.1" 200 OK
+INFO:     145.76.221.178:45824 - "GET /devices/ HTTP/1.1" 200 OK
+INFO:     145.76.221.178:47604 - "GET /values/add_steps?timestamp=2025-05-21T14:30:00Z&device_id=1&steps=1500 HTTP/1.1" 200 OK
+INFO:     145.76.221.178:59498 - "GET /values/add_MPU?timestamp=2025-05-21T14:30:00Z&device_id=1&gyro_x=10&gyro_y=15&gyro_z=5&accel_x=100&accel_y=105&accel_z=98 HTTP/1.1" 200 OK
+INFO:     145.76.221.178:37374 - "GET /values/add_temperature?timestamp=2025-05-21T14:30:00Z&device_id=123&temperature=36 HTTP/1.1" 200 OK
+INFO:     145.76.221.178:41006 - "GET /values/add_temperature?timestamp=2025-05-21T14:30:00Z&device_id=1&temperature=36 HTTP/1.1" 200 OK
+INFO:     145.76.221.178:41006 - "GET /values/add_temperature?timestamp=2025-05-21T14:30:00Z&device_id=1&temperature=36 HTTP/1.1" 200 OK
+INFO:     145.76.221.178:41006 - "GET /values/add_temperature?timestamp=2025-05-21T14:30:00Z&device_id=1&temperature=36 HTTP/1.1" 200 OK
+INFO:     145.76.221.178:41006 - "GET /values/add_temperature?timestamp=2025-05-21T14:30:00Z&device_id=1&temperature=36 HTTP/1.1" 200 OK
+INFO:     145.76.221.178:55928 - "GET /values/add_PulseOxygen?timestamp=2025-05-21T14:30:00Z&device_id=123&SPO2=97&heartrate=75 HTTP/1.1" 200 OK
+INFO:     145.76.221.178:48748 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.221.178:56306 - "GET /values/add_PulseOxygen?timestamp=2025-05-21T14:30:00Z&device_id=123&SPO2=97&heartrate=75 HTTP/1.1" 200 OK
+INFO:     145.76.221.178:47276 - "GET /values/add_PulseOxygen?timestamp=2025-05-21T14:30:00Z&device_id=1&SPO2=97&heartrate=75 HTTP/1.1" 200 OK
+INFO:     145.76.221.178:47276 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     31.43.185.42:43288 - "GET /RDWeb HTTP/1.1" 404 Not Found
+INFO:     103.203.59.1:40092 - "GET / HTTP/1.1" 200 OK
+INFO:     80.66.76.26:63778 - "GET /sslvpn_logon.shtml HTTP/1.1" 404 Not Found
+INFO:     185.242.226.163:48073 - "GET / HTTP/1.1" 200 OK
+INFO:     64.62.197.42:24169 - "GET / HTTP/1.1" 200 OK
+INFO:     64.62.197.39:62227 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     64.62.197.39:63395 - "GET / HTTP/1.1" 200 OK
+INFO:     64.62.197.40:65225 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     45.156.128.127:43317 - "GET /favicon-32x32.png HTTP/1.1" 404 Not Found
+INFO:     198.55.98.76:33898 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     167.94.138.114:40018 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.114:40414 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.114:40450 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     196.251.70.87:37106 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     167.94.138.114:42136 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.114:42146 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     170.64.128.26:33364 - "GET /ab2g HTTP/1.1" 404 Not Found
+INFO:     170.64.128.26:33374 - "GET /ab2h HTTP/1.1" 404 Not Found
+INFO:     170.64.128.26:47444 - "GET /alive.php HTTP/1.1" 404 Not Found
+INFO:     170.64.128.26:57048 - "GET / HTTP/1.1" 200 OK
+INFO:     170.64.128.26:57068 - "GET /t4 HTTP/1.1" 404 Not Found
+INFO:     170.64.128.26:57082 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     170.64.128.26:57092 - "GET / HTTP/1.1" 200 OK
+INFO:     170.64.128.26:33486 - "GET /teorema505?t=1 HTTP/1.1" 404 Not Found
+INFO:     87.236.176.59:33359 - "GET / HTTP/1.1" 200 OK
+INFO:     45.156.129.135:59803 - "GET / HTTP/1.1" 200 OK
+INFO:     20.65.195.123:40310 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.229:55678 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     93.123.109.229:55756 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.229:55764 - "GET /.env.uat HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:38624 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:38632 - "GET /.env.config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:38646 - "GET /.env.secret HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:38710 - "GET /.env_sample HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:38756 - "GET /.env.staging.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:38758 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:38768 - "GET /settings/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55030 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55040 - "GET /.env.development.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55056 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55070 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55080 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55088 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55104 - "GET /static../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51012 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51028 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51034 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51036 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51038 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51044 - "GET /core/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51046 - "GET /data/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:59986 - "GET /.env.preprod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:59988 - "GET /build/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:59996 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60010 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60016 - "GET /media../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60022 - "GET /.env.ci HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44398 - "GET /.env.default HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44408 - "GET /.env.template HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44422 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44436 - "GET /app/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44442 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44450 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45564 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45580 - "GET /config/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45590 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45598 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45608 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45616 - "GET /files/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45648 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45664 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45666 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45724 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45746 - "GET /www/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45776 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45798 - "GET /.env.production.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:39104 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:39118 - "GET /.env.live HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:39132 - "GET /.env.dev HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:39148 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:39172 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:39194 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:39198 - "GET /configuration/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:39204 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     147.185.133.7:64376 - "GET / HTTP/1.1" 200 OK
+INFO:     204.48.19.8:33552 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     138.197.173.65:45320 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     138.197.173.65:45336 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     54.211.21.75:60084 - "GET / HTTP/1.1" 200 OK
+INFO:     74.82.47.4:7056 - "GET / HTTP/1.1" 200 OK
+INFO:     74.82.47.4:59634 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.174.244.189:40212 - "GET /login HTTP/1.1" 404 Not Found
+INFO:     74.82.47.4:55800 - "GET / HTTP/1.1" 200 OK
+INFO:     74.82.47.4:24852 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     57.129.64.237:49002 - "GET / HTTP/1.1" 200 OK
+INFO:     198.55.98.76:40992 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     95.9.252.26:40344 - "GET / HTTP/1.0" 200 OK
+INFO:     45.156.129.48:52105 - "GET / HTTP/1.1" 200 OK
+INFO:     185.242.226.163:51241 - "GET / HTTP/1.1" 200 OK
+INFO:     4.150.190.180:57474 - "GET /actuator/health HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     152.32.188.177:32252 - "GET / HTTP/1.1" 200 OK
+INFO:     111.35.64.32:52470 - "GET / HTTP/1.1" 200 OK
+INFO:     111.35.64.32:52470 - "HEAD /backup.zip HTTP/1.1" 404 Not Found
+INFO:     111.35.64.32:52470 - "HEAD /admin.zip HTTP/1.1" 404 Not Found
+INFO:     111.35.64.32:52470 - "HEAD /website.zip HTTP/1.1" 404 Not Found
+INFO:     111.35.64.32:52470 - "HEAD /web.zip HTTP/1.1" 404 Not Found
+INFO:     111.35.64.32:52470 - "HEAD /config.zip HTTP/1.1" 404 Not Found
+INFO:     20.168.12.169:46968 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
+INFO:     47.236.78.62:33182 - "POST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1" 404 Not Found
+INFO:     139.99.35.35:53545 - "GET / HTTP/1.1" 200 OK
+INFO:     45.156.128.126:51879 - "GET / HTTP/1.1" 200 OK
+INFO:     15.235.189.154:32947 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     71.6.199.65:42174 - "GET / HTTP/1.1" 200 OK
+INFO:     188.89.122.139:43280 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     135.237.127.54:40008 - "GET /owa/auth/logon.aspx HTTP/1.1" 404 Not Found
+INFO:     85.215.190.219:58984 - "POST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1" 404 Not Found
+INFO:     85.215.190.219:58984 - "POST /cgi-bin/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/bin/sh HTTP/1.1" 404 Not Found
+INFO:     196.251.86.175:47128 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55340 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     93.123.109.228:55460 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.228:55470 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55476 - "GET /data/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55480 - "GET /media../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55492 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55506 - "GET /www/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55512 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55520 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55534 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55538 - "GET /app/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55552 - "GET /static../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55566 - "GET /.env_sample HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55570 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55574 - "GET /.env.uat HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55586 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55602 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55608 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55622 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55624 - "GET /core/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55630 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55646 - "GET /.env.preprod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55652 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55660 - "GET /settings/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55670 - "GET /.env.default HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55676 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55680 - "GET /.env.development.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55692 - "GET /.env.live HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55702 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55710 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55716 - "GET /.env.ci HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55728 - "GET /.env.template HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55740 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:55748 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59668 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59684 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59686 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59688 - "GET /configuration/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59700 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59716 - "GET /.env.config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59724 - "GET /.env.dev HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59732 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59742 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59758 - "GET /.env.staging.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59762 - "GET /build/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59774 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59790 - "GET /files/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59802 - "GET /config/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59810 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59824 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59828 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59830 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59838 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59848 - "GET /.env.production.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59858 - "GET /.env.secret HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59874 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:59876 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
+INFO:     146.190.134.221:57848 - "GET / HTTP/1.1" 200 OK
+INFO:     92.63.197.50:58466 - "GET /remote/login HTTP/1.1" 404 Not Found
+INFO:     92.63.197.50:58973 - "GET /login HTTP/1.1" 404 Not Found
+INFO:     45.156.129.54:36369 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     35.241.157.174:41994 - "GET / HTTP/1.1" 200 OK
+INFO:     194.0.234.107:58874 - "GET / HTTP/1.1" 200 OK
+INFO:     117.48.157.75:3350 - "POST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "POST /cgi-bin/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/bin/sh HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     117.48.157.75:3350 - "GET /containers/json HTTP/1.1" 404 Not Found
+INFO:     185.242.226.163:40641 - "GET / HTTP/1.1" 200 OK
+INFO:     79.124.58.198:43152 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not Found
+INFO:     92.63.197.50:64461 - "GET /RDWeb/Pages/ HTTP/1.1" 404 Not Found
+INFO:     199.45.154.146:40786 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.154.146:40794 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     199.45.154.146:40800 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.146:47320 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     199.45.154.146:47328 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     82.147.88.139:8194 - "POST /remote/logincheck HTTP/1.1" 404 Not Found
+INFO:     93.171.220.66:43115 - "GET / HTTP/1.1" 200 OK
+INFO:     93.171.220.66:43014 - "GET / HTTP/1.1" 200 OK
+INFO:     93.171.220.66:43117 - "GET / HTTP/1.1" 200 OK
+INFO:     185.100.87.136:37382 - "POST /ajax HTTP/1.1" 404 Not Found
+INFO:     20.169.85.114:33282 - "GET /owa/auth/x.js HTTP/1.1" 404 Not Found
+INFO:     82.147.88.139:40202 - "GET / HTTP/1.1" 200 OK
+INFO:     82.147.88.139:41722 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.230:42852 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     93.123.109.230:42950 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.230:42962 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42992 - "GET /.env.dev HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:43004 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:43014 - "GET /.env.staging.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:43030 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:43038 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33284 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33292 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33300 - "GET /core/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33316 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33322 - "GET /.env.production.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:49900 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:49908 - "GET /settings/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:49914 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:49958 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33248 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33250 - "GET /files/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33254 - "GET /config/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33266 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33268 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:33278 - "GET /build/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:47968 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:47978 - "GET /data/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:47986 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:47996 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:47998 - "GET /.env.ci HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:48012 - "GET /.env.default HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:48026 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:48028 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:49554 - "GET /static../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:49564 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:49570 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:49576 - "GET /.env.uat HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:49590 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37538 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37542 - "GET /.env_sample HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37546 - "GET /www/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37558 - "GET /app/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37564 - "GET /media../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37580 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37584 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37594 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37602 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37618 - "GET /.env.live HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37620 - "GET /configuration/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37624 - "GET /.env.template HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:46090 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:46092 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:46108 - "GET /.env.preprod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:46122 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:46124 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:46128 - "GET /.env.config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:46136 - "GET /.env.development.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:46144 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:46160 - "GET /.env.secret HTTP/1.1" 404 Not Found
+INFO:     74.235.100.142:52140 - "GET / HTTP/1.1" 200 OK
+INFO:     18.220.154.78:45912 - "GET / HTTP/1.1" 200 OK
+INFO:     79.124.58.198:37728 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 OK
+INFO:     148.153.56.86:48706 - "GET /eBCr HTTP/1.1" 404 Not Found
+INFO:     148.153.56.86:48720 - "GET /aa2i HTTP/1.1" 404 Not Found
+INFO:     148.153.56.86:48728 - "GET /aab8 HTTP/1.1" 404 Not Found
+INFO:     148.153.56.86:48738 - "GET /jquery-3.3.1.slim.min.js HTTP/1.1" 404 Not Found
+INFO:     148.153.56.86:48754 - "GET /aab9 HTTP/1.1" 404 Not Found
+INFO:     148.153.56.86:48766 - "GET /jquery-3.3.2.slim.min.js HTTP/1.1" 404 Not Found
+INFO:     92.63.197.50:57287 - "POST /global-protect/login.esp HTTP/1.1" 404 Not Found
+INFO:     34.77.36.4:39888 - "GET / HTTP/1.1" 200 OK
+INFO:     135.119.89.93:35398 - "GET /autodiscover/autodiscover.json?@zdi/Powershell HTTP/1.1" 404 Not Found
+INFO:     195.184.76.160:51293 - "GET / HTTP/1.1" 200 OK
+INFO:     195.184.76.113:59409 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     185.242.226.163:64151 - "GET / HTTP/1.1" 200 OK
+INFO:     188.10.255.70:43538 - "GET / HTTP/1.0" 200 OK
+INFO:     45.156.128.128:50251 - "GET / HTTP/1.1" 200 OK
+INFO:     209.38.81.118:40384 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     205.210.31.104:59954 - "GET / HTTP/1.1" 200 OK
+INFO:     47.88.86.63:52164 - "GET / HTTP/1.1" 200 OK
+INFO:     47.254.85.182:35997 - "GET /Public/home/js/check.js HTTP/1.1" 404 Not Found
+INFO:     47.254.16.187:36186 - "GET /static/admin/javascript/hetong.js HTTP/1.1" 404 Not Found
+INFO:     18.206.38.239:52584 - "GET / HTTP/1.1" 200 OK
+INFO:     198.55.98.76:35942 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     139.162.195.46:13412 - "GET / HTTP/1.1" 200 OK
+INFO:     64.227.65.83:53698 - "GET / HTTP/1.1" 200 OK
+INFO:     64.227.65.83:53796 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     165.154.163.10:39416 - "GET / HTTP/1.0" 200 OK
+INFO:     165.154.163.10:49764 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     165.154.163.10:55998 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     165.154.163.10:55252 - "GET /.well-known/security.txt HTTP/1.1" 404 Not Found
+INFO:     92.63.197.50:58311 - "GET /vpn/index.html HTTP/1.1" 404 Not Found
+INFO:     35.203.211.248:61392 - "GET / HTTP/1.1" 200 OK
+INFO:     52.188.227.37:37758 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
+INFO:     65.49.1.85:29525 - "GET / HTTP/1.1" 200 OK
+INFO:     65.49.1.83:51233 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     65.49.1.82:38423 - "GET / HTTP/1.1" 200 OK
+INFO:     65.49.1.86:48009 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     45.156.128.45:33845 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.228:46226 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     93.123.109.228:46330 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.228:46338 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46356 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46362 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46378 - "GET /.env.secret HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46386 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46398 - "GET /.env.ci HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46424 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46438 - "GET /.env.production.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46448 - "GET /.env_sample HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46460 - "GET /.env.staging.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46482 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46490 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46494 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46502 - "GET /.env.default HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46506 - "GET /.env.dev HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46514 - "GET /.env.live HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46536 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46550 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46564 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46576 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46580 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46594 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:46600 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51792 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51808 - "GET /.env.uat HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51820 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51826 - "GET /static../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51828 - "GET /www/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51844 - "GET /.env.template HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51850 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51858 - "GET /.env.preprod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51870 - "GET /settings/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51872 - "GET /.env.config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51886 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51890 - "GET /data/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51902 - "GET /config/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51914 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51924 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51930 - "GET /app/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51946 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51958 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51962 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51978 - "GET /.env.development.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51980 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:51992 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:52002 - "GET /core/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:52016 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:52022 - "GET /build/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:52032 - "GET /configuration/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:52034 - "GET /files/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:52044 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:52050 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:52058 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:52062 - "GET /media../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:52070 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     20.203.44.176:1686 - "GET / HTTP/1.1" 200 OK
+INFO:     185.242.226.163:55887 - "GET / HTTP/1.1" 200 OK
+INFO:     161.97.167.152:53441 - "GET /admin/config.php HTTP/1.0" 404 Not Found
+INFO:     79.124.58.198:56374 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not Found
+INFO:     43.156.202.34:60004 - "GET / HTTP/1.1" 200 OK
+INFO:     57.129.64.237:40032 - "GET / HTTP/1.1" 200 OK
+INFO:     47.79.93.187:42092 - "POST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "POST /cgi-bin/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/bin/sh HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     47.79.93.187:42092 - "GET /containers/json HTTP/1.1" 404 Not Found
+INFO:     20.163.14.102:53384 - "GET /version HTTP/1.1" 404 Not Found
+INFO:     20.65.193.203:59278 - "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.1" 404 Not Found
+INFO:     3.149.59.26:59528 - "GET / HTTP/1.1" 200 OK
+INFO:     198.55.98.76:40388 - "GET /.git/index HTTP/1.1" 404 Not Found
+INFO:     34.76.113.184:36666 - "GET / HTTP/1.1" 200 OK
+INFO:     192.34.62.230:65204 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     192.34.62.230:65211 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     161.35.202.169:38620 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     161.35.202.169:38652 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     172.236.228.197:51412 - "GET / HTTP/1.1" 200 OK
+INFO:     185.242.226.163:45557 - "GET / HTTP/1.1" 200 OK
+INFO:     204.48.19.8:44806 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     198.55.98.76:40470 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     3.93.24.48:62184 - "GET / HTTP/1.1" 200 OK
+INFO:     172.203.233.130:58070 - "GET / HTTP/1.1" 200 OK
+INFO:     172.236.228.198:47560 - "GET / HTTP/1.1" 200 OK
+INFO:     172.203.234.251:45956 - "GET /owa/auth/logon.aspx HTTP/1.1" 404 Not Found
+INFO:     79.2.166.142:51796 - "GET / HTTP/1.0" 200 OK
+INFO:     167.94.138.43:48094 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.43:33554 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.43:46220 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.43:54556 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.43:54568 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     185.63.99.219:54324 - "GET / HTTP/1.0" 200 OK
+INFO:     172.104.11.46:27438 - "GET / HTTP/1.1" 200 OK
+INFO:     103.39.93.93:39204 - "POST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "POST /cgi-bin/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/bin/sh HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     103.39.93.93:39204 - "GET /containers/json HTTP/1.1" 404 Not Found
+INFO:     209.38.210.16:28331 - "GET / HTTP/1.0" 200 OK
+INFO:     209.38.210.16:18965 - "GET /odinhttpcall1748072192 HTTP/1.1" 404 Not Found
+INFO:     209.38.210.16:8179 - "POST /sdk HTTP/1.1" 404 Not Found
+INFO:     209.38.210.16:5929 - "GET /evox/about HTTP/1.1" 404 Not Found
+INFO:     209.38.210.16:11547 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     209.38.210.16:20621 - "GET / HTTP/1.0" 200 OK
+INFO:     209.38.210.16:20467 - "GET / HTTP/1.1" 200 OK
+INFO:     138.68.66.64:63052 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     139.59.130.76:62542 - "GET / HTTP/1.1" 200 OK
+INFO:     159.223.35.160:60276 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     8.221.141.33:51144 - "GET / HTTP/1.1" 200 OK
+INFO:     198.44.137.54:48488 - "GET / HTTP/1.1" 200 OK
+INFO:     123.160.223.72:4995 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     118.194.251.145:60266 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     152.32.173.15:50078 - "GET / HTTP/1.1" 200 OK
+INFO:     152.32.173.15:50272 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     152.32.173.15:50620 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     152.32.173.15:50622 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     74.82.47.5:30596 - "GET / HTTP/1.1" 200 OK
+INFO:     198.55.98.76:39980 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     74.82.47.5:5874 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     74.82.47.5:36630 - "GET / HTTP/1.1" 200 OK
+INFO:     74.82.47.5:25238 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     178.128.232.144:57936 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     178.128.232.144:35064 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     172.104.11.51:9122 - "GET / HTTP/1.1" 200 OK
+INFO:     147.185.132.188:64364 - "GET / HTTP/1.1" 200 OK
+INFO:     96.126.104.20:51310 - "GET /XNRd HTTP/1.1" 404 Not Found
+INFO:     185.242.226.163:58865 - "GET / HTTP/1.1" 200 OK
+INFO:     200.6.48.54:64449 - "GET /admin/assets/js/pbxlib.js HTTP/1.0" 404 Not Found
+INFO:     172.104.11.46:32018 - "GET / HTTP/1.1" 200 OK
+INFO:     34.77.239.50:43194 - "GET / HTTP/1.1" 200 OK
+INFO:     79.124.58.198:48438 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 OK
+INFO:     47.236.76.100:41458 - "POST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "POST /cgi-bin/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/bin/sh HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:41458 - "GET /containers/json HTTP/1.1" 404 Not Found
+INFO:     172.236.228.115:58574 - "GET / HTTP/1.1" 200 OK
+INFO:     172.105.128.13:57196 - "GET / HTTP/1.1" 200 OK
+INFO:     45.33.80.243:41270 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.228:49172 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     93.123.109.228:49282 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.228:49298 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49310 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49312 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49324 - "GET /configuration/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49326 - "GET /settings/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49342 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49352 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49360 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49366 - "GET /.env.preprod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49372 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49386 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49394 - "GET /www/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49410 - "GET /.env.default HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49422 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49428 - "GET /data/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49438 - "GET /media../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49452 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49458 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49464 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49466 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49468 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49474 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49486 - "GET /.env_sample HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49498 - "GET /build/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49506 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49508 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49512 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49514 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49528 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49530 - "GET /.env.ci HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49538 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49552 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49554 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49556 - "GET /.env.dev HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49564 - "GET /.env.live HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:49568 - "GET /app/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39774 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39776 - "GET /.env.development.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39778 - "GET /.env.staging.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39782 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39798 - "GET /.env.config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39804 - "GET /.env.production.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39808 - "GET /config/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39820 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39836 - "GET /static../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39846 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39848 - "GET /core/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39852 - "GET /files/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39856 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39866 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39870 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39872 - "GET /.env.uat HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39884 - "GET /.env.secret HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39896 - "GET /.env.template HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:39906 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:62777 - "GET /users HTTP/1.1" 307 Temporary Redirect
+INFO:     86.87.128.118:62777 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62777 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.236.228.115:53510 - "GET / HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62783 - "POST /users/create/?user_first_name=Ivan&user_last_name=Andrejevs&user_birth_date=2003-02-02&user_weight=70&user_height=180%22 HTTP/1.1" 405 Method Not Allowed
+INFO:     86.87.128.118:62786 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62817 - "POST /users/create/?user_first_name=Ivans&user_last_name=Andrejevs&user_birth_date=2003-02-02&user_weight=70&user_height=180 HTTP/1.1" 405 Method Not Allowed
+INFO:     86.87.128.118:62818 - "POST /users/create/?user_first_name=Ivans&user_last_name=Andrejevs&user_birth_date=2003-02-02&user_weight=70&user_height=180 HTTP/1.1" 405 Method Not Allowed
+INFO:     86.87.128.118:62875 - "POST /users/create/?user_first_name=Ivans&user_last_name=Andrejevs&user_birth_date=2003-02-02&user_weight=70&user_height=180 HTTP/1.1" 405 Method Not Allowed
+INFO:     86.87.128.118:62880 - "POST /users/create/?user_first_name=Ivans&user_last_name=Andrejevs&user_birth_date=2003-02-02&user_weight=70&user_height=180+-k HTTP/1.1" 405 Method Not Allowed
+INFO:     86.87.128.118:62886 - "GET /users/create/?user_first_name=Ivans&user_last_name=Andrejevs&user_birth_date=2003-02-02&user_weight=70&user_height=180 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62889 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62896 - "GET /users HTTP/1.1" 307 Temporary Redirect
+INFO:     86.87.128.118:62896 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62899 - "GET /devices/create_device?user_id=3&registration_date=2025-05-24 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62900 - "GET /devices HTTP/1.1" 307 Temporary Redirect
+INFO:     86.87.128.118:62900 - "GET /devices/ HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62973 - "GET /values/add_temperature?timestamp=2025-05-24T14%3A30%3A00Z&device_id=2&temperature=23 HTTP/1.1" 200 OK
+INFO:     79.124.58.198:36662 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:62985 - "GET /values HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:62989 - "GET /get_values HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:62990 - "GET /users HTTP/1.1" 307 Temporary Redirect
+INFO:     86.87.128.118:62990 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     86.87.128.118:63522 - "GET /users HTTP/1.1" 307 Temporary Redirect
+INFO:     86.87.128.118:63522 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     93.123.109.228:56864 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     93.123.109.228:56940 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.228:56942 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:56946 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:56956 - "GET /.env.ci HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:56964 - "GET /.env.development.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:56968 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:56980 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:56986 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:56992 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57004 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57014 - "GET /settings/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57024 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57026 - "GET /config/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57034 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57050 - "GET /.env.default HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57056 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57058 - "GET /.env.secret HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57064 - "GET /.env.config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57080 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57090 - "GET /data/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57100 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57104 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57116 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57124 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57130 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57132 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57138 - "GET /.env.staging.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57154 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57158 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57164 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57166 - "GET /app/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57172 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57180 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:57190 - "GET /core/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41386 - "GET /.env.preprod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41390 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41392 - "GET /build/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41408 - "GET /.env.template HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41412 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41418 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41426 - "GET /files/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41438 - "GET /.env.dev HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41454 - "GET /.env_sample HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41460 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41468 - "GET /configuration/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41480 - "GET /.env.uat HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41492 - "GET /www/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41504 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41506 - "GET /.env.live HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41510 - "GET /.env.production.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41522 - "GET /media../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41532 - "GET /static../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41542 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41550 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41564 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.228:41566 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:63625 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     86.87.128.118:63625 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     20.65.194.164:46932 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
+INFO:     198.55.98.76:40196 - "GET /.env_1 HTTP/1.1" 404 Not Found
+INFO:     18.220.154.78:49142 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.219:49940 - "GET / HTTP/1.1" 200 OK
+INFO:     98.81.82.15:18848 - "GET / HTTP/1.1" 200 OK
+INFO:     44.220.188.200:41062 - "GET / HTTP/1.1" 200 OK
+INFO:     223.71.52.82:55480 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     185.242.226.163:60793 - "GET / HTTP/1.1" 200 OK
+INFO:     134.122.34.146:34450 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     134.122.34.146:34474 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     89.248.168.227:38730 - "GET / HTTP/1.1" 200 OK
+INFO:     146.190.241.65:44390 - "SSTP_DUPLEX_POST /sra_%7BBA195980-CD49-458b-9E23-C84EE0ADCD75%7D/ HTTP/1.1" 404 Not Found
+INFO:     66.228.53.174:46794 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.229:37082 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     93.123.109.229:37178 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.229:37198 - "GET /.env.production.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48676 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48686 - "GET /.env_sample HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48696 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48702 - "GET /.env.preprod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48716 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48722 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48734 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:50804 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:50840 - "GET /configuration/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:50868 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:50880 - "GET /config/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:50882 - "GET /.env.development.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:50956 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:50978 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51000 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:52520 - "GET /build/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:52530 - "GET /.env.template HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:52544 - "GET /.env.uat HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:52558 - "GET /files/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:52562 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:52566 - "GET /www/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45382 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45388 - "GET /.env.secret HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45402 - "GET /.env.staging.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45404 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45406 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45416 - "GET /media../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45422 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45438 - "GET /settings/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45446 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45462 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45464 - "GET /.env.live HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:45470 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:46050 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:46058 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:46068 - "GET /core/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:46070 - "GET /data/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:46074 - "GET /.env.config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:46084 - "GET /.env.dev HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:46094 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:46104 - "GET /app/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44120 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44130 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44146 - "GET /.env.ci HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44152 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44154 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44168 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44180 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44194 - "GET /.env.default HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44204 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:44218 - "GET /static../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:35276 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:35292 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:35300 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     20.65.193.203:34740 - "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.1" 404 Not Found
+INFO:     185.242.226.70:43864 - "GET / HTTP/1.1" 200 OK
+INFO:     185.247.137.153:39827 - "GET / HTTP/1.1" 200 OK
+INFO:     162.216.150.116:59034 - "GET / HTTP/1.1" 200 OK
+INFO:     66.228.53.4:15664 - "GET / HTTP/1.1" 200 OK
+INFO:     92.34.128.231:55763 - "GET / HTTP/1.0" 200 OK
+INFO:     124.223.193.80:34220 - "GET / HTTP/1.1" 200 OK
+INFO:     198.55.98.76:57070 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     64.62.197.49:61007 - "GET / HTTP/1.1" 200 OK
+INFO:     64.62.197.59:36441 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     64.62.197.56:26103 - "GET / HTTP/1.1" 200 OK
+INFO:     64.62.197.51:23805 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     172.202.117.213:56992 - "GET /owa/auth/logon.aspx HTTP/1.1" 404 Not Found
+INFO:     172.203.233.130:51662 - "GET /autodiscover/autodiscover.json?@zdi/Powershell HTTP/1.1" 404 Not Found
+INFO:     172.236.228.229:19700 - "GET / HTTP/1.1" 200 OK
+INFO:     185.242.226.163:48057 - "GET / HTTP/1.1" 200 OK
+INFO:     96.126.104.20:46700 - "GET /pfN8 HTTP/1.1" 404 Not Found
+INFO:     20.172.67.176:41614 - "GET /owa/auth/x.js HTTP/1.1" 404 Not Found
+INFO:     198.55.98.76:53252 - "GET /.git/index HTTP/1.1" 404 Not Found
+INFO:     20.65.193.207:52862 - "GET / HTTP/1.1" 200 OK
+INFO:     150.136.76.116:43708 - "POST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "POST /cgi-bin/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/bin/sh HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     20.65.194.99:58340 - "GET /actuator/health HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     150.136.76.116:43708 - "GET /containers/json HTTP/1.1" 404 Not Found
+INFO:     162.243.13.115:49524 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     162.243.13.115:49540 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:51842 - "GET /users HTTP/1.1" 307 Temporary Redirect
+INFO:     86.87.128.118:51842 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     86.87.128.118:51919 - "GET /users HTTP/1.1" 307 Temporary Redirect
+INFO:     86.87.128.118:51919 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     86.87.128.118:51919 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:51919 - "GET / HTTP/1.1" 200 OK
+INFO:     86.87.128.118:51921 - "GET /devices HTTP/1.1" 307 Temporary Redirect
+INFO:     86.87.128.118:51921 - "GET /devices/ HTTP/1.1" 200 OK
+INFO:     86.87.128.118:51921 - "GET /values HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:51925 - "GET /values HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:61948 - "POST /values HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:64920 - "POST /values HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:62251 - "POST /values HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:50126 - "POST /values HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:52047 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14%3A30%3A00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52052 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14%3A30%3A00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52057 - "POST /values/add_PulseOxygen?timestamp=2025-05-25T14%3A30%3A00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 405 Method Not Allowed
+INFO:     86.87.128.118:56804 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:64716 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:60376 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:58782 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:56846 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:64129 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:57859 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:55652 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:64418 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:55756 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52595 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14:30:00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     172.234.217.192:45926 - "GET / HTTP/1.1" 200 OK
+INFO:     45.79.128.205:15572 - "GET / HTTP/1.1" 200 OK
+INFO:     172.236.228.86:46116 - "GET / HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52663 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14%3A30%3A00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     165.154.206.35:47288 - "GET / HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52671 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14%3A30%3A00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     172.236.228.218:29602 - "GET / HTTP/1.1" 200 OK
+INFO:     86.87.128.118:52878 - "GET /values/add_PulseOxygen?timestamp=2025-05-25T14%3A30%3A00Z&device_id=2&SPO2=78&heartrate=63 HTTP/1.1" 200 OK
+INFO:     45.79.181.179:64150 - "GET / HTTP/1.1" 200 OK
+INFO:     198.55.98.76:57038 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     167.94.138.170:36054 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.170:44804 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.170:43494 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.170:53878 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.170:48156 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     52.90.85.64:20652 - "GET / HTTP/1.1" 200 OK
+INFO:     134.209.70.3:36660 - "GET / HTTP/1.1" 200 OK
+INFO:     134.209.70.3:43616 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     213.32.122.82:15271 - "GET / HTTP/1.1" 200 OK
+INFO:     164.52.0.92:37591 - "GET / HTTP/1.1" 200 OK
+INFO:     164.52.0.92:37591 - "GET / HTTP/1.1" 200 OK
+INFO:     164.52.0.92:37591 - "GET /v1/models HTTP/1.1" 404 Not Found
+INFO:     164.52.0.92:37591 - "GET /v1/models HTTP/1.1" 404 Not Found
+INFO:     164.52.0.92:37591 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     164.52.0.92:37591 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     218.104.149.39:63800 - "GET / HTTP/1.1" 200 OK
+INFO:     211.145.71.32:44423 - "GET / HTTP/1.1" 200 OK
+INFO:     113.128.66.194:19320 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     89.42.231.140:41088 - "GET /cgi-bin/luci/%3Bstok%3D/locale HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37094 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     93.123.109.229:37194 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.229:37206 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37208 - "GET /.env.uat HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37216 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37228 - "GET /app/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37258 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37264 - "GET /media../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37276 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37284 - "GET /.env.development.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37286 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37306 - "GET /.env.secret HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:37316 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:47972 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:47976 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:47988 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48002 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48010 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48022 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48028 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48030 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:48042 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51722 - "GET /static../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51734 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51740 - "GET /www/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51756 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51766 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51772 - "GET /.env.staging.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51774 - "GET /build/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51780 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51794 - "GET /core/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51802 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:51814 - "GET /.env.dev HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55040 - "GET /.env.production.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55054 - "GET /configuration/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55062 - "GET /files/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55068 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55078 - "GET /.env.ci HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55080 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     185.242.226.163:49887 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.229:55090 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55104 - "GET /.env_sample HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55106 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55120 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55124 - "GET /.env.default HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55134 - "GET /.env.live HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55148 - "GET /.env.template HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55164 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:55170 - "GET /config/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60298 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60304 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60316 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60328 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60338 - "GET /.env.config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60346 - "GET /settings/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60362 - "GET /data/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60372 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     93.123.109.229:60378 - "GET /.env.preprod HTTP/1.1" 404 Not Found
+INFO:     198.55.98.76:45814 - "GET /.git/refs/ HTTP/1.1" 404 Not Found
+INFO:     34.140.35.71:49258 - "GET / HTTP/1.1" 200 OK
+INFO:     66.228.53.162:12984 - "GET / HTTP/1.1" 200 OK
+INFO:     170.64.207.66:38260 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     170.64.207.66:38264 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     162.142.125.218:40860 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.218:40874 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     162.142.125.218:40890 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     162.142.125.218:34534 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     162.142.125.218:34546 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     66.228.53.78:51686 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.103:37914 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.103:37920 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.145.103:37928 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.145.103:37964 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.145.103:37980 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     184.105.139.68:28492 - "GET / HTTP/1.1" 200 OK
+INFO:     184.105.139.68:35524 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     184.105.139.68:14846 - "GET / HTTP/1.1" 200 OK
+INFO:     3.137.73.221:42828 - "GET / HTTP/1.1" 200 OK
+INFO:     20.80.88.32:54376 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
+INFO:     71.6.232.20:40640 - "GET / HTTP/1.1" 200 OK
+INFO:     172.104.11.46:15998 - "GET / HTTP/1.1" 200 OK
+INFO:     93.227.92.150:65129 - "GET / HTTP/1.0" 200 OK
+INFO:     137.74.246.152:51736 - "GET / HTTP/1.1" 200 OK
+INFO:     195.3.221.137:43766 - "GET / HTTP/1.1" 200 OK
+INFO:     172.104.11.34:25038 - "GET / HTTP/1.1" 200 OK
+INFO:     35.203.211.67:58880 - "GET / HTTP/1.1" 200 OK
+INFO:     66.175.213.4:46100 - "GET / HTTP/1.1" 200 OK

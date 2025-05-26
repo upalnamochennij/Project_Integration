@@ -1,0 +1,66 @@
+-- Tabel: Users
+CREATE TABLE Users (
+    user_id INTEGER PRIMARY KEY NOT NULL,
+    user_name CHAR(50),
+    user_age INTEGER NOT NULL,
+    user_weight INTEGER NOT NULL,
+    user_height INTEGER NOT NULL
+);
+
+-- Tabel: Log_In
+CREATE TABLE Log_In (
+    user_id INTEGER PRIMARY KEY NOT NULL,
+    Login_name CHAR(50) NOT NULL,
+    Login_password CHAR(50) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+
+-- Tabel: Devices
+CREATE TABLE Devices (
+    device_id INTEGER PRIMARY KEY NOT NULL,
+    user_id INTEGER NOT NULL,
+    registration_date INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+
+-- Tabel: accelerometer
+CREATE TABLE accelerometer (
+    timestamp TIME NOT NULL,
+    device_id INTEGER NOT NULL,
+    gyro_x INT NOT NULL,
+    gyro_y INT NOT NULL,
+    gyro_z INT NOT NULL,
+    accel_x INT NOT NULL,
+    accel_y INT NOT NULL,
+    accel_z INT NOT NULL,
+    PRIMARY KEY (timestamp, device_id),
+    FOREIGN KEY (device_id) REFERENCES Devices(device_id)
+);
+
+-- Tabel: temperature
+CREATE TABLE temperature (
+    timestamp TIME NOT NULL,
+    device_id INTEGER NOT NULL,
+    temperature INT NOT NULL,
+    PRIMARY KEY (timestamp, device_id),
+    FOREIGN KEY (device_id) REFERENCES Devices(device_id)
+);
+
+-- Tabel: pulse_oxigen
+CREATE TABLE pulse_oxigen (
+    timestamp TIME NOT NULL,
+    device_id INTEGER NOT NULL,
+    SPO2 INT NOT NULL,
+    heartrate INT NOT NULL,
+    PRIMARY KEY (timestamp, device_id),
+    FOREIGN KEY (device_id) REFERENCES Devices(device_id)
+);
+
+-- Tabel: light
+CREATE TABLE light (
+    timestamp TIME NOT NULL,
+    device_id INTEGER NOT NULL,
+    light_lux INT NOT NULL,
+    PRIMARY KEY (timestamp, device_id),
+    FOREIGN KEY (device_id) REFERENCES Devices(device_id)
+);
