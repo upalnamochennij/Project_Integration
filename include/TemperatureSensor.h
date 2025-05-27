@@ -6,7 +6,9 @@
 #include "IComponent.h"
 #include <Adafruit_BME280.h>
 
-class TemperatureSensor : public IComponent {
+#include "Adafruit_BME280.h"
+
+class TemperatureSensor : public IComponent, Adafruit_BME280 {
 
     public:
     TemperatureSensor() = default;
@@ -16,8 +18,10 @@ class TemperatureSensor : public IComponent {
     bool isActive() override;
     void goSleepMode() override;
     void wakeUp() override;
+    unsigned int getMode();
+    void setMode(unsigned int mode);
 
-    float readTemperature();
+    float readTemp();
 
     private:
     Adafruit_BME280 _tempSensor;

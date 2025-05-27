@@ -4,6 +4,7 @@
 #include "MAX30105.h"
 
 class HeartrateSensor : public IComponent{
+
     public:
     void calibrateComponent() override;
     void initComponent() override;
@@ -13,16 +14,6 @@ class HeartrateSensor : public IComponent{
     void wakeUp() override;
 
     void readSPO2();
-    double readBPM(); //reads raw data (pulse), calculates BPM and then returns it
-
-    private:
-    MAX30105 _heartSensor;
-    std::vector<double> _pulseData;
-    std::vector<uint32_t> _sp02Data;
-    bool _isCompActive = false;
-
-    long lastbeat = 0; //maybe useless
-    float bpm = 0; // maybee useless
 
     // for maxim_heart_rate_and_oxygen_saturation() method
     byte bufferLength = 100;
@@ -32,6 +23,15 @@ class HeartrateSensor : public IComponent{
     int8_t  _sp02_valid = false;
     int32_t _heartRate = 0;
     int8_t  _heartRateValid = false;
+
+    private:
+    MAX30105 _heartSensor;
+    std::vector<double> _pulseData;
+    std::vector<uint32_t> _sp02Data;
+    bool _isCompActive = false;
+
+    long lastbeat = 0; //maybe useless
+    float bpm = 0; // maybee useless
 
     byte ledBrightness = 60; //Options: 0=Off to 255=50mA
     byte sampleAverage = 2; //Options: 1, 2, 4, 8, 16, 32

@@ -3,18 +3,32 @@
 //
 #ifndef ALARMMODULE_H
 #define ALARMMODULE_H
+#include "../include/AlarmModule.h"
 #include <memory>
-#include "OLEDscreen.h"
+#include "../include/Mpu6050_Integration.h"
+#include "../include/HeartrateSensor.h"
+#include "../include/LightSensor.h"
+#include "../include/TemperatureSensor.h"
+#include "../include/OLEDscreen.h"
 
 
 class AlarmModule {
-    public:
-    AlarmModule();
-    void alert(float heartrate, float temperature); // need to work on mpu6050 data collection to write this function
+public:
+    AlarmModule(HeartrateSensor &heartrate,
+                TemperatureSensor &temperature,
+                Mpu6050_Integration &mpu6050,
+                OLEDscreen &oledScreen);
 
-    private:
+    ~AlarmModule();
+
+    void alert();
+
+private:
+    OLEDscreen *oledDisplay;
+    HeartrateSensor *heartrate;
+    TemperatureSensor *temperature;
+    Mpu6050_Integration *mpu6050;
 };
-
 
 
 #endif //ALARMMODULE_H

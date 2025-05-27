@@ -76,31 +76,6 @@ void HeartrateSensor::readSPO2() { //actually reads both bpm and heartrate
 
 }
 
-double HeartrateSensor::readBPM() {
-    long RawValue = _heartSensor.getIR();
-
-    if (checkForBeat(RawValue) == true) {
-        // check for beat kakogo to huja daet false
-        long delta = millis() - lastbeat;
-        lastbeat = millis();
-        bpm = 60 / (delta / 1000.0);
-
-        //_pulseData.push_back(bpm);
-        //debugging purposes
-        // for (const auto &data: _pulseData) {
-        //     Serial.print("Max30102 pulse bpm: \n");
-        //     Serial.println(data);
-        // }
-    }
-    Serial.print("IR=");
-    Serial.print(RawValue);
-    Serial.print(", BPM=");
-    Serial.print(bpm);
-    Serial.println("\n");
-
-    return bpm;
-}
-
 bool HeartrateSensor::isActive() {
     if (_isCompActive == true) {
         return true;

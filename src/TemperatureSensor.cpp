@@ -18,19 +18,38 @@ void TemperatureSensor::calibrateComponent() {
 }
 
 void TemperatureSensor::goSleepMode() {
-
+    if (_isActive) {
+        setMode(00);
+        _isActive = false;
+    }
 }
 
 void TemperatureSensor::wakeUp() {
+    if (!_isActive) {
+        setMode(11);
+        _isActive = true;
+    }
+}
 
+unsigned int TemperatureSensor::getMode() {
+    return _measReg.mode;
+}
+
+void TemperatureSensor::setMode(unsigned int mode) {
+    if (mode == 00 || mode == 01 || mode == 10 || mode == 11 ) {
+        _measReg.mode = mode;
+    }
+    throw std::invalid_argument("choose correct mode: 00, 01, 10, 11");
 }
 
 bool TemperatureSensor::isActive() {
+    if (!_isActive) return false;
     return true;
 }
 
-float TemperatureSensor::readTemperature() {
-    return 0.0;
+float TemperatureSensor::readTemp() {
+    if (!_isActive) return false;
+    return _tempSensor.readTemperature();
 }
 
 bool TemperatureSensor::withinLimits() {
