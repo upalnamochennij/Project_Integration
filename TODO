@@ -2,3 +2,12 @@
 надо пофиксить хуйню с alarm module в методе alert(). наверняка чет связанно с инициализацией объектов
 и указатеоями. индивидуально oled работает. как вриант можно требовать инициализацию объектов (сенсоров) и передачу
 их в конструктор alarmModule
+
+
+27.05
+OLEDscreen::BODY_TEMP_SCREEN; rabotaet
+OLEDscreen::MAIN_MENU; rabotaet
+OLEDscreen::HEART_RATE_SCREEN rabotaet
+OLEDscreen::STEPS_SCREEN; rabotaet
+OLEDscreen::PLACEHOLDER_SCREEN rabotaet
+OLEDscreen::HOME_SCREEN НЕ работает

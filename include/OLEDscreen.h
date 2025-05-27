@@ -25,6 +25,8 @@ class OLEDscreen : public IComponent{
     bool withinLimits() override;
     void connectToWifi(const char *ssid, const char *password);
 
+    void setBrightness();
+
     void drawHomeScreen();
     void drawMainMenu();
     void drawHeartRateScreen();
@@ -44,12 +46,12 @@ class OLEDscreen : public IComponent{
         BODY_TEMP_SCREEN,
         PLACEHOLDER_SCREEN
     };
-    ScreenState currentScreen = ScreenState::HOME_SCREEN;
+    ScreenState _screenState;
 
     //!test function (remove later)
-    void setCurrentScreen(ScreenState currentState);
+    void setCurrentScreen();
 
-    struct tm timeinfo;
+    tm timeinfo;
 
     // Placeholders sensor data
     int heartRate = 72;
@@ -65,7 +67,6 @@ class OLEDscreen : public IComponent{
     const int daylightOffset_sec = 3600;
 
     private:
-    Adafruit_SSD1306 oled_display;
     U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled_display_u8;
     bool _isActive = false;
     bool _isConnectedToWifi = false;

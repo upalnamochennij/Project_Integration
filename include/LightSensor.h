@@ -22,7 +22,6 @@ class LightSensor : public IComponent{
 
     private:
     Adafruit_VEML7700 _lightSensor;
-    std::vector<float> _lightValues;
     bool _isCompActive = false;
 };
 

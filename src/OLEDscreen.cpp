@@ -12,10 +12,10 @@
 #define OLED_RESET     -1 // Reset pin # (or -1 if sharing Arduino reset pin)
 #define SCREEN_ADDRESS 0x3C //< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
 
-OLEDscreen::OLEDscreen() : oled_display_u8(U8G2_R0){
+OLEDscreen::OLEDscreen() : oled_display_u8(U8G2_R0) {
 }
 
-void OLEDscreen::initComponent(){
+void OLEDscreen::initComponent() {
     oled_display_u8.begin();
     _isActive = true;
 }
@@ -38,16 +38,16 @@ void OLEDscreen::wakeUp() {
 }
 
 void OLEDscreen::showTestBS() {
-    oled_display_u8.clearDisplay();// Очистить дисплейста
-    oled_display_u8.setCursor(0, 10);              // Позиция текста (x=0, y=10)
-    oled_display_u8.println(" TI PIDOR");       // Собственно текст
-    oled_display_u8.display();                     // Показать на экране
+    oled_display_u8.clearDisplay(); // Очистить дисплейста
+    oled_display_u8.setCursor(0, 10); // Позиция текста (x=0, y=10)
+    oled_display_u8.println(" TI PIDOR"); // Собственно текст
+    oled_display_u8.display(); // Показать на экране
 }
 
 void OLEDscreen::showTestBSver() {
-    oled_display_u8.clearDisplay();// Очистить дисплейста
-    oled_display_u8.setCursor(0, 10);              // Позиция текста (x=0, y=10)
-    oled_display_u8.println(" JA PIDOR");       // Собственно текст
+    oled_display_u8.clearDisplay(); // Очистить дисплейста
+    oled_display_u8.setCursor(0, 10); // Позиция текста (x=0, y=10)
+    oled_display_u8.println(" JA PIDOR"); // Собственно текст
     oled_display_u8.display();
 }
 
@@ -99,12 +99,12 @@ void OLEDscreen::drawHomeScreen() {
     } else {
         sprintf(timeStr, "12:30:00"); // Fallback time
     }
-    oled_display_u8.clearDisplay();
+    oled_display_u8.clearBuffer(); // iznachaljno bil clearDisplay()
     oled_display_u8.drawFrame(0, 0, 128, 64);
     oled_display_u8.setFont(u8g2_font_6x10_tf);
 
     //title
-    const char* title = "Home Screen";
+    const char *title = "Home Screen";
     int titleWidth = oled_display_u8.getStrWidth(title);
     int titleX = (128 - titleWidth) / 2;
     oled_display_u8.drawStr(titleX, 12, title);
@@ -118,7 +118,7 @@ void OLEDscreen::drawHomeScreen() {
 
     // instruction text
     oled_display_u8.setFont(u8g2_font_6x10_tf);
-    const char* instruction = "Press for menu";
+    const char *instruction = "Press for menu";
     int instructionWidth = oled_display_u8.getStrWidth(instruction);
     int instructionX = (128 - instructionWidth) / 2;
     oled_display_u8.drawStr(instructionX, 60, instruction);
@@ -134,15 +134,15 @@ void OLEDscreen::drawMainMenu() {
     oled_display_u8.drawLine(0, 15, 128, 15);
 
     //  menu items
-    const char* menuItems[] = {"Heart Rate", "Steps", "Body Temp", "Option 4", "Back to Home"};
+    const char *menuItems[] = {"Heart Rate", "Steps", "Body Temp", "Option 4", "Back to Home"};
     const int numMenuItems = sizeof(menuItems) / sizeof(menuItems[0]); // Calculate number of items automatically
 
     for (int i = 0; i < numMenuItems; i++) {
-        int y = 25 + i * 7;  // Spacing adjusts based on number of items
+        int y = 25 + i * 7; // Spacing adjusts based on number of items
 
         // Highlight selected menu item
         if (i == menuPosition) {
-            oled_display_u8.drawBox(0, y-6, 128, 8);
+            oled_display_u8.drawBox(0, y - 6, 128, 8);
             oled_display_u8.setDrawColor(0); // Draw in black on white background
         } else {
             oled_display_u8.setDrawColor(1); // Draw in white on black background
@@ -161,9 +161,9 @@ void OLEDscreen::drawHeartRateScreen() {
     oled_display_u8.setFont(u8g2_font_6x10_tf);
 
     // Center the title
-    const char* title = "Heart Rate";
+    const char *title = "Heart Rate";
     int titleWidth = oled_display_u8.getStrWidth(title);
-    int titleX = (128 - titleWidth) / 2;  // Calculate center position
+    int titleX = (128 - titleWidth) / 2; // Calculate center position
     oled_display_u8.drawStr(titleX, 12, title);
     oled_display_u8.drawLine(0, 15, 128, 15);
 
@@ -188,7 +188,7 @@ void OLEDscreen::drawHeartRateScreen() {
     oled_display_u8.drawStr(startX + numWidth + 5, 40, "BPM");
 
     // Center the status message based on heart rate value
-    const char* statusMsg;
+    const char *statusMsg;
     if (heartRate >= 60 && heartRate <= 100) {
         statusMsg = "Normal Range";
     } else if (heartRate < 60) {
@@ -202,7 +202,7 @@ void OLEDscreen::drawHeartRateScreen() {
     oled_display_u8.drawStr(statusX, 55, statusMsg);
 
     // Center the back instruction
-    const char* backMsg = "Press to go back";
+    const char *backMsg = "Press to go back";
     int backWidth = oled_display_u8.getStrWidth(backMsg);
     int backX = (128 - backWidth) / 2;
     oled_display_u8.drawStr(backX, 63, backMsg);
@@ -216,7 +216,7 @@ void OLEDscreen::drawStepsScreen() {
     oled_display_u8.setFont(u8g2_font_6x10_tf);
 
     // Center the title
-    const char* title = "Steps";
+    const char *title = "Steps";
     int titleWidth = oled_display_u8.getStrWidth(title);
     int titleX = (128 - titleWidth) / 2;
     oled_display_u8.drawStr(titleX, 12, title);
@@ -232,13 +232,13 @@ void OLEDscreen::drawStepsScreen() {
 
     // Center the description text
     oled_display_u8.setFont(u8g2_font_6x10_tf);
-    const char* description = "Today's Count";
+    const char *description = "Today's Count";
     int descWidth = oled_display_u8.getStrWidth(description);
     int descX = (128 - descWidth) / 2;
     oled_display_u8.drawStr(descX, 45, description);
 
     // Center the back instruction
-    const char* backMsg = "Press to go back";
+    const char *backMsg = "Press to go back";
     int backWidth = oled_display_u8.getStrWidth(backMsg);
     int backX = (128 - backWidth) / 2;
     oled_display_u8.drawStr(backX, 63, backMsg);
@@ -252,7 +252,7 @@ void OLEDscreen::drawBodyTempScreen() {
     oled_display_u8.setFont(u8g2_font_6x10_tf);
 
     // Center the title
-    const char* title = "Body Temp";
+    const char *title = "Body Temp";
     int titleWidth = oled_display_u8.getStrWidth(title);
     int titleX = (128 - titleWidth) / 2;
     oled_display_u8.drawStr(titleX, 12, title);
@@ -268,7 +268,7 @@ void OLEDscreen::drawBodyTempScreen() {
 
     // Center the status message based on temperature value
     oled_display_u8.setFont(u8g2_font_6x10_tf);
-    const char* statusMsg;
+    const char *statusMsg;
     if (bodyTemp >= 36.1 && bodyTemp <= 37.2) {
         statusMsg = "Normal";
     } else {
@@ -280,7 +280,7 @@ void OLEDscreen::drawBodyTempScreen() {
     oled_display_u8.drawStr(statusX, 45, statusMsg);
 
     // Center the back instruction
-    const char* backMsg = "Press to go back";
+    const char *backMsg = "Press to go back";
     int backWidth = oled_display_u8.getStrWidth(backMsg);
     int backX = (128 - backWidth) / 2;
     oled_display_u8.drawStr(backX, 63, backMsg);
@@ -294,25 +294,25 @@ void OLEDscreen::drawPlaceholderScreen() {
     oled_display_u8.setFont(u8g2_font_6x10_tf);
 
     // Center the title
-    const char* title = "Option 4";
+    const char *title = "Option 4";
     int titleWidth = oled_display_u8.getStrWidth(title);
     int titleX = (128 - titleWidth) / 2;
     oled_display_u8.drawStr(titleX, 12, title);
     oled_display_u8.drawLine(0, 15, 128, 15);
 
     // Center the placeholder messages
-    const char* msg1 = "Coming Soon...";
+    const char *msg1 = "Coming Soon...";
     int msg1Width = oled_display_u8.getStrWidth(msg1);
     int msg1X = (128 - msg1Width) / 2;
     oled_display_u8.drawStr(msg1X, 35, msg1);
 
-    const char* msg2 = "Feature TBD";
+    const char *msg2 = "Feature TBD";
     int msg2Width = oled_display_u8.getStrWidth(msg2);
     int msg2X = (128 - msg2Width) / 2;
     oled_display_u8.drawStr(msg2X, 45, msg2);
 
     // Center the back instruction
-    const char* backMsg = "Press to go back";
+    const char *backMsg = "Press to go back";
     int backWidth = oled_display_u8.getStrWidth(backMsg);
     int backX = (128 - backWidth) / 2;
     oled_display_u8.drawStr(backX, 63, backMsg);
@@ -326,9 +326,9 @@ void OLEDscreen::checkButton() {
         if (digitalRead(BUTTON_PIN) == LOW) {
             buttonPressed = true;
 
-            switch (currentScreen) {
+            switch (_screenState) {
                 case HOME_SCREEN:
-                    currentScreen = MAIN_MENU;
+                    _screenState = MAIN_MENU;
                     menuPosition = 0;
                     Serial.println("Switched to Main Menu");
                     break;
@@ -336,24 +336,24 @@ void OLEDscreen::checkButton() {
                 case MAIN_MENU:
                     // Handle menu selection
                     switch (menuPosition) {
-                    case 0: // Heart Rate
-                            currentScreen = HEART_RATE_SCREEN;
+                        case 0: // Heart Rate
+                            _screenState = HEART_RATE_SCREEN;
                             Serial.println("Switched to Heart Rate Screen");
                             break;
-                    case 1: // Steps
-                            currentScreen = STEPS_SCREEN;
+                        case 1: // Steps
+                            _screenState = STEPS_SCREEN;
                             Serial.println("Switched to Steps Screen");
                             break;
-                    case 2: // Body Temp
-                            currentScreen = BODY_TEMP_SCREEN;
+                        case 2: // Body Temp
+                            _screenState = BODY_TEMP_SCREEN;
                             Serial.println("Switched to Body Temp Screen");
                             break;
-                    case 3: // Placeholder
-                            currentScreen = PLACEHOLDER_SCREEN;
+                        case 3: // Placeholder
+                            _screenState = PLACEHOLDER_SCREEN;
                             Serial.println("Switched to Placeholder Screen");
                             break;
-                    case 4: // Back to Home
-                            currentScreen = HOME_SCREEN;
+                        case 4: // Back to Home
+                            _screenState = HOME_SCREEN;
                             Serial.println("Returned to Home Screen");
                             break;
                     }
@@ -363,7 +363,7 @@ void OLEDscreen::checkButton() {
                 case STEPS_SCREEN:
                 case BODY_TEMP_SCREEN:
                 case PLACEHOLDER_SCREEN:
-                    currentScreen = MAIN_MENU;
+                    _screenState = MAIN_MENU;
                     Serial.println("Returned to Main Menu");
                     break;
             }
@@ -374,9 +374,9 @@ void OLEDscreen::checkButton() {
 }
 
 void OLEDscreen::checkRotation() {
-    if (currentScreen == MAIN_MENU) {
+    if (_screenState == MAIN_MENU) {
         // Calculate menu size dynamically
-        const char* menuItems[] = {"Heart Rate", "Steps", "Body Temp", "Option 4", "Back to Home"};
+        const char *menuItems[] = {"Heart Rate", "Steps", "Body Temp", "Option 4", "Back to Home"};
         const int numMenuItems = sizeof(menuItems) / sizeof(menuItems[0]);
 
         int currentEncA = digitalRead(ROTARY_ENCODER_A_PIN);
@@ -384,14 +384,12 @@ void OLEDscreen::checkRotation() {
 
         // Detect falling edge on CLK (pin A)
         if (lastEncA == HIGH && currentEncA == LOW) {
-
             if (currentEncB == HIGH) {
                 // Rotate RIGHT (clockwise) tp move DOWN in menu
                 menuPosition++;
                 if (menuPosition >= numMenuItems) menuPosition = 0; // Wrap to top
                 Serial.print("RIGHT rotation - Menu position: ");
                 Serial.println(menuPosition);
-
             } else {
                 // Rotate LEFT (counter-clockwise) to move UP in menu
                 menuPosition--;
@@ -404,8 +402,8 @@ void OLEDscreen::checkRotation() {
     }
 }
 
-void OLEDscreen::setCurrentScreen(ScreenState currentState) {
-    switch (currentState) {
+void OLEDscreen::setCurrentScreen() {
+    switch (_screenState) {
         case HOME_SCREEN:
             drawHomeScreen();
             break;
@@ -428,10 +426,5 @@ void OLEDscreen::setCurrentScreen(ScreenState currentState) {
     delay(10);
 }
 
-
-
-
-
-
-
-
+void OLEDscreen::setBrightness() {
+}

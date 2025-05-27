@@ -9,12 +9,15 @@
 #include <HTTPClient.h>
 #include <WiFi.h>
 
+#include "SensorDataParsing.h"
+
 class Parser{
 
     public:
     Parser(const char *wifi_name, const char *wifi_password);
     void connectToWifi() const;
-    void sendData(String &serverName);
+    void sendData(SensorDataParsing& sensordata);
+    void setServer(String& serverName);
 
     private:
     HTTPClient _httpClient;

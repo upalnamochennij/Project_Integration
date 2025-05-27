@@ -23,8 +23,6 @@ class Mpu6050_Integration : public IComponent {
     sensors_event_t readGyro();
 
     sensors_event_t _accelValue,_gyroValue,_tempValue;
-    std::vector<sensors_event_t> _accelArray;
-    std::vector<sensors_event_t> _gyroArray;
     time_t timestampAccel;
     time_t timestampGyro;
 

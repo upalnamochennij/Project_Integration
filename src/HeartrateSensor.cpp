@@ -33,7 +33,7 @@ void HeartrateSensor::wakeUp() {
     _isCompActive = true;
 }
 
-void HeartrateSensor::readSPO2() { //actually reads both bpm and heartrate
+void HeartrateSensor::readData() { //actually reads both bpm and heartrate
     for (char i = 0; i < bufferLength; i++) {
         while (!_heartSensor.available()) {
             _heartSensor.check();

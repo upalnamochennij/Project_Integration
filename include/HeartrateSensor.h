@@ -13,7 +13,7 @@ class HeartrateSensor : public IComponent{
     void goSleepMode() override;
     void wakeUp() override;
 
-    void readSPO2();
+    void readData();
 
     // for maxim_heart_rate_and_oxygen_saturation() method
     byte bufferLength = 100;
@@ -26,8 +26,6 @@ class HeartrateSensor : public IComponent{
 
     private:
     MAX30105 _heartSensor;
-    std::vector<double> _pulseData;
-    std::vector<uint32_t> _sp02Data;
     bool _isCompActive = false;
 
     long lastbeat = 0; //maybe useless

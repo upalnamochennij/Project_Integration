@@ -15,85 +15,103 @@
 #include "AlarmModule.h"
 #include "Parser.h"
 #include <memory>
+#include "SensorDataParsing.h"
 #include "../../../../../.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFi.h"
 
 #define BUZZER_PIN 2
 
 const char *ssid = "ACSlab";
 const char *password = "lab@ACS24";
-String serverName = "https://173.212.207.55/values";
+String serverName = "https://173.212.207.55";
+
+QueueHandle_t dataQueue;
 
 HeartrateSensor obj_heart;
 OLEDscreen obj_oled;
 LightSensor obj_light;
 Mpu6050_Integration obj_mpu;
-sensors_event_t event;
 TemperatureSensor obj_temp;
-// std::unique_ptr<AlarmModule> obj_alarm;
-AlarmModule obj_alarm(obj_heart,obj_temp,obj_mpu,obj_oled);
+AlarmModule obj_alarm(obj_heart, obj_temp, obj_mpu, obj_oled);
 Parser obj_parser(ssid, password);
 
-void setup() {
-  Serial.begin(9600);
-  // obj_heart.initComponent();
-  // obj_mpu.initComponent();
-  // obj_oled.initComponent();
-  //obj_light.initComponent();
+void heartrate_SP02_Task(void *pvParameters) {
+    SensorDataParsing DataHeart;
+    while (true) {
+        obj_heart.readData(); // reads both SP02 and heartrate
+        DataHeart.heartrate = obj_heart._heartRate;
+        DataHeart.sp02 = obj_heart._sp02_value;
+        DataHeart.dTypeEnum = SensorDataParsing::HEARTRATE_AND_SP02;
+        DataHeart.dataType = "Heartrate and SP02";
 
-  //rabotaet otdeljno bez problem
-  // obj_oled.initComponent();
-  // obj_oled.showTestBS();
-  // delay(2000);
-  // obj_oled.goSleepMode();
-  // delay(2000);
-  // obj_oled.wakeUp();
-
-  // LightSensor obj_light;
-  // obj_light.initComponent();
-  // auto light_activ_status = obj_light.isActive();
-  //
-  // Serial.println("VEML initialization status: ");
-  // Serial.println(light_activ_status ? "true" : "false");
-  // delay(3000);
-  //
-  // obj_light.goSleepMode();
-  // light_activ_status = obj_light.isActive();
-  // Serial.println("VEML initialization status: ");
-  // Serial.println(light_activ  _status ? "true" : "false");
-  //
-  // delay(3000);
-  // obj_light.wakeUp();
-  // light_activ_status = obj_light.isActive();
-  // Serial.println("VEML initialization status: ");
-  // Serial.println(light_activ_status ? "true" : "false");
-
-  // obj_mpu._accelValue.acceleration.x = 30;
-  // Serial.println(obj_mpu._accelValue.acceleration.x);
-  // obj_alarm.alert();
-  // delay(2000);
-  //
-  // obj_mpu._accelValue.acceleration.x = 20;
-  // Serial.println(obj_mpu._accelValue.acceleration.x);
-  // obj_alarm.alert();
-  // delay(2000);
-  obj_parser.connectToWifi();
+        Serial.println("HeartRate: " + String(DataHeart.heartrate));
+        Serial.println("SP02: " + String(DataHeart.sp02));
+        xQueueSend(dataQueue, &DataHeart, portMAX_DELAY);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
 }
 
-void loop() {
-  obj_parser.sendData(serverName);
-  // auto acc = obj_mpu.readAccel();
-  // Serial.print("Accel X: ");
-  // Serial.print(acc.acceleration.x);
-  // Serial.print("\n");
-  // delay(200);
-  // Serial.print("Accel Y: ");
-  // Serial.print(acc.acceleration.y);
-  // Serial.print("\n");
-  // delay(200);
-  // Serial.print("Accel Z: ");
-  // Serial.print(acc.acceleration.z);
-  // Serial.print("\n");
-  // delay(1000);
+void temperatureTask(void *pvParameters) {
+    SensorDataParsing DataTemp;
+    while (true) {
+        float temper = obj_temp.readTemp();
+        DataTemp.temperature = temper;
+        DataTemp.dTypeEnum = SensorDataParsing::TEMPERATURE;
+        DataTemp.dataType = "Temperature";
 
-  //obj_heart.readSPO2();
+        Serial.println("Temperature: " + String(DataTemp.temperature));
+        xQueueSend(dataQueue, &DataTemp, portMAX_DELAY);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+}
+
+void accelGyroTask(void *pvParameters) {
+    SensorDataParsing AccelGyro;
+    while (true) {
+        auto accel = obj_mpu.readAccel();
+        auto gyro = obj_mpu.readGyro();
+        AccelGyro.dTypeEnum = SensorDataParsing::ACCELERATION_AND_GYRO;
+        AccelGyro.accel_x = accel.acceleration.x;
+        AccelGyro.accel_y = accel.acceleration.y;
+        AccelGyro.accel_z = accel.acceleration.z;
+        AccelGyro.gyro_x = gyro.gyro.x;
+        AccelGyro.gyro_y = gyro.gyro.y;
+        AccelGyro.gyro_z = gyro.gyro.z;
+
+        xQueueSend(dataQueue, &AccelGyro, portMAX_DELAY);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+}
+
+void sendToApiTask(void *pvParameters) {
+    SensorDataParsing ReceivedData;
+    while (true) {
+        if (xQueueReceive(dataQueue, &ReceivedData, portMAX_DELAY) == pdTRUE) {
+            obj_parser.sendData(ReceivedData);
+        }
+    }
+}
+
+void setup() {
+    Serial.begin(9600);
+
+    obj_heart.initComponent();
+    obj_oled.initComponent();
+    // obj_light.initComponent(); //not connected properly right now
+    obj_mpu.initComponent();
+    obj_temp.initComponent();
+    obj_parser.setServer(serverName);
+
+    dataQueue = xQueueCreate(10, sizeof(SensorDataParsing));
+
+    xTaskCreate(heartrate_SP02_Task, "heartrate_SP02_Task", 2048, NULL, 2, NULL);
+    xTaskCreate(accelGyroTask, "accelGyroTask", 2048, NULL, 2, NULL);
+    xTaskCreate(temperatureTask, "temperatureTask", 2048, NULL, 2, NULL);
+    xTaskCreate(sendToApiTask, "sendToApiTask", 2048, NULL, 2, NULL);
+
+    // obj_oled._screenState = OLEDscreen::HOME_SCREEN;
+    // obj_oled.setCurrentScreen();
+}
+
+
+void loop() {
 }
