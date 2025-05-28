@@ -5,7 +5,7 @@ from datetime import datetime
 from pydantic import BaseModel
 
 router = APIRouter()
-#basemodels
+#basemodels for sending back
 class MPUInformation(BaseModel):
     timestamp: datetime
     device_id: int
@@ -226,6 +226,10 @@ async def add_PulseOxygen(
 
 
 #retrieving data if device exists
+
+#where clause for filtering each value
+where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time AND device_id == :device_id"
+
 @router.get("/get_values")
 async def get_values():
     try:
@@ -250,16 +254,17 @@ async def get_values():
     
 @router.get("/get_MPU_information")
 async def get_MPU_information(
+    device_id: int,
     start_time: datetime,
     end_time: datetime
 ):
     try:
         values = {
+            "device_id": device_id,
             "start_time": start_time,
             "end_time": end_time
         }
 
-        where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time"
         query_mpu = f"SELECT * FROM MPU_information{where_clause}"
 
         mpu_data = await database.fetch_all(query=query_mpu, values=values)
@@ -272,16 +277,17 @@ async def get_MPU_information(
     
 @router.get("/get_temperature")
 async def get_temperature(
+    device_id: int,
     start_time: datetime,
     end_time: datetime
 ):
     try:
         values = {
+            "device_id": device_id,
             "start_time": start_time,
             "end_time": end_time
         }
 
-        where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time"
         query_temp = f"SELECT * FROM temperature{where_clause}"
 
         temp_data = await database.fetch_all(query=query_temp, values=values)
@@ -294,16 +300,17 @@ async def get_temperature(
     
 @router.get("/get_pulse_oxygen")
 async def get_pulse_oxygen(
+    device_id: int,
     start_time: datetime,
     end_time: datetime
 ):
     try:
         values = {
+            "device_id": device_id,
             "start_time": start_time,
             "end_time": end_time
         }
 
-        where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time"
         query_pulse = f"SELECT * FROM pulse_oxygen{where_clause}"
 
         pulse_data = await database.fetch_all(query=query_pulse, values=values)
@@ -316,16 +323,17 @@ async def get_pulse_oxygen(
     
 @router.get("/get_steps")
 async def get_steps(
+    device_id: int,
     start_time: datetime,
     end_time: datetime
 ):
     try:
         values = {
+            "device_id": device_id,
             "start_time": start_time,
             "end_time": end_time
         }
 
-        where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time"
         query_steps = f"SELECT * FROM steps{where_clause}"
 
         steps_data = await database.fetch_all(query=query_steps, values=values)

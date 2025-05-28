@@ -1157,3 +1157,25 @@ INFO:     195.3.221.137:43766 - "GET / HTTP/1.1" 200 OK
 INFO:     172.104.11.34:25038 - "GET / HTTP/1.1" 200 OK
 INFO:     35.203.211.67:58880 - "GET / HTTP/1.1" 200 OK
 INFO:     66.175.213.4:46100 - "GET / HTTP/1.1" 200 OK
+INFO:     Started server process [262055]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:443 (Press CTRL+C to quit)
+INFO:     145.76.19.116:57910 - "GET /devices HTTP/1.1" 307 Temporary Redirect
+INFO:     145.76.19.116:57910 - "GET /devices/ HTTP/1.1" 200 OK
+INFO:     145.76.19.116:58025 - "GET /users HTTP/1.1" 307 Temporary Redirect
+INFO:     145.76.19.116:58025 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     145.76.19.116:58071 - "GET /values HTTP/1.1" 404 Not Found
+INFO:     145.76.19.116:58122 - "GET /get_values HTTP/1.1" 404 Not Found
+INFO:     20.15.162.215:46630 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.206:56436 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.206:56444 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.206:56508 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.206:46230 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.206:46254 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     Started server process [262329]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:443 (Press CTRL+C to quit)
