@@ -39,25 +39,36 @@ async def add_steps(
     device_id: int,
     steps: int
 ):
-    query = """
-    INSERT INTO steps (timestamp, device_id, steps)
-    SELECT :timestamp, :device_id, :steps
-    WHERE EXISTS (
-        SELECT 1 FROM Devices WHERE device_id = :device_id
-    )
-    AND NOT EXISTS (
-        SELECT 1 FROM steps WHERE timestamp = :timestamp AND device_id = :device_id
-    );
+    # does device excist?
+    device_check_query = "SELECT 1 FROM Devices WHERE device_id = :device_id"
+    device_exists = await database.fetch_one(query=device_check_query, values={"device_id": device_id})
+    
+    if not device_exists:
+        return {"message": "Device does not exist"}
+
+    # are you trying to add a record multiple times?
+    record_check_query = """
+    SELECT 1 FROM steps WHERE timestamp = :timestamp AND device_id = :device_id
     """
-    values = {
+    record_exists = await database.fetch_one(query=record_check_query, values={
         "timestamp": timestamp,
-        "device_id": device_id,
-        "steps": steps,
-    }
+        "device_id": device_id
+    })
+
+    if record_exists:
+        return {"message": "Steps record already exists for this timestamp and device"}
+
+    # now you can insert
+    insert_query = """
+    INSERT INTO steps (timestamp, device_id, steps)
+    VALUES (:timestamp, :device_id, :steps)
+    """
     try:
-        result = await database.execute(query=query, values=values)
-        if result is None:
-            return {"message": "Device does not exist or record already exists (is not possible or your adding it twice somehow)"}
+        await database.execute(query=insert_query, values={
+            "timestamp": timestamp,
+            "device_id": device_id,
+            "steps": steps
+        })
         return {"message": "Steps data added successfully"}
     except Exception as e:
         return {"message": f"Failed to add steps data: {str(e)}"}
@@ -74,18 +85,33 @@ async def add_mpu(
     accel_y: int,
     accel_z: int,
 ):
-    query = """
+    # does device excist?
+    device_check_query = "SELECT 1 FROM Devices WHERE device_id = :device_id"
+    device_exists = await database.fetch_one(query=device_check_query, values={"device_id": device_id})
+    
+    if not device_exists:
+        return {"message": "Device does not exist"}
+
+    # are you trying to add one record multiple times?
+    record_check_query = """
+    SELECT 1 FROM MPU_information WHERE timestamp = :timestamp AND device_id = :device_id
+    """
+    record_exists = await database.fetch_one(query=record_check_query, values={
+        "timestamp": timestamp,
+        "device_id": device_id
+    })
+
+    if record_exists:
+        return {"message": "MPU record already exists for this timestamp and device"}
+
+    # now you can insert
+    insert_query = """
     INSERT INTO MPU_information (
         timestamp, device_id, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z
     )
-    SELECT
+    VALUES (
         :timestamp, :device_id, :gyro_x, :gyro_y, :gyro_z, :accel_x, :accel_y, :accel_z
-    WHERE EXISTS (
-        SELECT 1 FROM Devices WHERE device_id = :device_id
     )
-    AND NOT EXISTS (
-        SELECT 1 FROM MPU_information WHERE timestamp = :timestamp AND device_id = :device_id
-    );
     """
     values = {
         "timestamp": timestamp,
@@ -97,10 +123,9 @@ async def add_mpu(
         "accel_y": accel_y,
         "accel_z": accel_z,
     }
+
     try:
-        result = await database.execute(query=query, values=values)
-        if result is None:
-            return {"message": "Device does not exist or record already exists"}
+        await database.execute(query=insert_query, values=values)
         return {"message": "MPU data added successfully"}
     except Exception as e:
         return {"message": f"Failed to add MPU data: {str(e)}"}
@@ -111,28 +136,46 @@ async def add_temperature(
     device_id: int,
     temperature: int,
 ):
-    query = """
-    INSERT INTO temperature (timestamp, device_id, temperature)
-    SELECT :timestamp, :device_id, :temperature
-    WHERE EXISTS (
-        SELECT 1 FROM Devices WHERE device_id = :device_id
+    # does the device exist?
+    device_check_query = "SELECT 1 FROM Devices WHERE device_id = :device_id"
+    device_exists = await database.fetch_one(
+        query=device_check_query,
+        values={"device_id": device_id}
     )
-    AND NOT EXISTS (
-        SELECT 1 FROM temperature WHERE timestamp = :timestamp AND device_id = :device_id
-    );
+    
+    if not device_exists:
+        return {"message": "Device does not exist"}
+
+    # are you trying to insert one value twice?
+    record_check_query = """
+    SELECT 1 FROM temperature WHERE timestamp = :timestamp AND device_id = :device_id
     """
-    values = {
-        "timestamp": timestamp,
-        "device_id": device_id,
-        "temperature": temperature,
-    }
+    record_exists = await database.fetch_one(
+        query=record_check_query,
+        values={"timestamp": timestamp, "device_id": device_id}
+    )
+
+    if record_exists:
+        return {"message": "Temperature record already exists for this timestamp and device"}
+
+    # now you can insert
+    insert_query = """
+    INSERT INTO temperature (timestamp, device_id, temperature)
+    VALUES (:timestamp, :device_id, :temperature)
+    """
     try:
-        result = await database.execute(query=query, values=values)
-        if result is None:
-            return {"message": "Device does not exist or record already exists"}
+        await database.execute(
+            query=insert_query,
+            values={
+                "timestamp": timestamp,
+                "device_id": device_id,
+                "temperature": temperature
+            }
+        )
         return {"message": "Temperature data added successfully"}
     except Exception as e:
         return {"message": f"Failed to add temperature data: {str(e)}"}
+
     
 @router.get("/add_PulseOxygen")
 async def add_PulseOxygen(
@@ -141,15 +184,32 @@ async def add_PulseOxygen(
     SPO2: int,
     heartrate: int
 ):
-    query = """
-    INSERT INTO pulse_oxygen (timestamp, device_id, SPO2, heartrate)
-    SELECT :timestamp, :device_id, :SPO2, :heartrate
-    WHERE EXISTS (
-        SELECT 1 FROM Devices WHERE device_id = :device_id
+    # does the device exist?
+    device_check_query = "SELECT 1 FROM Devices WHERE device_id = :device_id"
+    device_exists = await database.fetch_one(
+        query=device_check_query,
+        values={"device_id": device_id}
     )
-    AND NOT EXISTS (
-        SELECT 1 FROM pulse_oxygen WHERE timestamp = :timestamp AND device_id = :device_id
-    );
+    
+    if not device_exists:
+        return {"message": "Device does not exist"}
+
+    # are you trying to insert one value twice?
+    record_check_query = """
+    SELECT 1 FROM pulse_oxygen WHERE timestamp = :timestamp AND device_id = :device_id
+    """
+    record_exists = await database.fetch_one(
+        query=record_check_query,
+        values={"timestamp": timestamp, "device_id": device_id}
+    )
+
+    if record_exists:
+        return {"message": "PulseOxygen record already exists for this timestamp and device"}
+
+    # now you can insert
+    insert_query = """
+    INSERT INTO pulse_oxygen (timestamp, device_id, SPO2, heartrate)
+    VALUES (:timestamp, :device_id, :SPO2, :heartrate)
     """
     values = {
         "timestamp": timestamp,
@@ -157,13 +217,13 @@ async def add_PulseOxygen(
         "SPO2": SPO2,
         "heartrate": heartrate,
     }
+
     try:
-        result = await database.execute(query=query, values=values)
-        if result is None:
-            return {"message": "Device does not exist or record already exists"}
+        await database.execute(query=insert_query, values=values)
         return {"message": "PulseOxygen data added successfully"}
     except Exception as e:
         return {"message": f"Failed to add PulseOxygen data: {str(e)}"}
+
 
 #retrieving data if device exists
 @router.get("/get_values")
@@ -183,6 +243,94 @@ async def get_values():
             "mpu_information": [dict(record) for record in mpu_data],
             "temperature": [dict(record) for record in temp_data],
             "pulse_oxygen": [dict(record) for record in pulse_data],
+            "steps": [dict(record) for record in steps_data]
+        }
+    except Exception as e:
+        return {"message": f"Failed to fetch sensor data: {str(e)}"}
+    
+@router.get("/get_MPU_information")
+async def get_MPU_information(
+    start_time: datetime,
+    end_time: datetime
+):
+    try:
+        values = {
+            "start_time": start_time,
+            "end_time": end_time
+        }
+
+        where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time"
+        query_mpu = f"SELECT * FROM MPU_information{where_clause}"
+
+        mpu_data = await database.fetch_all(query=query_mpu, values=values)
+
+        return {
+            "mpu_information": [dict(record) for record in mpu_data],
+        }
+    except Exception as e:
+        return {"message": f"Failed to fetch sensor data: {str(e)}"}
+    
+@router.get("/get_temperature")
+async def get_temperature(
+    start_time: datetime,
+    end_time: datetime
+):
+    try:
+        values = {
+            "start_time": start_time,
+            "end_time": end_time
+        }
+
+        where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time"
+        query_temp = f"SELECT * FROM temperature{where_clause}"
+
+        temp_data = await database.fetch_all(query=query_temp, values=values)
+
+        return {
+           "temperature": [dict(record) for record in temp_data],
+        }
+    except Exception as e:
+        return {"message": f"Failed to fetch sensor data: {str(e)}"}
+    
+@router.get("/get_pulse_oxygen")
+async def get_pulse_oxygen(
+    start_time: datetime,
+    end_time: datetime
+):
+    try:
+        values = {
+            "start_time": start_time,
+            "end_time": end_time
+        }
+
+        where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time"
+        query_pulse = f"SELECT * FROM pulse_oxygen{where_clause}"
+
+        pulse_data = await database.fetch_all(query=query_pulse, values=values)
+
+        return {
+            "pulse_oxygen": [dict(record) for record in pulse_data],
+        }
+    except Exception as e:
+        return {"message": f"Failed to fetch sensor data: {str(e)}"}
+    
+@router.get("/get_steps")
+async def get_steps(
+    start_time: datetime,
+    end_time: datetime
+):
+    try:
+        values = {
+            "start_time": start_time,
+            "end_time": end_time
+        }
+
+        where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time"
+        query_steps = f"SELECT * FROM steps{where_clause}"
+
+        steps_data = await database.fetch_all(query=query_steps, values=values)
+
+        return {
             "steps": [dict(record) for record in steps_data]
         }
     except Exception as e:
