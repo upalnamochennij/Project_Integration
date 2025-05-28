@@ -24,3 +24,35 @@ INFO:     Started server process [263371]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on https://0.0.0.0:443 (Press CTRL+C to quit)
+INFO:     145.76.19.116:56543 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     46.101.157.195:36426 - "GET / HTTP/1.1" 200 OK
+INFO:     145.76.19.116:56579 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.19.116:56600 - "GET /get_values HTTP/1.1" 404 Not Found
+INFO:     145.76.19.116:56640 - "GET /values/get_value HTTP/1.1" 404 Not Found
+INFO:     145.76.19.116:56682 - "GET /get_values HTTP/1.1" 404 Not Found
+INFO:     145.76.19.116:56684 - "GET /get_values HTTP/1.1" 404 Not Found
+INFO:     145.76.19.116:56827 - "GET /get_values HTTP/1.1" 404 Not Found
+INFO:     145.76.19.116:56833 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.19.116:56846 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.216.135:60714 - "GET /get_all_users HTTP/1.1" 404 Not Found
+INFO:     145.76.216.135:60876 - "GET /users/get_all_users HTTP/1.1" 200 OK
+INFO:     145.76.216.135:48956 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.216.135:39480 - "GET /values/add_steps?timestamp=2025-05-21T14:50:00Z&device_id=1&steps=200 HTTP/1.1" 200 OK
+INFO:     145.76.216.135:39492 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.216.135:47790 - "GET /values/add_steps?timestamp=2025-05-21T14:50:00Z&device_id=1&steps=200 HTTP/1.1" 200 OK
+INFO:     Started server process [263851]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:443 (Press CTRL+C to quit)
+INFO:     20.65.195.105:42702 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
+INFO:     145.76.19.116:56982 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.19.116:56984 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.216.135:39674 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.216.135:52490 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.216.135:52490 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.216.135:52490 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.19.116:56996 - "GET /values/add_PulseOxygen?timestamp=2025-05-28T14%3A30%3A00Z&device_id=2&SPO2=87&heartrate=34 HTTP/1.1" 200 OK
+INFO:     145.76.216.135:60012 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     66.228.53.46:16138 - "GET / HTTP/1.1" 200 OK
+INFO:     145.76.19.116:57006 - "GET / HTTP/1.1" 200 OK
+INFO:     145.76.19.116:57006 - "GET /favicon.ico HTTP/1.1" 404 Not Found
