@@ -2,3 +2,16 @@ INFO:     Started server process [262749]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on https://0.0.0.0:443 (Press CTRL+C to quit)
+INFO:     145.76.216.135:58326 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     20.171.26.41:55038 - "GET /ReportServer HTTP/1.1" 404 Not Found
+INFO:     65.49.1.193:33437 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     145.76.216.135:52178 - "GET /users/create/?user_first_name=Tom&user_last_name=Rutjes&user_birth_date=2003-06-24&user_weight=57&user_height=180 HTTP/1.1" 200 OK
+INFO:     145.76.216.135:53352 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     145.76.216.135:54586 - "GET /users/create/?user_first_name=Tom&user_last_name=Rutjes&user_birth_date=2003-6-24&user_weight=57&user_height=180 HTTP/1.1" 422 Unprocessable Entity
+INFO:     145.76.216.135:34292 - "GET /users/create/?user_first_name=Tom&user_last_name=Rutjes&user_birth_date=2003-06-24&user_weight=57&user_height=180 HTTP/1.1" 200 OK
+INFO:     145.76.216.135:51544 - "GET /users/ HTTP/1.1" 200 OK
+INFO:     65.49.1.192:17011 - "GET / HTTP/1.1" 200 OK
+INFO:     Started server process [263070]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:443 (Press CTRL+C to quit)

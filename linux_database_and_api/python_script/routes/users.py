@@ -45,9 +45,28 @@ async def create_user_get(
 
 
 #get all data
-@router.get("/")
+@router.get("/get_all_users")
 async def read_users():
     query = "SELECT * FROM Users"
+    try:
+        users = await database.fetch_all(query=query)
+        return {"users": [dict(user) for user in users]}
+    except Exception as e:
+        return {"message": "Failed to fetch users", "error": str(e)}
+    
+#get data from one user
+@router.get("/get_user")
+async def create_user_get(
+    user_first_name: str, 
+    user_last_name: str, 
+    user_birth_date: date, 
+):
+    query = """
+    SELECT * FROM Users
+    WHERE user_first_name = :user_first_name
+    AND user_last_name = :user_last_name
+    AND user_birth_date = :user_birth_date
+    """
     try:
         users = await database.fetch_all(query=query)
         return {"users": [dict(user) for user in users]}
