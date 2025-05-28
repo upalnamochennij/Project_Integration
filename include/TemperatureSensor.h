@@ -21,7 +21,7 @@ class TemperatureSensor : public IComponent, Adafruit_BME280 {
     unsigned int getMode();
     void setMode(unsigned int mode);
 
-    float readTemp();
+    int readTemp(); //maybe cast back to float later on
 
     private:
     Adafruit_BME280 _tempSensor;

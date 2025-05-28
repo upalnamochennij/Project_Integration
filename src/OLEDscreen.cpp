@@ -7,16 +7,15 @@
 #define ROTARY_ENCODER_A_PIN 26 // CLK
 #define ROTARY_ENCODER_B_PIN 27 // DT
 
-#define SCREEN_WIDTH 128 // OLED display width, in pixels
-#define SCREEN_HEIGHT 32 // OLED display height, in pixels
-#define OLED_RESET     -1 // Reset pin # (or -1 if sharing Arduino reset pin)
-#define SCREEN_ADDRESS 0x3C //< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
-
 OLEDscreen::OLEDscreen() : oled_display_u8(U8G2_R0) {
 }
 
 void OLEDscreen::initComponent() {
     oled_display_u8.begin();
+    pinMode(BUTTON_PIN, INPUT_PULLUP);
+    pinMode(ROTARY_ENCODER_A_PIN, INPUT_PULLUP);
+    pinMode(ROTARY_ENCODER_B_PIN, INPUT_PULLUP);
+    lastEncA = digitalRead(ROTARY_ENCODER_A_PIN);
     _isActive = true;
 }
 
@@ -123,7 +122,7 @@ void OLEDscreen::drawHomeScreen() {
     int instructionX = (128 - instructionWidth) / 2;
     oled_display_u8.drawStr(instructionX, 60, instruction);
 
-    oled_display_u8.clearBuffer();
+    oled_display_u8.sendBuffer();
 }
 
 void OLEDscreen::drawMainMenu() {

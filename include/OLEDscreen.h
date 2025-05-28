@@ -37,6 +37,24 @@ class OLEDscreen : public IComponent{
     void checkButton();
     void checkRotation();
 
+    //!test function (remove later)
+    void setCurrentScreen();
+
+
+
+    private:
+    U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled_display_u8;
+    bool _isActive = false;
+    bool _isConnectedToWifi = false;
+
+    int heartRate = 75;
+    int stepCount = 1234;
+    float bodyTemp = 36.6;
+    bool wifiConnected = false;
+    bool buttonPressed = false;
+
+    int menuPosition = 0;
+    int lastEncA = 0;
 
     enum ScreenState {
         HOME_SCREEN,
@@ -45,31 +63,12 @@ class OLEDscreen : public IComponent{
         STEPS_SCREEN,
         BODY_TEMP_SCREEN,
         PLACEHOLDER_SCREEN
-    };
-    ScreenState _screenState;
+    } _screenState = HOME_SCREEN;
 
-    //!test function (remove later)
-    void setCurrentScreen();
+    struct tm timeinfo;
 
-    tm timeinfo;
-
-    // Placeholders sensor data
-    int heartRate = 72;
-    int stepCount = 1234;
-    float bodyTemp = 36.5;
-
-    int menuPosition = 0;
-    bool buttonPressed = false;
-    bool wifiConnected = false;
-    int lastEncA = 0;
-
-    const long gmtOffset_sec = 3600;      // Netherlands base time (GMT+1)
+    const long gmtOffset_sec = 3600;
     const int daylightOffset_sec = 3600;
-
-    private:
-    U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled_display_u8;
-    bool _isActive = false;
-    bool _isConnectedToWifi = false;
 
 };
 

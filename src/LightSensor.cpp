@@ -49,13 +49,6 @@ bool LightSensor::withinLimits() {
 
 float LightSensor::readLight() {
     float lux_val = _lightSensor.readLux(VEML_LUX_CORRECTED);
-    _lightValues.push_back(lux_val);
-
-    //debugging purposes
-    for (auto &current: _lightValues) {
-        Serial.println("Values from lux array: ");
-        Serial.print(current);
-    }
     return lux_val;
 }
 
