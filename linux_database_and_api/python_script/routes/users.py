@@ -20,15 +20,15 @@ async def create_user_get(
     user_weight: int, 
     user_height: int
 ):
-    query = """
+    check_query = """
+    SELECT 1 FROM Users
+    WHERE user_first_name = :user_first_name
+      AND user_last_name = :user_last_name
+      AND user_birth_date = :user_birth_date
+    """
+    insert_query = """
     INSERT INTO Users (user_first_name, user_last_name, user_birth_date, user_weight, user_height)
-    SELECT :user_first_name, :user_last_name, :user_birth_date, :user_weight, :user_height
-    WHERE NOT EXISTS (
-        SELECT 1 FROM Users
-        WHERE user_first_name = :user_first_name
-          AND user_last_name = :user_last_name
-          AND user_birth_date = :user_birth_date
-    );
+    VALUES (:user_first_name, :user_last_name, :user_birth_date, :user_weight, :user_height)
     """
     values = {
         "user_first_name": user_first_name,
@@ -37,9 +37,15 @@ async def create_user_get(
         "user_weight": user_weight,
         "user_height": user_height,
     }
+
     try:
-        await database.execute(query=query, values=values)
-        return {"message": "User created or already exists"}
+        existing_user = await database.fetch_one(query=check_query, values=values)
+        if existing_user:
+            return {"message": "User already exists"}
+
+        await database.execute(query=insert_query, values=values)
+        return {"message": "User created successfully"}
+
     except Exception as e:
         return {"message": f"Failed to create user: {str(e)}"}
 
@@ -67,8 +73,14 @@ async def create_user_get(
     AND user_last_name = :user_last_name
     AND user_birth_date = :user_birth_date
     """
+    values = {
+        "user_first_name": user_first_name,
+        "user_last_name": user_last_name,
+        "user_birth_date": user_birth_date
+    }
+    
     try:
-        users = await database.fetch_all(query=query)
+        users = await database.fetch_all(query=query, values=values)
         return {"users": [dict(user) for user in users]}
     except Exception as e:
         return {"message": "Failed to fetch users", "error": str(e)}

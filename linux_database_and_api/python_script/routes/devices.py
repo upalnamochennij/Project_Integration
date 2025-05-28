@@ -15,34 +15,65 @@ async def create_device_(
     user_id: int,
     registration_date: date
 ):
-    query = """
-    INSERT INTO Devices (user_id, registration_date)
-    SELECT :user_id, :registration_date
-    WHERE EXISTS (
-        SELECT 1 FROM Users
-        WHERE user_id = :user_id
-    )AND NOT EXISTS (
+    check_user_query = """
+    SELECT 1 FROM Users WHERE user_id = :user_id
+    """
+
+    check_device_query = """
     SELECT 1 FROM Devices
     WHERE user_id = :user_id AND registration_date = :registration_date
-    );
     """
+
+    insert_query = """
+    INSERT INTO Devices (user_id, registration_date)
+    VALUES (:user_id, :registration_date)
+    """
+
     values = {
         "user_id": user_id,
         "registration_date": registration_date,
-        
     }
+
     try:
-        await database.execute(query=query, values=values)
-        return {"message": "device created or already exists"}
+        user_exists = await database.fetch_one(query=check_user_query, values=values)
+        if not user_exists:
+            return {"message": "User does not exist"}
+
+        device_exists = await database.fetch_one(query=check_device_query, values=values)
+        if device_exists:
+            return {"message": "Device already exists for this user on this date"}
+
+        await database.execute(query=insert_query, values=values)
+        return {"message": "Device created successfully"}
+
     except Exception as e:
         return {"message": f"Failed to create device: {str(e)}"}
 
 #get devices
-@router.get("/")
+@router.get("/get_all_devices")
 async def get_devices():
     query = "SELECT * FROM Devices"
     try:
         users = await database.fetch_all(query=query)
+        return {"device": [dict(user) for user in users]}
+    except Exception as e:
+        return {"message": "Failed to fetch device", "error": str(e)}
+
+#get specific device/devices
+@router.get("/get_all_devices")
+async def get_devices(
+    user_id: int
+):
+    query = """
+    SELECT * FROM Devices 
+    WHERE user_id = :user_id    
+    """
+
+    values = {
+        "user_id": user_id
+    }
+    try:
+        users = await database.fetch_one(query=query, values=values)
         return {"device": [dict(user) for user in users]}
     except Exception as e:
         return {"message": "Failed to fetch device", "error": str(e)}
