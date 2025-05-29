@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../functions/symptom_tracker.dart';
 import '../screens/homescreen.dart';
 import '../functions/weight_bmi_screen.dart';
 
@@ -16,7 +15,6 @@ class _VitalTrackHomeState extends State<VitalTrackHome> {
   final List<Widget> _screens = const [
     VitalMainScreen(),
     WeightBMIScreen(),
-    SymptomTracker()
   ];
 
   void _onItemTapped(int index) {
