@@ -123,7 +123,7 @@ class _WeightBMIScreenState extends State<WeightBMIScreen> {
           children: [
             const Text(
               "Enter your Weight & Height",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
             ),
             const SizedBox(height: 20),
             TextField(

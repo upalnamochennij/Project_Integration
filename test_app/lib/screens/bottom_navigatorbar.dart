@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../functions/symptom_tracker.dart';
-import '../screens/design.dart';
+import '../screens/homescreen.dart';
 import '../functions/weight_bmi_screen.dart';
 
 class VitalTrackHome extends StatefulWidget {
@@ -43,7 +43,7 @@ class _VitalTrackHomeState extends State<VitalTrackHome> {
             label: 'BMI Tracker',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.healing), // or Icons.healing
+            icon: Icon(Icons.healing), //
             label: 'Symptoms',
           ),
         ],

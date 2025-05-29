@@ -61,7 +61,7 @@ class _VitalTrendState extends State<VitalTrend> {
         ),
         title: const Text(
           'Vital Trends',
-          style: TextStyle(color: Colors.black87),
+          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
 

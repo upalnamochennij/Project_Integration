@@ -147,25 +147,6 @@ class MeasurementChartScreen extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            Center(
-              child: TextButton.icon(
-                onPressed: () {
-                  // handle add measurement
-                },
-                style: TextButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 14),
-                  backgroundColor: const Color(0xFFFFE5E7),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-                icon: const Icon(Icons.add, color: Colors.red),
-                label: const Text(
-                  'Add Measurement',
-                  style: TextStyle(color: Colors.red, fontSize: 16),
-                ),
-              ),
-            ),
           ],
         ),
       ),

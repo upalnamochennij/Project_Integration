@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../functions/vital_trend.dart';
 import 'measurement_chart_screen.dart';
 import '../widgets/vital_card.dart';
+import 'settings_screen.dart';
 
 class VitalMainScreen extends StatelessWidget {
   const VitalMainScreen({super.key});
@@ -13,24 +14,41 @@ class VitalMainScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 20),
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
             color: const Color(0xFFFFDADC),
-            child: const SafeArea(
+            child: SafeArea(
               bottom: false,
-              child: Center(
-                child: Text(
-                  'VITALWATCH',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.5,
-                    color: Colors.black87,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: IconButton(
+                      icon: const Icon(Icons.settings, color: Colors.black87),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const SettingsScreen()),
+                        );
+                      },
+                    ),
                   ),
-                ),
+                  const Center(
+                    child: Text(
+                      'VITALWATCH',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.5,
+                        color: Colors.black87,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
+
           Expanded(
             child: SafeArea(
               top: false,
@@ -91,8 +109,8 @@ class VitalMainScreen extends StatelessWidget {
                     ),
                     VitalCard(
                       icon: Icons.thermostat,
-                      label: 'Temperature',
-                      value: '98.6°F',
+                      label: 'Body Temperature',
+                      value: '36,5°C',
                       color: Colors.deepOrange,
                       bgColor: const Color(0xFFFFECD4),
                       onTap: () {
@@ -101,8 +119,8 @@ class VitalMainScreen extends StatelessWidget {
                           MaterialPageRoute(
                             builder: (_) => const MeasurementChartScreen(
                               title: 'Temperature',
-                              value: '98.6°F',
-                              data: [98.0, 98.3, 98.6, 98.7, 98.4, 98.8],
+                              value: '35.5°F',
+                              data: [36.0, 36.3, 36.6, 36.7, 36.4, 36.8],
                               lineColor: Colors.orange,
                             ),
                           ),
