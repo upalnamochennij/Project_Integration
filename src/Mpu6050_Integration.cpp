@@ -29,7 +29,6 @@ void Mpu6050_Integration::wakeUp() {
 }
 
 void Mpu6050_Integration::calibrateComponent() {
-
 }
 
 bool Mpu6050_Integration::isActive() {
@@ -42,14 +41,12 @@ bool Mpu6050_Integration::isActive() {
 }
 
 sensors_event_t Mpu6050_Integration::readAccel() {
-    _mpu.getEvent(&_accelValue,&_gyroValue,&_tempValue);
-    time(&timestampAccel);
+    _mpu.getEvent(&_accelValue, &_gyroValue, &_tempValue);
     return _accelValue;
 }
 
 sensors_event_t Mpu6050_Integration::readGyro() {
-    _mpu.getEvent(&_accelValue,&_gyroValue,&_tempValue);
-    time(&timestampGyro);
+    _mpu.getEvent(&_accelValue, &_gyroValue, &_tempValue);
     return _gyroValue;
 }
 
@@ -67,7 +64,24 @@ bool Mpu6050_Integration::withinLimits() {
     return true;
 }
 
+int Mpu6050_Integration::countSteps(sensors_event_t &Accel) {
+    // Считаем модуль ускорения (норму вектора)
+    float magnitude = sqrt(Accel.acceleration.x * Accel.acceleration.x +
+                           Accel.acceleration.y * Accel.acceleration.y +
+                           Accel.acceleration.z * Accel.acceleration.z);
 
+    // Вычитаем 1g (гравитацию)
+    float netAccel = fabs(magnitude - 9.81);
 
+    unsigned long currentTime = millis();
 
-
+    // Если ускорение выше порога и прошло достаточно времени — считаем шаг
+    if (netAccel > accelThreshold && currentTime - lastStepTime > stepDelay) {
+        stepCount++;
+        lastStepTime = currentTime;
+        Serial.print("Step detected! Count: ");
+        Serial.println(stepCount);
+    }
+    int final_step = stepCount;
+    return final_step;
+}

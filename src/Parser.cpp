@@ -15,14 +15,14 @@ Parser::Parser(const char *wifi_net_name, const char *wifi_password) {
     _password = wifi_password;
 }
 
-void Parser::setServer(String& serverName) {
+void Parser::setServer(String &serverName) {
     this->_serverName = serverName;
 }
 
 void Parser::connectToWifi() const {
     WiFi.begin(_ssid, _password);
     Serial.println("Connecting");
-    while(WiFi.status() != WL_CONNECTED) {
+    while (WiFi.status() != WL_CONNECTED) {
         delay(500);
         Serial.print(".");
     }
@@ -31,36 +31,62 @@ void Parser::connectToWifi() const {
     Serial.println(WiFi.localIP());
 }
 
-void Parser::sendData(SensorDataParsing& sensordata) {
-    String payload;
-    String timest_casted = String(sensordata.datetime.c_str());
-    //String timest_casted = "2025-06-18T14:10:00Z";
-    //payload = "https://173.212.207.55/values/add_PulseOxygen?timestamp=2025-05-31T14:20:00Z&device_id=2&SPO2=12&heartrate=23";
+void Parser::sendData(SensorDataParsing &sensordata) {
+    //String payload;
+    char payload_max[512];
+    memset(payload_max, 0, sizeof(payload_max)); //cleaning buffer just in case
+
     switch (sensordata.dTypeEnum) {
+        case SensorDataParsing::STEPS:
+            snprintf(payload_max, sizeof(payload_max),
+                     "%s/values/add_steps?timestamp=%s&device_id=%d&steps=%d",
+                     _serverName.c_str(),
+                     sensordata.datetime,
+                     this->device_id,
+                     sensordata.steps);
+            break;
         case SensorDataParsing::HEARTRATE_AND_SP02:
-            payload = _serverName +
-                      "/values/add_PulseOxygen?timestamp=" + timest_casted + "&device_id=" + this->device_id + "&SPO2=" + sensordata.sp02 +
-                      "&heartrate=" + sensordata.heartrate;
-            Serial.println(payload);
+            snprintf(payload_max, sizeof(payload_max),
+                     "%s/values/add_PulseOxygen?timestamp=%s&device_id=%d&SPO2=%d&heartrate=%d",
+                     _serverName.c_str(), // если _serverName — это String
+                     sensordata.datetime, // если timest_casted — это String
+                     this->device_id,
+                     sensordata.sp02,
+                     sensordata.heartrate
+            );
+            Serial.println(payload_max);
             break;
         case SensorDataParsing::TEMPERATURE:
-            payload = _serverName + "/values/add_temperature?timestamp=" + timest_casted + "&device_id=" + this->device_id + "&temperature=" +
-                      sensordata.temperature;
-            Serial.println(payload);
+            snprintf(payload_max, sizeof(payload_max),
+                     "%s/values/add_temperature?timestamp=%s&device_id=%d&temperature=%d",
+                     _serverName.c_str(),
+                     sensordata.datetime,
+                     this->device_id,
+                     sensordata.temperature
+            );
+            Serial.println(payload_max);
             break;
         case SensorDataParsing::ACCELERATION_AND_GYRO:
-            payload = _serverName + "/values/add_MPU?timestamp=" + timest_casted + "&device_id=" + this->device_id + "&gyro_x="
-                      + sensordata.gyro_x + "&gyro_y=" + sensordata.gyro_y + "&gyro_z=" + sensordata.gyro_z +
-                      "&accel_x=" + sensordata.accel_x + "&accel_y=" + sensordata.accel_y + " &accel_z=" + sensordata.
-                      accel_z;
-            Serial.println(payload);
+            snprintf(payload_max, sizeof(payload_max),
+                     "%s/values/add_MPU?timestamp=%s&device_id=%d&gyro_x=%d&gyro_y=%d&gyro_z=%d&accel_x=%d&accel_y=%d&accel_z=%d",
+                     _serverName.c_str(),
+                     sensordata.datetime,
+                     this->device_id,
+                     sensordata.gyro_x,
+                     sensordata.gyro_y,
+                     sensordata.gyro_z,
+                     sensordata.accel_x,
+                     sensordata.accel_y,
+                     sensordata.accel_z
+            );
+            Serial.println(payload_max);
             break;
         default:
             throw std::invalid_argument("Invalid sensor data type");
     }
 
     if (WiFi.status() == WL_CONNECTED) {
-        _httpClient.begin(payload.c_str(), api_certificate);
+        _httpClient.begin(payload_max, api_certificate);
 
         int httpCode = _httpClient.GET();
         if (httpCode > 0) {
@@ -85,21 +111,20 @@ void Parser::setDevice(int device) {
 }
 
 std::string Parser::getCurrentTime() {
-    // Получаем текущее системное время
-    auto now = std::chrono::system_clock::now();
-    std::time_t time_t_now = std::chrono::system_clock::to_time_t(now);
+    time_t now;
+    time(&now);
 
-    // Получаем UTC-время
-    std::tm *utc_tm = std::localtime(&time_t_now); // UTC time
+    struct tm timeinfo;
+    localtime_r(&now, &timeinfo);
 
-    // Используем stringstream и put_time (поддерживается в C++11)
-    std::ostringstream oss;
-    oss << std::put_time(utc_tm, "%Y-%m-%dT%H:%M:%SZ");
-    return oss.str();
+    char buffer[25];
+    snprintf(buffer, sizeof(buffer), "%04d-%02d-%02dT%02d:%02d:%02dZ",
+             timeinfo.tm_year + 1900,
+             timeinfo.tm_mon + 1,
+             timeinfo.tm_mday,
+             timeinfo.tm_hour,
+             timeinfo.tm_min,
+             timeinfo.tm_sec);
+
+    return std::string(buffer);
 }
-
-
-
-
-
-

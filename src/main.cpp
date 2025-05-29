@@ -20,8 +20,8 @@
 
 #define BUZZER_PIN 2
 
-const char *ssid = "ACSlab";
-const char *password = "lab@ACS24";
+const char *ssid = "H369A87FCC2";
+const char *password = "E92C56743537";
 
 const char Parser::api_certificate[] = \
         "-----BEGIN CERTIFICATE-----\n" \
@@ -71,30 +71,53 @@ void heartrate_SP02_Task(void *pvParameters) {
         DataHeart.heartrate = obj_heart._heartRate;
         DataHeart.sp02 = obj_heart._sp02_value;
         DataHeart.dTypeEnum = SensorDataParsing::HEARTRATE_AND_SP02;
-        DataHeart.dataType = "Heartrate and SP02";
-        DataHeart.datetime = obj_parser.getCurrentTime();
+        strcpy(DataHeart.dataType, "Heartrate and SP02"); //for datatype
+        auto timest = obj_parser.getCurrentTime();
+        strcpy(DataHeart.datetime, timest.c_str()); // for datetime
 
         Serial.println("HeartRate: " + String(DataHeart.heartrate));
         Serial.println("SP02: " + String(DataHeart.sp02));
         xQueueSend(dataQueue, &DataHeart, portMAX_DELAY);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
+    vTaskDelete(NULL);
 }
 
 void temperatureTask(void *pvParameters) {
     SensorDataParsing DataTemp; // initial way of doing it
     //SensorDataParsing* DataTemp = new SensorDataParsing();
     while (true) {
-        float temper = obj_temp.readTemp();
+        int temper = obj_temp.readTemp();
         DataTemp.temperature = temper;
         DataTemp.dTypeEnum = SensorDataParsing::TEMPERATURE;
-        DataTemp.dataType = "Temperature";
-        DataTemp.datetime = obj_parser.getCurrentTime();
+        strcpy(DataTemp.dataType, "Temperature"); //for datatype
+        auto timest = obj_parser.getCurrentTime();
+        strcpy(DataTemp.datetime, timest.c_str()); // for datetime
 
         Serial.println("Temperature: " + String(DataTemp.temperature));
         xQueueSend(dataQueue, &DataTemp, portMAX_DELAY);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
+    vTaskDelete(NULL);
+}
+
+void stepsTask(void *pvParameters) {
+    SensorDataParsing DataSteps; // initial way of doing it
+    //SensorDataParsing* DataTemp = new SensorDataParsing();
+    while (true) {
+        auto accel = obj_mpu.readAccel();
+        int step = obj_mpu.countSteps(accel);
+        DataSteps.steps = step;
+        DataSteps.dTypeEnum = SensorDataParsing::STEPS;
+        strcpy(DataSteps.dataType, "Steps"); //for datatype
+        auto timest = obj_parser.getCurrentTime();
+        strcpy(DataSteps.datetime, timest.c_str()); // for datetime
+
+        Serial.println("Steps: " + String(DataSteps.steps));
+        xQueueSend(dataQueue, &DataSteps, portMAX_DELAY);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+    vTaskDelete(NULL);
 }
 
 void accelGyroTask(void *pvParameters) {
@@ -104,17 +127,20 @@ void accelGyroTask(void *pvParameters) {
         auto accel = obj_mpu.readAccel();
         auto gyro = obj_mpu.readGyro();
         AccelGyro.dTypeEnum = SensorDataParsing::ACCELERATION_AND_GYRO;
-        AccelGyro.accel_x = accel.acceleration.x;
-        AccelGyro.accel_y = accel.acceleration.y;
-        AccelGyro.accel_z = accel.acceleration.z;
-        AccelGyro.gyro_x = gyro.gyro.x;
-        AccelGyro.gyro_y = gyro.gyro.y;
-        AccelGyro.gyro_z = gyro.gyro.z;
-        AccelGyro.datetime = obj_parser.getCurrentTime();
+        AccelGyro.accel_x = static_cast<int>(accel.acceleration.x);
+        AccelGyro.accel_y = static_cast<int>(accel.acceleration.y);
+        AccelGyro.accel_z = static_cast<int>(accel.acceleration.z);
+        AccelGyro.gyro_x = static_cast<int>(gyro.gyro.x);
+        AccelGyro.gyro_y = static_cast<int>(gyro.gyro.y);
+        AccelGyro.gyro_z = static_cast<int>(gyro.gyro.z);
+        strcpy(AccelGyro.dataType, "Accel & Gyro"); //for datatype
+        std::string timest = obj_parser.getCurrentTime();
+        strcpy(AccelGyro.datetime, timest.c_str()); // for datetime
 
         xQueueSend(dataQueue, &AccelGyro, portMAX_DELAY);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
+    vTaskDelete(NULL);
 }
 
 void sendToApiTask(void *pvParameters) {
@@ -130,40 +156,12 @@ void sendToApiTask(void *pvParameters) {
             if (xQueueReceive(dataQueue, &ReceivedData, portMAX_DELAY) == pdTRUE) {
                 obj_parser.sendData(ReceivedData);
             }
+            else Serial.println("Failed to receive data\n");
         }
     }
+    vTaskDelete(NULL);
 }
 
-void read_and_sendHeart() {
-    obj_heart.readData();
-    test.heartrate = obj_heart._heartRate;
-    test.sp02 = obj_heart._sp02_value;
-    test.dTypeEnum = SensorDataParsing::HEARTRATE_AND_SP02;
-    test.datetime = obj_parser.getCurrentTime();
-    obj_parser.sendData(test);
-    test.reset();
-}
-
-void read_and_sendTemp() {
-    test.temperature = obj_temp.readTemp();
-    test.dTypeEnum = SensorDataParsing::TEMPERATURE;
-    test.datetime = obj_parser.getCurrentTime();
-    obj_parser.sendData(test);
-    test.reset();
-}
-
-void read_and_sendMPU() {
-    auto event_a = obj_mpu.readAccel();
-    auto event_g = obj_mpu.readGyro();
-    test.accel_x = event_a.acceleration.x;
-    test.accel_y = event_a.acceleration.y;
-    test.accel_z = event_a.acceleration.z;
-    test.gyro_x = event_g.gyro.x;
-    test.gyro_y = event_g.gyro.y;
-    test.gyro_z = event_g.gyro.z;
-    obj_parser.sendData(test);
-    test.reset();
-}
 
 void setup() {
     Serial.begin(9600);
@@ -174,6 +172,8 @@ void setup() {
     obj_mpu.initComponent();
     obj_temp.initComponent();
 
+    configTime(0, 0, "pool.ntp.org", "time.nist.gov");
+
     obj_parser.connectToWifi();
 
     obj_parser.setServer(serverName);
@@ -183,17 +183,20 @@ void setup() {
 
     dataQueue = xQueueCreate(10, sizeof(SensorDataParsing));
 
-    xTaskCreate(heartrate_SP02_Task, "heartrate_SP02_Task", 2048, NULL, 2, NULL);
-    xTaskCreate(accelGyroTask, "accelGyroTask", 2048, NULL, 2, NULL);
-    xTaskCreate(temperatureTask, "temperatureTask", 2048, NULL, 2, NULL);
-    xTaskCreate(sendToApiTask, "sendToApiTask", 2048, NULL, 2, NULL);
-
-    // read_and_sendHeart();
-    // read_and_sendTemp();
-    // read_and_sendMPU();
+    xTaskCreate(heartrate_SP02_Task, "heartrate_SP02_Task", 4096, NULL, 2, NULL);
+    xTaskCreate(accelGyroTask, "accelGyroTask", 4096, NULL, 2, NULL);
+    xTaskCreate(temperatureTask, "temperatureTask", 4096, NULL, 2, NULL);
+    xTaskCreate(sendToApiTask, "sendToApiTask", 8192, NULL, 2, NULL);
+    xTaskCreate(stepsTask, "stepsTask", 4096, NULL, 2, NULL);
 }
 
 void loop() {
+    // auto accel = obj_mpu.readAccel();
+    // int steps = obj_mpu.countSteps(accel);
+    // Serial.print("Steps count: ");
+    // Serial.println(steps);
+    // delay(500);
+
     //delay(100000);
     // obj_oled.checkButton();
     // obj_oled.checkRotation();
