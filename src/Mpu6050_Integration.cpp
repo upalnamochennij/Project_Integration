@@ -82,6 +82,5 @@ int Mpu6050_Integration::countSteps(sensors_event_t &Accel) {
         Serial.print("Step detected! Count: ");
         Serial.println(stepCount);
     }
-    int final_step = stepCount;
-    return final_step;
+    return stepCount;
 }

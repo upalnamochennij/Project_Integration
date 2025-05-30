@@ -53,7 +53,10 @@ const char Parser::api_certificate[] = \
 String serverName = "https://173.212.207.55";
 
 QueueHandle_t dataQueue;
-SensorDataParsing test;
+SemaphoreHandle_t mutex = xSemaphoreCreateMutex();
+// const TickType_t mutex_time = pdMS_TO_TICKS(100);
+
+SensorDataParsing dataforOLED;
 
 HeartrateSensor obj_heart;
 OLEDscreen obj_oled;
@@ -67,10 +70,17 @@ void heartrate_SP02_Task(void *pvParameters) {
     SensorDataParsing DataHeart;
     //SensorDataParsing* DataHeart = new SensorDataParsing();
     while (true) {
+        xSemaphoreTake(mutex, portMAX_DELAY);
         obj_heart.readData(); // reads both SP02 and heartrate
+        xSemaphoreGive(mutex);
+
         DataHeart.heartrate = obj_heart._heartRate;
         DataHeart.sp02 = obj_heart._sp02_value;
         DataHeart.dTypeEnum = SensorDataParsing::HEARTRATE_AND_SP02;
+
+        dataforOLED.heartrate = obj_heart._heartRate;
+        dataforOLED.sp02 = obj_heart._sp02_value;
+
         strcpy(DataHeart.dataType, "Heartrate and SP02"); //for datatype
         auto timest = obj_parser.getCurrentTime();
         strcpy(DataHeart.datetime, timest.c_str()); // for datetime
@@ -83,12 +93,38 @@ void heartrate_SP02_Task(void *pvParameters) {
     vTaskDelete(NULL);
 }
 
+void displayDataOLED(void *pvParameters) {
+    while (true) {
+        // xSemaphoreTake(mutex, portMAX_DELAY);
+        // auto accel = obj_mpu.readAccel();
+        // obj_heart.readData();
+        // obj_oled.bodyTemp = obj_temp.readTemp();
+        // xSemaphoreGive(mutex);
+        //
+        // obj_oled.stepCount = obj_mpu.countSteps(accel);
+        // obj_oled.heartRate = obj_heart._heartRate;
+        obj_oled.bodyTemp = dataforOLED.temperature;
+        obj_oled.stepCount = dataforOLED.steps;
+        obj_oled.heartRate = dataforOLED.heartrate;
+
+        obj_oled.checkButton();
+        obj_oled.checkRotation();
+        obj_oled.setCurrentScreen();
+        vTaskDelay(100 / portTICK_PERIOD_MS);
+    }
+}
+
 void temperatureTask(void *pvParameters) {
     SensorDataParsing DataTemp; // initial way of doing it
     //SensorDataParsing* DataTemp = new SensorDataParsing();
     while (true) {
+        xSemaphoreTake(mutex, portMAX_DELAY);
         int temper = obj_temp.readTemp();
+        xSemaphoreGive(mutex);
+
         DataTemp.temperature = temper;
+        dataforOLED.temperature = temper;
+
         DataTemp.dTypeEnum = SensorDataParsing::TEMPERATURE;
         strcpy(DataTemp.dataType, "Temperature"); //for datatype
         auto timest = obj_parser.getCurrentTime();
@@ -105,9 +141,14 @@ void stepsTask(void *pvParameters) {
     SensorDataParsing DataSteps; // initial way of doing it
     //SensorDataParsing* DataTemp = new SensorDataParsing();
     while (true) {
+        xSemaphoreTake(mutex, portMAX_DELAY);
         auto accel = obj_mpu.readAccel();
+        xSemaphoreGive(mutex);
+
         int step = obj_mpu.countSteps(accel);
         DataSteps.steps = step;
+        dataforOLED.steps = step;
+
         DataSteps.dTypeEnum = SensorDataParsing::STEPS;
         strcpy(DataSteps.dataType, "Steps"); //for datatype
         auto timest = obj_parser.getCurrentTime();
@@ -124,8 +165,11 @@ void accelGyroTask(void *pvParameters) {
     SensorDataParsing AccelGyro;
     //SensorDataParsing* AccelGyro = new SensorDataParsing();
     while (true) {
+        xSemaphoreTake(mutex, portMAX_DELAY);
         auto accel = obj_mpu.readAccel();
         auto gyro = obj_mpu.readGyro();
+        xSemaphoreGive(mutex);
+
         AccelGyro.dTypeEnum = SensorDataParsing::ACCELERATION_AND_GYRO;
         AccelGyro.accel_x = static_cast<int>(accel.acceleration.x);
         AccelGyro.accel_y = static_cast<int>(accel.acceleration.y);
@@ -165,12 +209,36 @@ void sendToApiTask(void *pvParameters) {
 
 void setup() {
     Serial.begin(9600);
+    Wire.begin();
+    Wire.setClock(400000);
+    delay(100);
 
+    while (mutex == nullptr) {
+        Serial.println("mutex was not created");
+        if (mutex != nullptr) {
+            break;
+        }
+    }
+
+    xSemaphoreTake(mutex,portMAX_DELAY);
     obj_heart.initComponent();
+    xSemaphoreGive(mutex);
+    delay(100);
+
+    xSemaphoreTake(mutex,portMAX_DELAY);
     obj_oled.initComponent();
-    // obj_light.initComponent(); //not connected properly right now
+    xSemaphoreGive(mutex);
+    delay(100);
+
+    xSemaphoreTake(mutex,portMAX_DELAY);
     obj_mpu.initComponent();
+    xSemaphoreGive(mutex);
+    delay(100);
+
+    xSemaphoreTake(mutex,portMAX_DELAY);
     obj_temp.initComponent();
+    xSemaphoreGive(mutex);
+    delay(100);
 
     configTime(0, 0, "pool.ntp.org", "time.nist.gov");
 
@@ -187,7 +255,8 @@ void setup() {
     xTaskCreate(accelGyroTask, "accelGyroTask", 4096, NULL, 2, NULL);
     xTaskCreate(temperatureTask, "temperatureTask", 4096, NULL, 2, NULL);
     xTaskCreate(sendToApiTask, "sendToApiTask", 8192, NULL, 2, NULL);
-    xTaskCreate(stepsTask, "stepsTask", 4096, NULL, 2, NULL);
+    xTaskCreate(stepsTask, "stepsTask", 4096, NULL,2 , NULL);
+    xTaskCreate(displayDataOLED, "displayDataOLED", 8192, NULL, 2, NULL);
 }
 
 void loop() {

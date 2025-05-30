@@ -168,7 +168,7 @@ void OLEDscreen::drawHeartRateScreen() {
 
     //  heart rate display
     char hrStr[10];
-    sprintf(hrStr, "%d", heartRate);
+    sprintf(hrStr, "%d", heartRate); //placeholder ебануть сюда
     oled_display_u8.setFont(u8g2_font_profont22_tf);
 
     // centering

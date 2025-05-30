@@ -40,6 +40,11 @@ class OLEDscreen : public IComponent{
     //!test function (remove later)
     void setCurrentScreen();
 
+    int heartRate = 0; //ex. 75
+    int stepCount = 0; // ex. 1234
+    float bodyTemp = 0; // ex. 36.6
+    bool wifiConnected = false;
+    bool buttonPressed = false;
 
 
     private:
@@ -47,11 +52,7 @@ class OLEDscreen : public IComponent{
     bool _isActive = false;
     bool _isConnectedToWifi = false;
 
-    int heartRate = 75;
-    int stepCount = 1234;
-    float bodyTemp = 36.6;
-    bool wifiConnected = false;
-    bool buttonPressed = false;
+
 
     int menuPosition = 0;
     int lastEncA = 0;
