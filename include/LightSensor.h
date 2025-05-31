@@ -13,7 +13,6 @@ class LightSensor : public IComponent{
     public:
     LightSensor() = default;
     void initComponent() override; //initialize VEML7700 for the first time
-    void calibrateComponent() override;
     bool withinLimits() override;
     bool isActive() override; // checks if VEML7700 is currently active
     void goSleepMode() override; // put VEML7700 into sleep mode (configurations and settings still remained)

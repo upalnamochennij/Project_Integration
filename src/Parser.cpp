@@ -29,6 +29,7 @@ void Parser::connectToWifi() const {
     Serial.println("");
     Serial.print("Connected to WiFi network with IP Address: ");
     Serial.println(WiFi.localIP());
+
 }
 
 void Parser::sendData(SensorDataParsing &sensordata) {

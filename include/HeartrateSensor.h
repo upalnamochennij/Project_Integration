@@ -6,7 +6,6 @@
 class HeartrateSensor : public IComponent{
 
     public:
-    void calibrateComponent() override;
     void initComponent() override;
     bool withinLimits() override;
     bool isActive() override;

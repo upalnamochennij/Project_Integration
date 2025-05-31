@@ -28,9 +28,6 @@ void Mpu6050_Integration::wakeUp() {
     Serial.println("Mpu6050 woken up\n");
 }
 
-void Mpu6050_Integration::calibrateComponent() {
-}
-
 bool Mpu6050_Integration::isActive() {
     if (_isCompActive == true) {
         Serial.println("Mpu6050 is currently active\n");
@@ -69,7 +66,6 @@ int Mpu6050_Integration::countSteps(sensors_event_t &Accel) {
     float magnitude = sqrt(Accel.acceleration.x * Accel.acceleration.x +
                            Accel.acceleration.y * Accel.acceleration.y +
                            Accel.acceleration.z * Accel.acceleration.z);
-
     // Вычитаем 1g (гравитацию)
     float netAccel = fabs(magnitude - 9.81);
 

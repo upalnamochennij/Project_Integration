@@ -13,7 +13,7 @@ class TemperatureSensor : public IComponent, Adafruit_BME280 {
     public:
     TemperatureSensor() = default;
     void initComponent() override;
-    void calibrateComponent() override;
+
     bool withinLimits() override;
     bool isActive() override;
     void goSleepMode() override;

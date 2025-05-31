@@ -50,9 +50,6 @@ void OLEDscreen::showTestBSver() {
     oled_display_u8.display();
 }
 
-void OLEDscreen::calibrateComponent() {
-}
-
 bool OLEDscreen::withinLimits() {
     return true;
 }
@@ -70,6 +67,7 @@ void OLEDscreen::connectToWifi(const char *ssid, const char *password) {
     if (WiFi.status() == WL_CONNECTED) {
         Serial.println("Wifi connected");
         _isConnectedToWifi = true;
+        wifiConnected = true;
         configTime(gmtOffset_sec, daylightOffset_sec, "pool.ntp.org", "time.nist.gov");
         Serial.println("Getting time from NTP server...");
 
@@ -88,6 +86,7 @@ void OLEDscreen::connectToWifi(const char *ssid, const char *password) {
     } else {
         Serial.println("\nWiFi connection failed");
         _isConnectedToWifi = false;
+        wifiConnected = false;
     }
 }
 

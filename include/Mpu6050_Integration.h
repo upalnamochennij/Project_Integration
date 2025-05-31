@@ -13,7 +13,7 @@ class Mpu6050_Integration : public IComponent {
     public:
     Mpu6050_Integration() = default;
     void initComponent() override;
-    void calibrateComponent() override;
+
     bool withinLimits() override;
     bool isActive() override;
     void goSleepMode() override;

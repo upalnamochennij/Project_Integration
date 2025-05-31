@@ -13,10 +13,6 @@ void TemperatureSensor::initComponent() {
     _isActive = true;
 }
 
-void TemperatureSensor::calibrateComponent() {
-
-}
-
 void TemperatureSensor::goSleepMode() {
     if (_isActive) {
         setMode(00);

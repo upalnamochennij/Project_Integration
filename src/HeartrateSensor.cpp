@@ -85,13 +85,3 @@ bool HeartrateSensor::isActive() {
 bool HeartrateSensor::withinLimits() {
     return true;
 }
-
-void HeartrateSensor::calibrateComponent() {
-
-}
-
-
-
-
-
-

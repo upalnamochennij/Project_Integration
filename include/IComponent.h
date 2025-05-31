@@ -4,7 +4,6 @@ class IComponent { //Interface that's going to be used as a blueprint for all th
 public:
 
   virtual void initComponent() = 0;
-  virtual void calibrateComponent() = 0;
   //virtual bool componentStatus(); //true if component functions properly, false if overheating/any error
   virtual bool withinLimits() = 0; // true if value is within the certain range, threshold. false otherwise
   virtual bool isActive() = 0;

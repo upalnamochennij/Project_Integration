@@ -21,7 +21,7 @@ class OLEDscreen : public IComponent{
     void wakeUp() override; // wake oled from sleep (all the settings are saved)
     void showTestBS(); // function to test input on oled
     void showTestBSver();
-    void calibrateComponent() override;
+
     bool withinLimits() override;
     void connectToWifi(const char *ssid, const char *password);
 

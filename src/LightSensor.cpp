@@ -22,10 +22,6 @@ void LightSensor::initComponent() {
     Serial.println("VEML initialized");
 }
 
-void LightSensor::calibrateComponent() {
-
-}
-
 void LightSensor::goSleepMode() {
     if (_isCompActive == true) {
         _lightSensor.enable(false);
