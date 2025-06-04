@@ -7,3 +7,5 @@ INFO:     188.89.122.139:57910 - "GET /users/bmi_measurement?user_id=1000 HTTP/1
 INFO:     196.251.70.87:55308 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     20.14.87.238:50370 - "GET /autodiscover/autodiscover.json?@zdi/Powershell HTTP/1.1" 404 Not Found
 INFO:     45.135.193.65:53120 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     188.89.88.249:52804 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     188.89.88.249:52804 - "GET /favicon.ico HTTP/1.1" 404 Not Found
