@@ -4,3 +4,4 @@ INFO:     Application startup complete.
 INFO:     Uvicorn running on https://0.0.0.0:443 (Press CTRL+C to quit)
 INFO:     188.89.122.139:57910 - "GET /users/bmi_measurement?user_id=1000 HTTP/1.1" 200 OK
 INFO:     188.89.122.139:57910 - "GET /users/bmi_measurement?user_id=1000 HTTP/1.1" 200 OK
+INFO:     196.251.70.87:55308 - "GET /.env HTTP/1.1" 404 Not Found
