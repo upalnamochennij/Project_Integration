@@ -10,3 +10,4 @@ INFO:     45.135.193.65:53120 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
 INFO:     188.89.88.249:52804 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     188.89.88.249:52804 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     185.242.226.163:41833 - "GET / HTTP/1.1" 200 OK
+INFO:     195.3.221.137:34028 - "GET / HTTP/1.1" 200 OK
