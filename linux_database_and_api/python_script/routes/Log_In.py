@@ -17,7 +17,7 @@ async def create_Log_In(
     username: str,
     password: str
 ):
-    
+
     values = {
         "user_id": user_id,
         "Login_name": username,
@@ -35,24 +35,24 @@ async def create_Log_In(
         return {"message": f"Failed to add log in data: {str(e)}"}
 
 #get password with username
-@router.get("/get_password_by_username")
-async def get_password_by_username(username: str):
+@router.get("/check_password_by_username")
+async def check_password_by_username(username: str, password: str):
     query = "SELECT Login_password FROM Log_In WHERE Login_name = :username"
     result = await database.fetch_one(query=query, values={"username": username})
 
     if result:
-        return {"username": username, "password": result["Login_password"]}
-    return {"message": "Username not found"}
+        return result["Login_password"] == password
+    return False
 
 #get password with user_id
-@router.get("/get_password_by_user_id")
-async def get_password_by_user_id(user_id: int):
+@router.get("/check_password_by_user_id")
+async def check_password_by_user_id(user_id: int, password: str):
     query = "SELECT Login_password FROM Log_In WHERE user_id = :user_id"
     result = await database.fetch_one(query=query, values={"user_id": user_id})
 
     if result:
-        return {"user_id": user_id, "password": result["Login_password"]}
-    return {"message": "User ID not found"}
+        return result["Login_password"] == password
+    return False
 
 #check if username exists (already)
 @router.get("/check_username_exists")

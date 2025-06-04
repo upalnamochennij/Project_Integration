@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /root/python_script/fastapi-env
+set -gx VIRTUAL_ENV /root/Project_Integration/linux_database_and_api/python_script/fastapi-env
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

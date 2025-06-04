@@ -55,8 +55,8 @@ async def create_user_get(
         return {"message": f"Failed to create user: {str(e)}"}
 
 
-#get all data
-@router.get("/get_all_users")
+#get all data for debugging
+@router.get("/get_all")
 async def read_users():
     query = "SELECT * FROM Users"
     try:
@@ -65,23 +65,17 @@ async def read_users():
     except Exception as e:
         return {"message": "Failed to fetch users", "error": str(e)}
 
-#get data from one user
+#get data from one user with user_id
 @router.get("/get_user")
 async def get_user(
-    user_first_name: str,
-    user_last_name: str,
-    user_birth_date: date,
+    user_first_name: int
 ):
     query = """
     SELECT * FROM Users
-    WHERE user_first_name = :user_first_name
-    AND user_last_name = :user_last_name
-    AND user_birth_date = :user_birth_date
+    WHERE user_id = :user_id
     """
     values = {
-        "user_first_name": user_first_name,
-        "user_last_name": user_last_name,
-        "user_birth_date": user_birth_date
+        "user_id": user_id,
     }
 
     try:
@@ -94,31 +88,53 @@ async def get_user(
 #get bmi with first name, last name and birth date
 @router.get("/bmi_measurement")
 async def get_bmi_measurement(
-    user_first_name: str,
-    user_last_name: str,
-    user_birth_date: date
+    user_id: int
 ):
     query = """
         SELECT user_weight, user_height
         FROM Users
-        WHERE user_first_name = :user_first_name
-          AND user_last_name = :user_last_name
-          AND user_birth_date = :user_birth_date
+        WHERE user_id = :user_id
     """
     values = {
-        "user_first_name": user_first_name,
-        "user_last_name": user_last_name,
-        "user_birth_date": user_birth_date
+        "user_id": user_id
     }
 
     try:
         user = await database.fetch_one(query=query, values=values)
         if user:
+            weight = user["user_weight"]
+            height_cm = user["user_height"]
+            height_m = height_cm / 100
+
+            if height_m == 0:
+                return {"message": "Invalid height (0 cm)"}
+
+            bmi = weight / (height_m ** 2)
             return {
-                "user_weight": user["user_weight"],
-                "user_height": user["user_height"]
+                "bmi": round(bmi, 2)
             }
         else:
             return {"message": "User not found"}
     except Exception as e:
         return {"message": f"Failed to fetch user data: {str(e)}"}
+
+#change weight and heigt of a user_id
+@router.get("/update_measurements/")
+async def update_user_measurements(
+    user_id: int,
+    user_weight: int,
+    user_height: int
+):
+    query = """
+        UPDATE Users
+        SET user_weight = :user_weight,
+            user_height = :user_height
+        WHERE user_id = :user_id
+    """
+    values = {
+        "user_weight": user_weight,
+        "user_height": user_height,
+        "user_id": user_id
+    }
+    await database.execute(query=query, values=values)
+    return {"message": "User measurements updated successfully"}

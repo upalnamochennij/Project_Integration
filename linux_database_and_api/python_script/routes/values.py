@@ -42,7 +42,7 @@ async def add_steps(
     # does device excist?
     device_check_query = "SELECT 1 FROM Devices WHERE device_id = :device_id"
     device_exists = await database.fetch_one(query=device_check_query, values={"device_id": device_id})
-    
+
     if not device_exists:
         return {"message": "Device does not exist"}
 
@@ -73,7 +73,7 @@ async def add_steps(
     except Exception as e:
         return {"message": f"Failed to add steps data: {str(e)}"}
 
-    
+
 @router.get("/add_MPU")
 async def add_mpu(
     timestamp: datetime,
@@ -88,7 +88,7 @@ async def add_mpu(
     # does device excist?
     device_check_query = "SELECT 1 FROM Devices WHERE device_id = :device_id"
     device_exists = await database.fetch_one(query=device_check_query, values={"device_id": device_id})
-    
+
     if not device_exists:
         return {"message": "Device does not exist"}
 
@@ -129,7 +129,7 @@ async def add_mpu(
         return {"message": "MPU data added successfully"}
     except Exception as e:
         return {"message": f"Failed to add MPU data: {str(e)}"}
-    
+
 @router.get("/add_temperature")
 async def add_temperature(
     timestamp: datetime,
@@ -142,7 +142,7 @@ async def add_temperature(
         query=device_check_query,
         values={"device_id": device_id}
     )
-    
+
     if not device_exists:
         return {"message": "Device does not exist"}
 
@@ -176,7 +176,7 @@ async def add_temperature(
     except Exception as e:
         return {"message": f"Failed to add temperature data: {str(e)}"}
 
-    
+
 @router.get("/add_PulseOxygen")
 async def add_PulseOxygen(
     timestamp: datetime,
@@ -190,7 +190,7 @@ async def add_PulseOxygen(
         query=device_check_query,
         values={"device_id": device_id}
     )
-    
+
     if not device_exists:
         return {"message": "Device does not exist"}
 
@@ -251,7 +251,7 @@ async def get_values():
         }
     except Exception as e:
         return {"message": f"Failed to fetch sensor data: {str(e)}"}
-    
+
 @router.get("/get_MPU_information")
 async def get_MPU_information(
     device_id: int,
@@ -274,7 +274,7 @@ async def get_MPU_information(
         }
     except Exception as e:
         return {"message": f"Failed to fetch sensor data: {str(e)}"}
-    
+
 @router.get("/get_temperature")
 async def get_temperature(
     device_id: int,
@@ -297,7 +297,7 @@ async def get_temperature(
         }
     except Exception as e:
         return {"message": f"Failed to fetch sensor data: {str(e)}"}
-    
+
 @router.get("/get_pulse_oxygen")
 async def get_pulse_oxygen(
     device_id: int,
@@ -320,7 +320,7 @@ async def get_pulse_oxygen(
         }
     except Exception as e:
         return {"message": f"Failed to fetch sensor data: {str(e)}"}
-    
+
 @router.get("/get_steps")
 async def get_steps(
     device_id: int,
@@ -343,3 +343,24 @@ async def get_steps(
         }
     except Exception as e:
         return {"message": f"Failed to fetch sensor data: {str(e)}"}
+
+@router.get("/total_steps")
+async def get_total_steps(
+    device_id: int,
+    start_timestamp: datetime,
+    end_timestamp: datetime
+):
+    query = """
+        SELECT SUM(steps) as total_steps
+        FROM steps
+        WHERE device_id = :device_id
+        AND timestamp BETWEEN :start_timestamp AND :end_timestamp
+    """
+    values = {
+        "device_id": device_id,
+        "start_timestamp": start_timestamp,
+        "end_timestamp": end_timestamp
+    }
+
+    result = await database.fetch_one(query=query, values=values)
+    return {"device_id": device_id, "total_steps": result["total_steps"] or 0}

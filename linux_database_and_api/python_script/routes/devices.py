@@ -9,9 +9,9 @@ class DeviceCreate(BaseModel):
     user_id: int
     registration_date: date
 
-#create device
-@router.get("/create_device")
-async def create_device_(
+#create device this should be done by the product seller
+@router.get("/create")
+async def create_device(
     user_id: int,
     registration_date: date
 ):
@@ -30,7 +30,6 @@ async def create_device_(
     """
     check_user_values = {
         "user_id": user_id,
-        "registration_date": registration_date,
     }
 
     check_device_values = {
@@ -44,7 +43,7 @@ async def create_device_(
     }
 
     try:
-        user_exists = await database.fetch_one(query=check_user_query, values=check_user_query)
+        user_exists = await database.fetch_one(query=check_user_query, values=check_user_values)
         if not user_exists:
             return {"message": "User does not exist"}
 
@@ -58,7 +57,7 @@ async def create_device_(
     except Exception as e:
         return {"message": f"Failed to create device: {str(e)}"}
 
-#get devices
+#get all devices for debugging
 @router.get("/get_all_devices")
 async def get_devices():
     query = "SELECT * FROM Devices"
@@ -68,7 +67,7 @@ async def get_devices():
     except Exception as e:
         return {"message": "Failed to fetch device", "error": str(e)}
 
-#get specific device/devices
+#get specific device/devices of a user
 @router.get("/get_device")
 async def get_device(
     user_id: int
@@ -86,35 +85,3 @@ async def get_device(
         return {"device": [dict(user) for user in users]}
     except Exception as e:
         return {"message": "Failed to fetch device", "error": str(e)}
-
-#get registration date from a user
-@router.get("/registration_date")
-async def get_registration_date(
-    user_first_name: str,
-    user_last_name: str,
-    user_birth_date: date
-):
-    query = """
-        SELECT D.registration_date
-        FROM Devices D
-        JOIN Users U ON D.user_id = U.user_id
-        WHERE U.user_first_name = :user_first_name
-            AND U.user_last_name = :user_last_name
-            AND U.user_birth_date = :user_birth_date;
-    """
-    values = {
-        "user_first_name": user_first_name,
-        "user_last_name": user_last_name,
-        "user_birth_date": user_birth_date
-    }
-
-    try:
-        device = await database.fetch_one(query=query, values=values)
-        if device:
-            return {
-                "registration_date": device["registration_date"]
-            }
-        else:
-            return {"message": "User not found"}
-    except Exception as e:
-        return {"message": f"Failed to fetch user data: {str(e)}"}
