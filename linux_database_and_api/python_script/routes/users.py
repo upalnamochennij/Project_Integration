@@ -14,10 +14,10 @@ class UserCreate(BaseModel):
 
 @router.get("/create/")
 async def create_user_get(
-    user_first_name: str, 
-    user_last_name: str, 
-    user_birth_date: date, 
-    user_weight: int, 
+    user_first_name: str,
+    user_last_name: str,
+    user_birth_date: date,
+    user_weight: int,
     user_height: int
 ):
     check_query = """
@@ -30,7 +30,12 @@ async def create_user_get(
     INSERT INTO Users (user_first_name, user_last_name, user_birth_date, user_weight, user_height)
     VALUES (:user_first_name, :user_last_name, :user_birth_date, :user_weight, :user_height)
     """
-    values = {
+    check_values = {
+        "user_first_name": user_first_name,
+        "user_last_name": user_last_name,
+        "user_birth_date": user_birth_date,
+    }
+    insert_values = {
         "user_first_name": user_first_name,
         "user_last_name": user_last_name,
         "user_birth_date": user_birth_date,
@@ -39,11 +44,11 @@ async def create_user_get(
     }
 
     try:
-        existing_user = await database.fetch_one(query=check_query, values=values)
+        existing_user = await database.fetch_one(query=check_query, values=check_values)
         if existing_user:
             return {"message": "User already exists"}
 
-        await database.execute(query=insert_query, values=values)
+        await database.execute(query=insert_query, values=insert_values)
         return {"message": "User created successfully"}
 
     except Exception as e:
@@ -59,13 +64,13 @@ async def read_users():
         return {"users": [dict(user) for user in users]}
     except Exception as e:
         return {"message": "Failed to fetch users", "error": str(e)}
-    
+
 #get data from one user
 @router.get("/get_user")
-async def create_user_get(
-    user_first_name: str, 
-    user_last_name: str, 
-    user_birth_date: date, 
+async def get_user(
+    user_first_name: str,
+    user_last_name: str,
+    user_birth_date: date,
 ):
     query = """
     SELECT * FROM Users
@@ -78,13 +83,13 @@ async def create_user_get(
         "user_last_name": user_last_name,
         "user_birth_date": user_birth_date
     }
-    
+
     try:
         users = await database.fetch_all(query=query, values=values)
         return {"users": [dict(user) for user in users]}
     except Exception as e:
         return {"message": "Failed to fetch users", "error": str(e)}
-    
+
 
 #get bmi with first name, last name and birth date
 @router.get("/bmi_measurement")
@@ -94,7 +99,7 @@ async def get_bmi_measurement(
     user_birth_date: date
 ):
     query = """
-        SELECT user_weight, user_height 
+        SELECT user_weight, user_height
         FROM Users
         WHERE user_first_name = :user_first_name
           AND user_last_name = :user_last_name
