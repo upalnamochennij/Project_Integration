@@ -22,3 +22,4 @@ INFO:     199.45.155.81:60966 - "GET /.well-known/security.txt HTTP/1.1" 404 Not
 INFO:     199.45.155.81:60980 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     199.45.155.81:60986 - "PRI %2A HTTP/2.0" 404 Not Found
 WARNING:  Invalid HTTP request received.
+INFO:     172.105.128.11:6194 - "GET / HTTP/1.1" 200 OK
