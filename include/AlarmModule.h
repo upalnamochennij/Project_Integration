@@ -14,20 +14,22 @@
 
 class AlarmModule {
 public:
-    AlarmModule(HeartrateSensor &heartrate,
-                TemperatureSensor &temperature,
-                Mpu6050_Integration &mpu6050,
-                OLEDscreen &oledScreen);
+    enum alertEnum {
+        FALL = 1,
+        TEMPERATURE = 2,
+        SP02 = 3,
+        HEARTRATE = 4,
+        WITHIN_NORM = 5
+    };
 
+    AlarmModule(OLEDscreen &oledScreen);
     ~AlarmModule();
 
-    void alert();
+    alertEnum checkAlertType(SensorDataParsing &globalData); //берет данные из dataForOLED и в разных случаях чет выводит
+    void selectAlert(const alertEnum& alertType);
 
 private:
     OLEDscreen *oledDisplay;
-    HeartrateSensor *heartrate;
-    TemperatureSensor *temperature;
-    Mpu6050_Integration *mpu6050;
 };
 
 

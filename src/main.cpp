@@ -18,10 +18,13 @@
 #include "SensorDataParsing.h"
 #include "../../../../../.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFi.h"
 
-#define BUZZER_PIN 2
+#define BUZZER_PIN 16
+//H369A87FCC2
+//E92C56743537
 
-const char *ssid = "H369A87FCC2";
-const char *password = "E92C56743537";
+String serverName = "https://173.212.207.55";
+const char *ssid = "ACSlab";
+const char *password = "lab@ACS24";
 
 const char Parser::api_certificate[] =
         "-----BEGIN CERTIFICATE-----\n"
@@ -50,20 +53,17 @@ const char Parser::api_certificate[] =
         "7dMe2m114wDgVOieRA==\n"
         "-----END CERTIFICATE-----\n";
 
-String serverName = "https://173.212.207.55";
-
 QueueHandle_t dataQueue;
 SemaphoreHandle_t mutex = xSemaphoreCreateMutex();
-// const TickType_t mutex_time = pdMS_TO_TICKS(100);
 
-SensorDataParsing dataforOLED;
+SensorDataParsing dataForOLED;
 
 HeartrateSensor obj_heart;
 OLEDscreen obj_oled;
 LightSensor obj_light;
 Mpu6050_Integration obj_mpu;
 TemperatureSensor obj_temp;
-AlarmModule obj_alarm(obj_heart, obj_temp, obj_mpu, obj_oled);
+AlarmModule obj_alarm(obj_oled);
 Parser obj_parser(ssid, password);
 
 void heartrate_SP02_Task(void *pvParameters) {
@@ -71,14 +71,14 @@ void heartrate_SP02_Task(void *pvParameters) {
     while (true) {
         //xSemaphoreTake(mutex, portMAX_DELAY);
         obj_heart.readData(); // reads both SP02 and heartrate
-        //xSemaphoreGive(mutex);
+        //xSemaphoreGive(mutex)
 
         DataHeart.heartrate = obj_heart._heartRate;
         DataHeart.sp02 = obj_heart._sp02_value;
         DataHeart.dTypeEnum = SensorDataParsing::HEARTRATE_AND_SP02;
 
-        dataforOLED.heartrate = obj_heart._heartRate;
-        dataforOLED.sp02 = obj_heart._sp02_value;
+        dataForOLED.heartrate = obj_heart._heartRate;
+        dataForOLED.sp02 = obj_heart._sp02_value;
 
         strcpy(DataHeart.dataType, "Heartrate and SP02"); //for datatype
         auto timest = obj_parser.getCurrentTime();
@@ -89,22 +89,13 @@ void heartrate_SP02_Task(void *pvParameters) {
         xQueueSend(dataQueue, &DataHeart, portMAX_DELAY);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
-
 }
 
 void displayDataOLED(void *pvParameters) {
     while (true) {
-        // xSemaphoreTake(mutex, portMAX_DELAY);
-        // auto accel = obj_mpu.readAccel();
-        // obj_heart.readData();
-        // obj_oled.bodyTemp = obj_temp.readTemp();
-        // xSemaphoreGive(mutex);
-        //
-        // obj_oled.stepCount = obj_mpu.countSteps(accel);
-        // obj_oled.heartRate = obj_heart._heartRate;
-        obj_oled.bodyTemp = dataforOLED.temperature;
-        obj_oled.stepCount = dataforOLED.steps;
-        obj_oled.heartRate = dataforOLED.heartrate;
+        obj_oled.bodyTemp = dataForOLED.temperature;
+        obj_oled.stepCount = dataForOLED.steps;
+        obj_oled.heartRate = dataForOLED.heartrate;
 
         obj_oled.checkButton();
         obj_oled.checkRotation();
@@ -117,11 +108,11 @@ void temperatureTask(void *pvParameters) {
     SensorDataParsing DataTemp; // initial way of doing it
     while (true) {
         //xSemaphoreTake(mutex, portMAX_DELAY);
-        int temper = obj_temp.readTemp();
+        float temper = obj_temp.readTemp();
         //xSemaphoreGive(mutex);
 
         DataTemp.temperature = temper;
-        dataforOLED.temperature = temper;
+        dataForOLED.temperature = temper;
 
         DataTemp.dTypeEnum = SensorDataParsing::TEMPERATURE;
         strcpy(DataTemp.dataType, "Temperature"); //for datatype
@@ -132,34 +123,47 @@ void temperatureTask(void *pvParameters) {
         xQueueSend(dataQueue, &DataTemp, portMAX_DELAY);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
-
 }
 
+// void checkAlertTask(void *pvParameters) {
+//     while (true) {
+//         Serial.println("Entering checkAlertTask method\n");
+//         auto type = obj_alarm.checkAlertType(dataForOLED);
+//         obj_alarm.selectAlert(type);
+//         Serial.println("Checking for checkAlertType");
+//         vTaskDelay(1000 / portTICK_PERIOD_MS);
+//     }
+// }
+
 void stepsTask(void *pvParameters) {
-    SensorDataParsing DataSteps; // initial way of doing it
+    SensorDataParsing DataSteps;
+    unsigned long lastDetectedTime = millis();
+
     while (true) {
-        //xSemaphoreTake(mutex, portMAX_DELAY);
         auto accel = obj_mpu.readAccel();
-        //xSemaphoreGive(mutex);
+        int step = obj_mpu.detectStep(accel);
+        if (step == 1) {
+            DataSteps.steps = step;
+            dataForOLED.steps = step;
 
-        int step = obj_mpu.countSteps(accel);
-        DataSteps.steps = step;
-        dataforOLED.steps = step;
+            DataSteps.dTypeEnum = SensorDataParsing::STEPS;
+            strcpy(DataSteps.dataType, "Steps"); //for datatype
+            std::string timest = obj_parser.getCurrentTime();
+            strcpy(DataSteps.datetime, timest.c_str()); // for datetime
 
-        DataSteps.dTypeEnum = SensorDataParsing::STEPS;
-        strcpy(DataSteps.dataType, "Steps"); //for datatype
-        auto timest = obj_parser.getCurrentTime();
-        strcpy(DataSteps.datetime, timest.c_str()); // for datetime
-
-        Serial.println("Steps: " + String(DataSteps.steps));
-        xQueueSend(dataQueue, &DataSteps, portMAX_DELAY);
+            if (millis() - lastDetectedTime >= 300000) {
+                Serial.println("Steps: " + String(DataSteps.steps));
+                xQueueSend(dataQueue, &DataSteps, portMAX_DELAY);
+                lastDetectedTime = millis();
+            }
+        }
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
-
 }
 
 void accelGyroTask(void *pvParameters) {
     SensorDataParsing AccelGyro;
+    unsigned long lastTime = millis();
     while (true) {
         //xSemaphoreTake(mutex, portMAX_DELAY);
         auto accel = obj_mpu.readAccel();
@@ -167,21 +171,30 @@ void accelGyroTask(void *pvParameters) {
         //xSemaphoreGive(mutex);
 
         AccelGyro.dTypeEnum = SensorDataParsing::ACCELERATION_AND_GYRO;
-        AccelGyro.accel_x = static_cast<int>(accel.acceleration.x);
-        AccelGyro.accel_y = static_cast<int>(accel.acceleration.y);
-        AccelGyro.accel_z = static_cast<int>(accel.acceleration.z);
-        AccelGyro.gyro_x = static_cast<int>(gyro.gyro.x);
-        AccelGyro.gyro_y = static_cast<int>(gyro.gyro.y);
-        AccelGyro.gyro_z = static_cast<int>(gyro.gyro.z);
+        AccelGyro.accel_x = accel.acceleration.x;
+        AccelGyro.accel_y = accel.acceleration.y;
+        AccelGyro.accel_z = accel.acceleration.z;
+        AccelGyro.gyro_x = gyro.gyro.x;
+        AccelGyro.gyro_y = gyro.gyro.y;
+        AccelGyro.gyro_z = gyro.gyro.z;
+
+        dataForOLED.accel_x = accel.acceleration.x;
+        dataForOLED.accel_y = accel.acceleration.y;
+        dataForOLED.accel_z = accel.acceleration.z;
+        dataForOLED.gyro_x = gyro.gyro.x;
+        dataForOLED.gyro_y = gyro.gyro.y;
+        dataForOLED.gyro_z = gyro.gyro.z;
         strcpy(AccelGyro.dataType, "Accel & Gyro"); //for datatype
         std::string timest = obj_parser.getCurrentTime();
         strcpy(AccelGyro.datetime, timest.c_str()); // for datetime
 
+        //if (millis() - lastTime >= 100000) {}
         xQueueSend(dataQueue, &AccelGyro, portMAX_DELAY);
+
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
-
 }
+
 
 void sendToApiTask(void *pvParameters) {
     SensorDataParsing ReceivedData;
@@ -196,21 +209,18 @@ void sendToApiTask(void *pvParameters) {
             } else Serial.println("Failed to receive data\n");
         }
     }
-
 }
 
 
 void setup() {
     Serial.begin(9600);
     Wire.begin();
-    Wire.setClock(400000);
+    Wire.setClock(400000); //400khz ultra fast
     delay(100);
 
     while (mutex == nullptr) {
         Serial.println("mutex was not created");
-        if (mutex != nullptr) {
-            break;
-        }
+        if (mutex != nullptr) break;
     }
 
     xSemaphoreTake(mutex, portMAX_DELAY);
@@ -234,29 +244,29 @@ void setup() {
     xSemaphoreGive(mutex);
     delay(100);
 
-    configTime(0, 0, "pool.ntp.org", "time.nist.gov");
+    configTime(3600, 3600, "pool.ntp.org", "time.nist.gov");
 
     obj_parser.connectToWifi();
     obj_parser.setServer(serverName);
     obj_parser.setDevice(1);
 
-
     dataQueue = xQueueCreate(10, sizeof(SensorDataParsing));
 
-    xTaskCreate(heartrate_SP02_Task, "heartrate_SP02_Task", 4096,
-                NULL, 2, NULL);
+    // xTaskCreate(heartrate_SP02_Task, "heartrate_SP02_Task", 4096,
+    //             NULL, 2, NULL);
     xTaskCreate(accelGyroTask, "accelGyroTask", 4096,
                 NULL, 2, NULL);
-    xTaskCreate(temperatureTask, "temperatureTask", 4096,
-                NULL, 2, NULL);
+    // xTaskCreate(temperatureTask, "temperatureTask", 4096,
+    //             NULL, 2, NULL);
     xTaskCreate(stepsTask, "stepsTask", 4096,
                 NULL, 2, NULL);
     xTaskCreate(displayDataOLED, "displayDataOLED", 8192,
                 NULL, 3, NULL);
     xTaskCreate(sendToApiTask, "sendToApiTask", 8192,
                 NULL, 2, NULL);
+    // xTaskCreate(checkAlertTask, "checkAlertTask", 8192,
+    //             NULL, 2, NULL);
 }
 
 void loop() {
-
 }

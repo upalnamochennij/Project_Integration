@@ -7,11 +7,11 @@
 #define ROTARY_ENCODER_A_PIN 26 // CLK
 #define ROTARY_ENCODER_B_PIN 27 // DT
 
-OLEDscreen::OLEDscreen() : oled_display_u8(U8G2_R0) {
+OLEDscreen::OLEDscreen() : oled_u8(U8G2_R0) {
 }
 
 void OLEDscreen::initComponent() {
-    oled_display_u8.begin();
+    oled_u8.begin();
     pinMode(BUTTON_PIN, INPUT_PULLUP);
     pinMode(ROTARY_ENCODER_A_PIN, INPUT_PULLUP);
     pinMode(ROTARY_ENCODER_B_PIN, INPUT_PULLUP);
@@ -25,29 +25,29 @@ bool OLEDscreen::isActive() {
 }
 
 void OLEDscreen::goSleepMode() {
-    oled_display_u8.sleepOn();
+    oled_u8.sleepOn();
     Serial.println("OLED is put to sleep mode\n");
     _isActive = false;
 }
 
 void OLEDscreen::wakeUp() {
-    oled_display_u8.sleepOff();
+    oled_u8.sleepOff();
     Serial.println("OLED is wake up\n");
     _isActive = true;
 }
 
 void OLEDscreen::showTestBS() {
-    oled_display_u8.clearDisplay(); // Очистить дисплейста
-    oled_display_u8.setCursor(0, 10); // Позиция текста (x=0, y=10)
-    oled_display_u8.println(" TI PIDOR"); // Собственно текст
-    oled_display_u8.display(); // Показать на экране
+    oled_u8.clearDisplay(); // Очистить дисплейста
+    oled_u8.setCursor(0, 10); // Позиция текста (x=0, y=10)
+    oled_u8.println(" TI PIDOR"); // Собственно текст
+    oled_u8.display(); // Показать на экране
 }
 
 void OLEDscreen::showTestBSver() {
-    oled_display_u8.clearDisplay(); // Очистить дисплейста
-    oled_display_u8.setCursor(0, 10); // Позиция текста (x=0, y=10)
-    oled_display_u8.println(" JA PIDOR"); // Собственно текст
-    oled_display_u8.display();
+    oled_u8.clearDisplay(); // Очистить дисплейста
+    oled_u8.setCursor(0, 10); // Позиция текста (x=0, y=10)
+    oled_u8.println(" JA PIDOR"); // Собственно текст
+    oled_u8.display();
 }
 
 bool OLEDscreen::withinLimits() {
@@ -90,6 +90,7 @@ void OLEDscreen::connectToWifi(const char *ssid, const char *password) {
     }
 }
 
+
 void OLEDscreen::drawHomeScreen() {
     char timeStr[9];
     if (wifiConnected && getLocalTime(&timeinfo)) {
@@ -97,39 +98,39 @@ void OLEDscreen::drawHomeScreen() {
     } else {
         sprintf(timeStr, "12:30:00"); // Fallback time
     }
-    oled_display_u8.clearBuffer(); // iznachaljno bil clearDisplay()
-    oled_display_u8.drawFrame(0, 0, 128, 64);
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
+    oled_u8.clearBuffer(); // iznachaljno bil clearDisplay()
+    oled_u8.drawFrame(0, 0, 128, 64);
+    oled_u8.setFont(u8g2_font_6x10_tf);
 
     //title
     const char *title = "Home Screen";
-    int titleWidth = oled_display_u8.getStrWidth(title);
+    int titleWidth = oled_u8.getStrWidth(title);
     int titleX = (128 - titleWidth) / 2;
-    oled_display_u8.drawStr(titleX, 12, title);
-    oled_display_u8.drawLine(0, 15, 128, 15);
+    oled_u8.drawStr(titleX, 12, title);
+    oled_u8.drawLine(0, 15, 128, 15);
 
     // clock display
-    oled_display_u8.setFont(u8g2_font_profont22_tf);
-    int timeWidth = oled_display_u8.getStrWidth(timeStr);
+    oled_u8.setFont(u8g2_font_profont22_tf);
+    int timeWidth = oled_u8.getStrWidth(timeStr);
     int timeX = (128 - timeWidth) / 2;
-    oled_display_u8.drawStr(timeX, 40, timeStr);
+    oled_u8.drawStr(timeX, 40, timeStr);
 
     // instruction text
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
+    oled_u8.setFont(u8g2_font_6x10_tf);
     const char *instruction = "Press for menu";
-    int instructionWidth = oled_display_u8.getStrWidth(instruction);
+    int instructionWidth = oled_u8.getStrWidth(instruction);
     int instructionX = (128 - instructionWidth) / 2;
-    oled_display_u8.drawStr(instructionX, 60, instruction);
+    oled_u8.drawStr(instructionX, 60, instruction);
 
-    oled_display_u8.sendBuffer();
+    oled_u8.sendBuffer();
 }
 
 void OLEDscreen::drawMainMenu() {
-    oled_display_u8.clearBuffer();
-    oled_display_u8.drawFrame(0, 0, 128, 64);
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
-    oled_display_u8.drawStr(40, 12, "Main Menu");
-    oled_display_u8.drawLine(0, 15, 128, 15);
+    oled_u8.clearBuffer();
+    oled_u8.drawFrame(0, 0, 128, 64);
+    oled_u8.setFont(u8g2_font_6x10_tf);
+    oled_u8.drawStr(40, 12, "Main Menu");
+    oled_u8.drawLine(0, 15, 128, 15);
 
     //  menu items
     const char *menuItems[] = {"Heart Rate", "Steps", "Body Temp", "Option 4", "Back to Home"};
@@ -140,50 +141,50 @@ void OLEDscreen::drawMainMenu() {
 
         // Highlight selected menu item
         if (i == menuPosition) {
-            oled_display_u8.drawBox(0, y - 6, 128, 8);
-            oled_display_u8.setDrawColor(0); // Draw in black on white background
+            oled_u8.drawBox(0, y - 6, 128, 8);
+            oled_u8.setDrawColor(0); // Draw in black on white background
         } else {
-            oled_display_u8.setDrawColor(1); // Draw in white on black background
+            oled_u8.setDrawColor(1); // Draw in white on black background
         }
 
-        oled_display_u8.drawStr(10, y, menuItems[i]);
-        oled_display_u8.setDrawColor(1); // Reset to normal
+        oled_u8.drawStr(10, y, menuItems[i]);
+        oled_u8.setDrawColor(1); // Reset to normal
     }
 
-    oled_display_u8.sendBuffer();
+    oled_u8.sendBuffer();
 }
 
 void OLEDscreen::drawHeartRateScreen() {
-    oled_display_u8.clearBuffer();
-    oled_display_u8.drawFrame(0, 0, 128, 64);
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
+    oled_u8.clearBuffer();
+    oled_u8.drawFrame(0, 0, 128, 64);
+    oled_u8.setFont(u8g2_font_6x10_tf);
 
     // Center the title
     const char *title = "Heart Rate";
-    int titleWidth = oled_display_u8.getStrWidth(title);
+    int titleWidth = oled_u8.getStrWidth(title);
     int titleX = (128 - titleWidth) / 2; // Calculate center position
-    oled_display_u8.drawStr(titleX, 12, title);
-    oled_display_u8.drawLine(0, 15, 128, 15);
+    oled_u8.drawStr(titleX, 12, title);
+    oled_u8.drawLine(0, 15, 128, 15);
 
-    //  heart rate display
+    // heart rate display
     char hrStr[10];
     sprintf(hrStr, "%d", heartRate); //placeholder ебануть сюда
-    oled_display_u8.setFont(u8g2_font_profont22_tf);
+    oled_u8.setFont(u8g2_font_profont22_tf);
 
     // centering
-    int numWidth = oled_display_u8.getStrWidth(hrStr);
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
-    int bpmWidth = oled_display_u8.getStrWidth("BPM");
+    int numWidth = oled_u8.getStrWidth(hrStr);
+    oled_u8.setFont(u8g2_font_6x10_tf);
+    int bpmWidth = oled_u8.getStrWidth("BPM");
     int totalWidth = numWidth + bpmWidth + 5; // 5 pixels spacing between number and BPM
     int startX = (128 - totalWidth) / 2;
 
     // Draw the heart rate number
-    oled_display_u8.setFont(u8g2_font_profont22_tf);
-    oled_display_u8.drawStr(startX, 40, hrStr);
+    oled_u8.setFont(u8g2_font_profont22_tf);
+    oled_u8.drawStr(startX, 40, hrStr);
 
     // Draw "BPM" next to the number
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
-    oled_display_u8.drawStr(startX + numWidth + 5, 40, "BPM");
+    oled_u8.setFont(u8g2_font_6x10_tf);
+    oled_u8.drawStr(startX + numWidth + 5, 40, "BPM");
 
     // Center the status message based on heart rate value
     const char *statusMsg;
@@ -195,77 +196,77 @@ void OLEDscreen::drawHeartRateScreen() {
         statusMsg = "High Rate";
     }
 
-    int statusWidth = oled_display_u8.getStrWidth(statusMsg);
+    int statusWidth = oled_u8.getStrWidth(statusMsg);
     int statusX = (128 - statusWidth) / 2;
-    oled_display_u8.drawStr(statusX, 55, statusMsg);
+    oled_u8.drawStr(statusX, 55, statusMsg);
 
     // Center the back instruction
     const char *backMsg = "Press to go back";
-    int backWidth = oled_display_u8.getStrWidth(backMsg);
+    int backWidth = oled_u8.getStrWidth(backMsg);
     int backX = (128 - backWidth) / 2;
-    oled_display_u8.drawStr(backX, 63, backMsg);
+    oled_u8.drawStr(backX, 63, backMsg);
 
-    oled_display_u8.sendBuffer();
+    oled_u8.sendBuffer();
 }
 
 void OLEDscreen::drawStepsScreen() {
-    oled_display_u8.clearBuffer();
-    oled_display_u8.drawFrame(0, 0, 128, 64);
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
+    oled_u8.clearBuffer();
+    oled_u8.drawFrame(0, 0, 128, 64);
+    oled_u8.setFont(u8g2_font_6x10_tf);
 
     // Center the title
     const char *title = "Steps";
-    int titleWidth = oled_display_u8.getStrWidth(title);
+    int titleWidth = oled_u8.getStrWidth(title);
     int titleX = (128 - titleWidth) / 2;
-    oled_display_u8.drawStr(titleX, 12, title);
-    oled_display_u8.drawLine(0, 15, 128, 15);
+    oled_u8.drawStr(titleX, 12, title);
+    oled_u8.drawLine(0, 15, 128, 15);
 
     // steps display
     char stepsStr[10];
     sprintf(stepsStr, "%d", stepCount);
-    oled_display_u8.setFont(u8g2_font_profont17_tf);
-    int stepsWidth = oled_display_u8.getStrWidth(stepsStr);
+    oled_u8.setFont(u8g2_font_profont17_tf);
+    int stepsWidth = oled_u8.getStrWidth(stepsStr);
     int stepsX = (128 - stepsWidth) / 2;
-    oled_display_u8.drawStr(stepsX, 35, stepsStr);
+    oled_u8.drawStr(stepsX, 35, stepsStr);
 
     // Center the description text
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
+    oled_u8.setFont(u8g2_font_6x10_tf);
     const char *description = "Today's Count";
-    int descWidth = oled_display_u8.getStrWidth(description);
+    int descWidth = oled_u8.getStrWidth(description);
     int descX = (128 - descWidth) / 2;
-    oled_display_u8.drawStr(descX, 45, description);
+    oled_u8.drawStr(descX, 45, description);
 
     // Center the back instruction
     const char *backMsg = "Press to go back";
-    int backWidth = oled_display_u8.getStrWidth(backMsg);
+    int backWidth = oled_u8.getStrWidth(backMsg);
     int backX = (128 - backWidth) / 2;
-    oled_display_u8.drawStr(backX, 63, backMsg);
+    oled_u8.drawStr(backX, 63, backMsg);
 
-    oled_display_u8.sendBuffer();
+    oled_u8.sendBuffer();
 }
 
 void OLEDscreen::drawBodyTempScreen() {
-    oled_display_u8.clearBuffer();
-    oled_display_u8.drawFrame(0, 0, 128, 64);
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
+    oled_u8.clearBuffer();
+    oled_u8.drawFrame(0, 0, 128, 64);
+    oled_u8.setFont(u8g2_font_6x10_tf);
 
     // Center the title
-    const char *title = "Body Temp";
-    int titleWidth = oled_display_u8.getStrWidth(title);
+    const char *title = "Outside Temp";
+    int titleWidth = oled_u8.getStrWidth(title);
     int titleX = (128 - titleWidth) / 2;
-    oled_display_u8.drawStr(titleX, 12, title);
-    oled_display_u8.drawLine(0, 15, 128, 15);
+    oled_u8.drawStr(titleX, 12, title);
+    oled_u8.drawLine(0, 15, 128, 15);
 
     //temperature display
     char tempStr[10];
     sprintf(tempStr, "%.1fC", bodyTemp);
-    oled_display_u8.setFont(u8g2_font_profont17_tf);
-    int tempWidth = oled_display_u8.getStrWidth(tempStr);
+    oled_u8.setFont(u8g2_font_profont17_tf);
+    int tempWidth = oled_u8.getStrWidth(tempStr);
     int tempX = (128 - tempWidth) / 2;
-    oled_display_u8.drawStr(tempX, 35, tempStr);
+    oled_u8.drawStr(tempX, 35, tempStr);
 
     // Center the status message based on temperature value
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
+    oled_u8.setFont(u8g2_font_6x10_tf);
     const char *statusMsg;
     if (bodyTemp >= 36.1 && bodyTemp <= 37.2) {
         statusMsg = "Normal";
@@ -273,49 +274,54 @@ void OLEDscreen::drawBodyTempScreen() {
         statusMsg = "Check temp";
     }
 
-    int statusWidth = oled_display_u8.getStrWidth(statusMsg);
+    int statusWidth = oled_u8.getStrWidth(statusMsg);
     int statusX = (128 - statusWidth) / 2;
-    oled_display_u8.drawStr(statusX, 45, statusMsg);
+    oled_u8.drawStr(statusX, 45, statusMsg);
 
     // Center the back instruction
     const char *backMsg = "Press to go back";
-    int backWidth = oled_display_u8.getStrWidth(backMsg);
+    int backWidth = oled_u8.getStrWidth(backMsg);
     int backX = (128 - backWidth) / 2;
-    oled_display_u8.drawStr(backX, 63, backMsg);
+    oled_u8.drawStr(backX, 63, backMsg);
 
-    oled_display_u8.sendBuffer();
+    oled_u8.sendBuffer();
 }
 
 void OLEDscreen::drawPlaceholderScreen() {
-    oled_display_u8.clearBuffer();
-    oled_display_u8.drawFrame(0, 0, 128, 64);
-    oled_display_u8.setFont(u8g2_font_6x10_tf);
+    oled_u8.clearBuffer();
+    oled_u8.drawFrame(0, 0, 128, 64);
+    oled_u8.setFont(u8g2_font_6x10_tf);
 
     // Center the title
     const char *title = "Option 4";
-    int titleWidth = oled_display_u8.getStrWidth(title);
+    int titleWidth = oled_u8.getStrWidth(title);
     int titleX = (128 - titleWidth) / 2;
-    oled_display_u8.drawStr(titleX, 12, title);
-    oled_display_u8.drawLine(0, 15, 128, 15);
+    oled_u8.drawStr(titleX, 12, title);
+    oled_u8.drawLine(0, 15, 128, 15);
 
     // Center the placeholder messages
     const char *msg1 = "Coming Soon...";
-    int msg1Width = oled_display_u8.getStrWidth(msg1);
+    int msg1Width = oled_u8.getStrWidth(msg1);
     int msg1X = (128 - msg1Width) / 2;
-    oled_display_u8.drawStr(msg1X, 35, msg1);
+    oled_u8.drawStr(msg1X, 35, msg1);
 
     const char *msg2 = "Feature TBD";
-    int msg2Width = oled_display_u8.getStrWidth(msg2);
+    int msg2Width = oled_u8.getStrWidth(msg2);
     int msg2X = (128 - msg2Width) / 2;
-    oled_display_u8.drawStr(msg2X, 45, msg2);
+    oled_u8.drawStr(msg2X, 45, msg2);
 
     // Center the back instruction
     const char *backMsg = "Press to go back";
-    int backWidth = oled_display_u8.getStrWidth(backMsg);
+    int backWidth = oled_u8.getStrWidth(backMsg);
     int backX = (128 - backWidth) / 2;
-    oled_display_u8.drawStr(backX, 63, backMsg);
+    oled_u8.drawStr(backX, 63, backMsg);
 
-    oled_display_u8.sendBuffer();
+    oled_u8.sendBuffer();
+}
+
+void OLEDscreen::drawClearScreen() {
+    oled_u8.clearBuffer();
+    oled_u8.sendBuffer();
 }
 
 void OLEDscreen::checkButton() {
@@ -346,10 +352,6 @@ void OLEDscreen::checkButton() {
                             _screenState = BODY_TEMP_SCREEN;
                             Serial.println("Switched to Body Temp Screen");
                             break;
-                        case 3: // Placeholder
-                            _screenState = PLACEHOLDER_SCREEN;
-                            Serial.println("Switched to Placeholder Screen");
-                            break;
                         case 4: // Back to Home
                             _screenState = HOME_SCREEN;
                             Serial.println("Returned to Home Screen");
@@ -360,10 +362,8 @@ void OLEDscreen::checkButton() {
                 case HEART_RATE_SCREEN:
                 case STEPS_SCREEN:
                 case BODY_TEMP_SCREEN:
-                case PLACEHOLDER_SCREEN:
-                    _screenState = MAIN_MENU;
-                    Serial.println("Returned to Main Menu");
-                    break;
+                default:
+                    throw std::invalid_argument("Invalid Screen State");
             }
         }
     } else if (digitalRead(BUTTON_PIN) == HIGH) {
@@ -417,12 +417,38 @@ void OLEDscreen::setCurrentScreen() {
         case BODY_TEMP_SCREEN:
             drawBodyTempScreen();
             break;
-        case PLACEHOLDER_SCREEN:
-            drawPlaceholderScreen();
+        case CLEAR_SCREEN:
+            drawClearScreen();
             break;
     }
     delay(10);
 }
 
-void OLEDscreen::setBrightness() {
+//For alarm screens
+
+void OLEDscreen::drawAlarmDefault() {
+    oled_u8.clearBuffer();
+    oled_u8.setFont(u8g2_font_9x18B_tf);
+
+    // Рисуем восклицательный знак внутри треугольника
+    oled_u8.drawBox(63, 10, 3, 23);  // Основная часть (толщина 3 пикселя)
+    oled_u8.drawBox(63, 38, 5, 5);   // Точка (3x3 пикселя)
+    oled_u8.setCursor(15, 60);
+    oled_u8.print("Out of norm");
+
+    oled_u8.sendBuffer(); // Отправляем на дисплей
 }
+
+void OLEDscreen::drawAlarmFall() {
+    oled_u8.clearBuffer();
+    oled_u8.setFont(u8g2_font_9x18B_tf);
+
+    // Рисуем восклицательный знак внутри треугольника
+    oled_u8.drawBox(63, 10, 3, 23);  // Основная часть (толщина 3 пикселя)
+    oled_u8.drawBox(63, 38, 5, 5);   // Точка (3x3 пикселя)
+    oled_u8.setCursor(15, 60);
+    oled_u8.print("ALARM! Fall");
+
+    oled_u8.sendBuffer(); // Отправляем на дисплей
+}
+

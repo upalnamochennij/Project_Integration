@@ -3,29 +3,60 @@
 //
 #include "../include/AlarmModule.h"
 #include <memory>
-#include "../include/Mpu6050_Integration.h"
-#include "../include/HeartrateSensor.h"
-#include "../include/LightSensor.h"
-#include "../include/TemperatureSensor.h"
 #include "../include/OLEDscreen.h"
+#include <math.h>
 
-AlarmModule::AlarmModule(HeartrateSensor &heartrate,
-                         TemperatureSensor &temperature,
-                         Mpu6050_Integration &mpu6050,
-                         OLEDscreen &oledScreen) {
-    this->heartrate = &heartrate;
-    this->temperature = &temperature;
-    this->mpu6050 = &mpu6050;
+AlarmModule::AlarmModule(OLEDscreen &oledScreen) {
     this->oledDisplay = &oledScreen;
 }
 
 AlarmModule::~AlarmModule() = default;
 
-void AlarmModule::alert() {
-    if (mpu6050->_accelValue.acceleration.x == 30) {
-        oledDisplay->showTestBS();
+AlarmModule::alertEnum AlarmModule::checkAlertType(SensorDataParsing &globalData) {
+    alertEnum concreteAlert;
+
+    auto accelZ = abs(globalData.accel_z / 16384);
+    auto gyroX = abs(globalData.gyro_x / 131);
+
+    if (accelZ < 0.4 && gyroX > 30) {
+        Serial.println("Drawing fall alarm screen\n");
+        concreteAlert = FALL;
     }
-    else if (mpu6050->_accelValue.acceleration.x == 20) {
-        oledDisplay->showTestBSver();
+    else if (globalData.temperature > 37) {
+        Serial.println("Drawing default alarm screen\n");
+        concreteAlert = TEMPERATURE;
+    }
+    else if (globalData.heartrate > 120 ) {
+        Serial.println("Drawing default alarm screen\n");
+        concreteAlert = HEARTRATE;
+    }
+    else if (globalData.sp02 < 60) {
+        Serial.println("Drawing default alarm screen\n");
+        concreteAlert = SP02;
+    }
+    else concreteAlert = WITHIN_NORM;
+
+    return concreteAlert;
+}
+
+void AlarmModule::selectAlert(const alertEnum &alertType) {
+    switch (alertType) {
+        case FALL:
+            Serial.println("FALL");
+            oledDisplay->drawAlarmFall();
+        case TEMPERATURE:
+            Serial.println("TEMPERATURE");
+            oledDisplay->drawAlarmDefault();
+        case HEARTRATE:
+            Serial.println("HEARTRATE");
+            oledDisplay->drawAlarmDefault();
+        case SP02:
+            Serial.println("SP02");
+            oledDisplay->drawAlarmDefault();
+        case WITHIN_NORM:
+            Serial.println("WITHIN_NORM");
+        default:
+            Serial.println("UNKNOWN");
     }
 }
+

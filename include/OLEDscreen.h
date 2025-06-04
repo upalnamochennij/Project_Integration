@@ -10,6 +10,7 @@
 #include <time.h>
 #include "WiFi.h"
 #include <U8g2lib.h>
+#include "SensorDataParsing.h"
 
 
 class OLEDscreen : public IComponent{
@@ -25,7 +26,8 @@ class OLEDscreen : public IComponent{
     bool withinLimits() override;
     void connectToWifi(const char *ssid, const char *password);
 
-    void setBrightness();
+    void drawAlarmDefault();
+    void drawAlarmFall();
 
     void drawHomeScreen();
     void drawMainMenu();
@@ -33,6 +35,7 @@ class OLEDscreen : public IComponent{
     void drawStepsScreen();
     void drawBodyTempScreen();
     void drawPlaceholderScreen();
+    void drawClearScreen();
 
     void checkButton();
     void checkRotation();
@@ -40,22 +43,11 @@ class OLEDscreen : public IComponent{
     //!test function (remove later)
     void setCurrentScreen();
 
-    int heartRate = 0; //ex. 75
-    int stepCount = 0; // ex. 1234
-    float bodyTemp = 0; // ex. 36.6
+    int heartRate = 0;
+    int stepCount = 0;
+    float bodyTemp = 0;
     bool wifiConnected = false;
     bool buttonPressed = false;
-
-
-    private:
-    U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled_display_u8;
-    bool _isActive = false;
-    bool _isConnectedToWifi = false;
-
-
-
-    int menuPosition = 0;
-    int lastEncA = 0;
 
     enum ScreenState {
         HOME_SCREEN,
@@ -63,8 +55,16 @@ class OLEDscreen : public IComponent{
         HEART_RATE_SCREEN,
         STEPS_SCREEN,
         BODY_TEMP_SCREEN,
-        PLACEHOLDER_SCREEN
+        CLEAR_SCREEN
     } _screenState = HOME_SCREEN;
+
+    private:
+    U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled_u8;
+    bool _isActive = false;
+    bool _isConnectedToWifi = false;
+
+    int menuPosition = 0;
+    int lastEncA = 0;
 
     struct tm timeinfo;
 

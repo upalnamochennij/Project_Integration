@@ -2,6 +2,8 @@
 // Created by bloom on 18.05.2025.
 //
 #include "Mpu6050_Integration.h"
+
+#include <iostream>
 #include <math.h>
 
 using namespace std;
@@ -48,20 +50,10 @@ sensors_event_t Mpu6050_Integration::readGyro() {
 }
 
 bool Mpu6050_Integration::withinLimits() {
-    // for (sensors_event_t accelCurrent: _accelArray) {
-    //     auto &acc = accelCurrent.acceleration;
-    //     float total_accel = sqrt(acc.x * acc.x + acc.y * acc.y + acc.z * acc.z);
-    //     if (total_accel < 2.0) {
-    //         Serial.print("Falling down");
-    //     }
-    // }
-    // for (sensors_event_t gyroCurrent: _gyroArray) {
-    //     auto &gyro = gyroCurrent.gyro;
-    // }
     return true;
 }
 
-int Mpu6050_Integration::countSteps(sensors_event_t &Accel) {
+int Mpu6050_Integration::detectStep(sensors_event_t &Accel) {
     // Считаем модуль ускорения (норму вектора)
     float magnitude = sqrt(Accel.acceleration.x * Accel.acceleration.x +
                            Accel.acceleration.y * Accel.acceleration.y +
@@ -73,10 +65,16 @@ int Mpu6050_Integration::countSteps(sensors_event_t &Accel) {
 
     // Если ускорение выше порога и прошло достаточно времени — считаем шаг
     if (netAccel > accelThreshold && currentTime - lastStepTime > stepDelay) {
-        stepCount++;
+        step = 1;
         lastStepTime = currentTime;
-        Serial.print("Step detected! Count: ");
-        Serial.println(stepCount);
+        Serial.print("Step detected!");
+        Serial.println(step);
     }
-    return stepCount;
+    else step = 0;
+    return step;
 }
+
+// bool Mpu6050_Integration::detectFall(SensorDataParsing &data) {
+//
+// }
+

@@ -6,6 +6,8 @@
 #include <vector>
 #include <time.h>
 
+#include "SensorDataParsing.h"
+
 #ifndef MPU6050_INTEGRATION_H
 #define MPU6050_INTEGRATION_H
 
@@ -18,7 +20,8 @@ class Mpu6050_Integration : public IComponent {
     bool isActive() override;
     void goSleepMode() override;
     void wakeUp() override;
-    int countSteps(sensors_event_t &Accel);
+    //bool detectFall(SensorDataParsing &data); pod voprosom
+    int detectStep(sensors_event_t &Accel);
 
     sensors_event_t readAccel(); //returns an object, that contains accelo and gyro data in its fields.
     sensors_event_t readGyro();
@@ -27,7 +30,7 @@ class Mpu6050_Integration : public IComponent {
     float accelThreshold = 1.2;  // Порог ускорения (g)
     unsigned long stepDelay = 300; // Минимальное время между шагами (мс)
     unsigned long lastStepTime = 0;
-    int stepCount = 0;
+    int step = 0;
 
     private:
     Adafruit_MPU6050 _mpu;

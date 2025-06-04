@@ -22,6 +22,7 @@ class HeartrateSensor : public IComponent{
     int8_t  _sp02_valid = false;
     int32_t _heartRate = 0;
     int8_t  _heartRateValid = false;
+    int bufferIndex = 0;
 
     private:
     MAX30105 _heartSensor;
@@ -36,5 +37,4 @@ class HeartrateSensor : public IComponent{
     byte sampleRate = 100; //Options: 50, 100, 200, 400, 800, 1000, 1600, 3200
     int pulseWidth = 411; //Options: 69, 118, 215, 411
     int adcRange = 4096; //Options: 2048, 4096, 8192, 16384
-
 };

@@ -6,8 +6,8 @@
 #include <chrono>
 #include <iomanip>
 #include <sstream>
-
 #include "SensorDataParsing.h"
+
 using namespace std::chrono;
 
 Parser::Parser(const char *wifi_net_name, const char *wifi_password) {
@@ -29,7 +29,6 @@ void Parser::connectToWifi() const {
     Serial.println("");
     Serial.print("Connected to WiFi network with IP Address: ");
     Serial.println(WiFi.localIP());
-
 }
 
 void Parser::sendData(SensorDataParsing &sensordata) {
@@ -45,12 +44,13 @@ void Parser::sendData(SensorDataParsing &sensordata) {
                      sensordata.datetime,
                      this->device_id,
                      sensordata.steps);
+            Serial.println(payload_max);
             break;
         case SensorDataParsing::HEARTRATE_AND_SP02:
             snprintf(payload_max, sizeof(payload_max),
                      "%s/values/add_PulseOxygen?timestamp=%s&device_id=%d&SPO2=%d&heartrate=%d",
-                     _serverName.c_str(), // если _serverName — это String
-                     sensordata.datetime, // если timest_casted — это String
+                     _serverName.c_str(),
+                     sensordata.datetime,
                      this->device_id,
                      sensordata.sp02,
                      sensordata.heartrate
@@ -100,7 +100,6 @@ void Parser::sendData(SensorDataParsing &sensordata) {
             Serial.println(httpCode);
         }
         _httpClient.end();
-        // не влияет на Disconnected from WIFI Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
     }
     Serial.println("Disconnected from WIFI");
 }

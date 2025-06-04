@@ -43,9 +43,9 @@ bool TemperatureSensor::isActive() {
     return true;
 }
 
-int TemperatureSensor::readTemp() {
+float TemperatureSensor::readTemp() {
     if (!_isActive) return false;
-    return static_cast<int>(_tempSensor.readTemperature());
+    return _tempSensor.readTemperature();
 }
 
 bool TemperatureSensor::withinLimits() {

@@ -4,15 +4,15 @@
 #include "MAX30105.h"
 #include "spo2_algorithm.h"
 
-void HeartrateSensor::initComponent(){
+void HeartrateSensor::initComponent() {
     if (_heartSensor.begin(Wire, I2C_SPEED_FAST) == false) {
         Serial.println("MAX30102 was not found. Please check wiring/power. \n");
         while (true);
     }
     //The LEDs are very low power and won't affect the temp reading much but
     //you may want to turn off the LEDs to avoid any local heating
-    _heartSensor.setup(ledBrightness,sampleAverage,
-        ledMode,sampleRate, pulseWidth, adcRange); //Configure sensor.
+    _heartSensor.setup(ledBrightness, sampleAverage,
+                       ledMode, sampleRate, pulseWidth, adcRange); //Configure sensor.
     //_heartSensor.enableDIETEMPRDY(); //Enable the temp ready interrupt. This is required
 
     _heartSensor.setPulseAmplitudeRed(0x0A);
@@ -48,7 +48,6 @@ void HeartrateSensor::readData() {
                                            &_sp02_value, &_sp02_valid,
                                            &_heartRate, &_heartRateValid);
 
-
     for (auto i = 25; i < 100; i++) {
         RBuffer[i - 25] = RBuffer[i];
         IRBuffer[i - 25] = IRBuffer[i];
@@ -62,7 +61,6 @@ void HeartrateSensor::readData() {
         IRBuffer[i] = _heartSensor.getIR();
         _heartSensor.nextSample();
     }
-
     maxim_heart_rate_and_oxygen_saturation(IRBuffer, bufferLength, RBuffer,
                                            &_sp02_value, &_sp02_valid,
                                            &_heartRate, &_heartRateValid);
