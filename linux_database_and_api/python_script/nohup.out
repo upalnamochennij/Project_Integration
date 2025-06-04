@@ -15,3 +15,4 @@ INFO:     199.45.155.81:50346 - "GET / HTTP/1.1" 200 OK
 INFO:     199.45.155.81:50354 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     199.45.155.81:50370 - "PRI %2A HTTP/2.0" 404 Not Found
 WARNING:  Invalid HTTP request received.
+INFO:     199.45.155.81:60946 - "GET /favicon.ico HTTP/1.1" 404 Not Found
