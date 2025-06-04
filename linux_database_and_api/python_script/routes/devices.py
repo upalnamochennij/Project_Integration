@@ -8,7 +8,7 @@ router = APIRouter()
 class DeviceCreate(BaseModel):
     user_id: int
     registration_date: date
-    
+
 #create device
 @router.get("/create_device")
 async def create_device_(
@@ -28,22 +28,31 @@ async def create_device_(
     INSERT INTO Devices (user_id, registration_date)
     VALUES (:user_id, :registration_date)
     """
+    check_user_values = {
+        "user_id": user_id,
+        "registration_date": registration_date,
+    }
 
-    values = {
+    check_device_values = {
+        "user_id": user_id,
+        "registration_date": registration_date,
+    }
+
+    insert_values = {
         "user_id": user_id,
         "registration_date": registration_date,
     }
 
     try:
-        user_exists = await database.fetch_one(query=check_user_query, values=values)
+        user_exists = await database.fetch_one(query=check_user_query, values=check_user_query)
         if not user_exists:
             return {"message": "User does not exist"}
 
-        device_exists = await database.fetch_one(query=check_device_query, values=values)
+        device_exists = await database.fetch_one(query=check_device_query, values=check_device_values)
         if device_exists:
             return {"message": "Device already exists for this user on this date"}
 
-        await database.execute(query=insert_query, values=values)
+        await database.execute(query=insert_query, values=insert_values)
         return {"message": "Device created successfully"}
 
     except Exception as e:
@@ -60,13 +69,13 @@ async def get_devices():
         return {"message": "Failed to fetch device", "error": str(e)}
 
 #get specific device/devices
-@router.get("/get_all_devices")
-async def get_devices(
+@router.get("/get_device")
+async def get_device(
     user_id: int
 ):
     query = """
-    SELECT * FROM Devices 
-    WHERE user_id = :user_id    
+    SELECT * FROM Devices
+    WHERE user_id = :user_id
     """
 
     values = {
