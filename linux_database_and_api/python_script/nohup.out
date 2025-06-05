@@ -104,3 +104,5 @@ INFO:     93.123.109.231:50898 - "GET /www/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:45568 - "GET /.env.backup HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:45600 - "GET /.env.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:45632 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:45664 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:45694 - "GET /configuration/.env HTTP/1.1" 404 Not Found
