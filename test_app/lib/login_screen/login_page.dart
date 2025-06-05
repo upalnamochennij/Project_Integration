@@ -49,8 +49,8 @@ class LoginPage extends StatelessWidget {
                     TextField(
                       controller: emailController,
                       decoration: const InputDecoration(
-                        prefixIcon: Icon(Icons.email_outlined),
-                        labelText: 'Email',
+                        prefixIcon: Icon(Icons.alternate_email),
+                        labelText: 'Username',
                         border: UnderlineInputBorder(),
                       ),
                     ),

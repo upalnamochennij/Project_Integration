@@ -90,7 +90,7 @@ class VitalMainScreen extends StatelessWidget {
                     VitalCard(
                       icon: Icons.directions_walk,
                       label: 'Steps',
-                      value: '6,200 steps',
+                      value: '200 steps',
                       color: Colors.blue,
                       bgColor: const Color(0xFFD6ECF8),
                       onTap: () {
@@ -99,8 +99,8 @@ class VitalMainScreen extends StatelessWidget {
                           MaterialPageRoute(
                             builder: (_) => const MeasurementChartScreen(
                               title: 'Steps',
-                              value: '6,200 steps',
-                              data: [4000, 5000, 6200, 5800, 6100, 6700, 6900],
+                              value: '200 steps',
+                              data: [200, 500, 620, 580, 610, 670, 690],
                               lineColor: Colors.blue,
                             ),
                           ),
@@ -109,8 +109,8 @@ class VitalMainScreen extends StatelessWidget {
                     ),
                     VitalCard(
                       icon: Icons.thermostat,
-                      label: 'Body Temperature',
-                      value: '36,5°C',
+                      label: 'Temperature',
+                      value: '24°C',
                       color: Colors.deepOrange,
                       bgColor: const Color(0xFFFFECD4),
                       onTap: () {
@@ -120,7 +120,7 @@ class VitalMainScreen extends StatelessWidget {
                             builder: (_) => const MeasurementChartScreen(
                               title: 'Temperature',
                               value: '35.5°F',
-                              data: [36.0, 36.3, 36.6, 36.7, 36.4, 36.8],
+                              data: [20, 21, 23, 23.5, 24, 25],
                               lineColor: Colors.orange,
                             ),
                           ),

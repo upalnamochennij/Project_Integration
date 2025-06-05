@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Setting/AccountSettingsScreen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -8,7 +9,7 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFFFDADC),
-        title: const Text('Settings'),
+        title: const Text('Settings', style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,
       ),
       body: ListView(
@@ -18,18 +19,12 @@ class SettingsScreen extends StatelessWidget {
             context,
             icon: Icons.person,
             title: 'Account Settings',
-            subtitle: 'Update name, email, password',
+            subtitle: 'Checking Full name, Username',
             onTap: () {
-              // Implement navigation to Account Settings screen
-            },
-          ),
-          _buildSettingCard(
-            context,
-            icon: Icons.bar_chart,
-            title: 'Activity History',
-            subtitle: 'View all your health data history',
-            onTap: () {
-              // Implement navigation to full data history screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AccountSettingsScreen()),
+              );
             },
           ),
           _buildSettingCard(

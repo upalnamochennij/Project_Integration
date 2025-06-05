@@ -8,8 +8,9 @@ class CreateAccountPage extends StatefulWidget {
 }
 
 class _CreateAccountPageState extends State<CreateAccountPage> {
-  final nameController = TextEditingController();
-  final emailController = TextEditingController();
+  final firstNameController = TextEditingController();
+  final lastNameController = TextEditingController();
+  final usernameController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
   bool agreeToTerms = false;
@@ -55,19 +56,28 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextField(
-                      controller: nameController,
+                      controller: firstNameController,
                       decoration: const InputDecoration(
-                        prefixIcon: Icon(Icons.person_outline),
-                        labelText: 'Full Name',
+                        prefixIcon: Icon(Icons.account_circle),
+                        labelText: 'First Name',
                         border: UnderlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 16),
                     TextField(
-                      controller: emailController,
+                      controller: lastNameController,
                       decoration: const InputDecoration(
-                        prefixIcon: Icon(Icons.email_outlined),
-                        labelText: 'Email',
+                        prefixIcon: Icon(Icons.badge),
+                        labelText: 'Last Name',
+                        border: UnderlineInputBorder(),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    TextField(
+                      controller: usernameController,
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.alternate_email),
+                        labelText: 'Username',
                         border: UnderlineInputBorder(),
                       ),
                     ),
@@ -104,8 +114,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                         ),
                         const Flexible(
                           child: Text("I agree to the terms and conditions",
-                              style: TextStyle(fontSize: 14)
-                          ),
+                              style: TextStyle(fontSize: 14)),
                         ),
                       ],
                     ),
@@ -141,8 +150,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text("Already have an account? ",
-                      style: TextStyle(fontSize: 16)
-                  ),
+                      style: TextStyle(fontSize: 16)),
                   GestureDetector(
                     onTap: () => Navigator.pop(context),
                     child: const Text(
@@ -151,7 +159,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                         fontWeight: FontWeight.bold,
                         decoration: TextDecoration.underline,
                         color: Colors.black,
-                        fontSize: 16
+                        fontSize: 16,
                       ),
                     ),
                   ),

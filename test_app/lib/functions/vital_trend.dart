@@ -16,7 +16,7 @@ class _VitalTrendState extends State<VitalTrend> {
   final List<String> titles = [
     'Heart Rate',
     'Foot Steps',
-    'Body Temperature',
+    'Temperature',
     'Blood Oxygen',
   ];
 
@@ -29,8 +29,8 @@ class _VitalTrendState extends State<VitalTrend> {
 
   final List<List<double>> allData = [
     [72, 75, 78, 76, 74, 73, 77],
-    [5200, 6200, 5800, 6100, 5900, 6000, 6300], // foot steps
-    [36.6, 36.7, 36.8, 36.5, 36.6, 36.7, 36.8],
+    [200, 500, 620, 580, 610, 670, 690], // foot steps
+    [23, 23.7, 23.8, 23.5, 23.6, 23.7, 24],
     [98, 97, 99, 98, 96, 97, 98],
   ];
 

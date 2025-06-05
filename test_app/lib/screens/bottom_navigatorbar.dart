@@ -40,10 +40,6 @@ class _VitalTrackHomeState extends State<VitalTrackHome> {
             icon: Icon(Icons.fitness_center),
             label: 'BMI Tracker',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.healing), //
-            label: 'Symptoms',
-          ),
         ],
       ),
     );
