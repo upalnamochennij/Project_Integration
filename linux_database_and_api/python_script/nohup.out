@@ -2728,3 +2728,13 @@ INFO:     145.239.154.82:50824 - "GET /apps/zxtm/login.cgi HTTP/1.1" 404 Not Fou
 INFO:     145.239.154.82:50948 - "GET /api/server/version HTTP/1.1" 404 Not Found
 INFO:     145.239.154.82:51100 - "GET /administrator/manifests/files/joomla.xml HTTP/1.1" 404 Not Found
 INFO:     145.239.154.82:51206 - "GET /language/en-GB/en-GB.xml HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:51328 - "GET /versa/login HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:51430 - "GET /login.html HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:51562 - "GET /p/login/ HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:51718 - "GET /api/version HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:51898 - "GET /portal/ HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:52046 - "GET /status HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:52194 - "GET /info.asp HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:52348 - "GET /cgi-bin/param.cgi?get_device_conf HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:52518 - "GET /lms/db HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:52652 - "GET /ext-js/app/common/zld_product_spec.js HTTP/1.1" 404 Not Found
