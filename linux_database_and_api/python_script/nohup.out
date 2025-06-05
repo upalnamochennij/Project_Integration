@@ -2790,3 +2790,4 @@ INFO:     196.251.86.80:49888 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     195.3.221.137:33002 - "GET / HTTP/1.1" 200 OK
 INFO:     217.154.203.209:65283 - "GET /webclient/ HTTP/1.1" 404 Not Found
 INFO:     198.55.98.76:48698 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     176.65.148.52:48878 - "POST /api/auth/login HTTP/1.1" 404 Not Found
