@@ -2696,3 +2696,12 @@ INFO:     145.76.19.105:60490 - "GET /values/add_steps?timestamp=2025-06-05T16:0
 INFO:     213.209.143.71:28514 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     213.209.143.71:28906 - "POST / HTTP/1.1" 405 Method Not Allowed
 INFO:     196.251.85.74:36422 - "GET /.c9/metadata/environment/.env HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48050 - "GET / HTTP/1.1" 200 OK
+INFO:     145.239.154.82:48056 - "GET / HTTP/1.1" 200 OK
+INFO:     145.239.154.82:48060 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48054 - "GET /login.php HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48112 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     145.239.154.82:48110 - "GET /dniapi/userInfos HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48116 - "GET / HTTP/1.1" 200 OK
+INFO:     145.239.154.82:48212 - "GET /api/v2/about HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48214 - "GET /owa/ HTTP/1.1" 404 Not Found
