@@ -54,3 +54,6 @@ INFO:     78.153.140.177:44082 - "GET /includes/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:48352 - "GET /APPS/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:52850 - "GET /application/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:57204 - "GET /.config HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:34808 - "GET /doc/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:39552 - "GET /css/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:47866 - "GET /framework/.env HTTP/1.1" 404 Not Found
