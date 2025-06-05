@@ -64,3 +64,5 @@ WARNING:  Invalid HTTP request received.
 INFO:     93.123.109.231:47326 - "GET / HTTP/1.1" 200 OK
 INFO:     93.123.109.231:47340 - "GET /.env.ci HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:47352 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:36590 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:36592 - "GET /.env HTTP/1.1" 404 Not Found
