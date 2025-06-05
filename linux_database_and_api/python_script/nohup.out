@@ -1588,3 +1588,4 @@ INFO:     145.76.19.105:52110 - "GET /values/add_temperature?timestamp=2025-06-0
 INFO:     145.76.19.105:52110 - "GET /values/add_temperature?timestamp=2025-06-05T14:55:10Z&device_id=1&temperature=-1610612736 HTTP/1.1" 200 OK
 INFO:     145.76.19.105:52110 - "GET /values/add_temperature?timestamp=2025-06-05T14:55:11Z&device_id=1&temperature=-1610612736 HTTP/1.1" 200 OK
 INFO:     145.76.19.105:52110 - "GET /values/add_temperature?timestamp=2025-06-05T14:55:12Z&device_id=1&temperature=-1610612736 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:52110 - "GET /values/add_temperature?timestamp=2025-06-05T14:55:13Z&device_id=1&temperature=0 HTTP/1.1" 200 OK
