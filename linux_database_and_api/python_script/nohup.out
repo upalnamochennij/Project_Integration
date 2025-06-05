@@ -209,3 +209,6 @@ INFO:     145.76.19.105:53743 - "GET /values/add_temperature?timestamp=2025-06-0
 INFO:     145.76.19.105:53743 - "GET /values/add_MPU?timestamp=2025-06-05T12:31:24Z&device_id=1&gyro_x=-1610612736&gyro_y=-1080825047&gyro_z=-1610612736&accel_x=1065860373&accel_y=-1610612736&accel_z=-1081766331 HTTP/1.1" 200 OK
 INFO:     145.76.19.105:53743 - "GET /values/add_temperature?timestamp=2025-06-05T12:31:25Z&device_id=1&temperature=1610612736 HTTP/1.1" 200 OK
 INFO:     145.76.19.105:53743 - "GET /values/add_MPU?timestamp=2025-06-05T12:31:25Z&device_id=1&gyro_x=-2147483648&gyro_y=-1080556817&gyro_z=-2147483648&accel_x=1065753081&accel_y=-2147483648&accel_z=-1081569629 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:53743 - "GET /values/add_temperature?timestamp=2025-06-05T12:31:26Z&device_id=1&temperature=-2147483648 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:53743 - "GET /values/add_MPU?timestamp=2025-06-05T12:31:26Z&device_id=1&gyro_x=-2147483648&gyro_y=-1080833988&gyro_z=1610612736&accel_x=1066057075&accel_y=-2147483648&accel_z=-1081515983 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:53743 - "GET /values/add_temperature?timestamp=2025-06-05T12:31:27Z&device_id=1&temperature=-1073741824 HTTP/1.1" 200 OK
