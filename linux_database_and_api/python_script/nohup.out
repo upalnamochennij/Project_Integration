@@ -2738,3 +2738,12 @@ INFO:     145.239.154.82:52194 - "GET /info.asp HTTP/1.1" 404 Not Found
 INFO:     145.239.154.82:52348 - "GET /cgi-bin/param.cgi?get_device_conf HTTP/1.1" 404 Not Found
 INFO:     145.239.154.82:52518 - "GET /lms/db HTTP/1.1" 404 Not Found
 INFO:     145.239.154.82:52652 - "GET /ext-js/app/common/zld_product_spec.js HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:52822 - "GET /login/login.html HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:52956 - "GET /allversions HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:53084 - "GET /versions HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:53226 - "GET /r-seenet/index.php HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:53342 - "GET /api/vip/i18n/api/v2/translation/products/vRNIUI/versions/1 HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:53476 - "GET /tos/index.php?user/login HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:53594 - "GET /c/login HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:53722 - "GET /WebApp/js/UI_String.js HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:53844 - "GET /login.aspx HTTP/1.1" 404 Not Found
