@@ -408,3 +408,4 @@ INFO:     145.76.19.105:51627 - "GET /values/add_PulseOxygen?timestamp=2025-06-0
 INFO:     145.76.19.105:51627 - "GET /values/add_temperature?timestamp=2025-06-05T13:31:50Z&device_id=1&temperature=-536870912 HTTP/1.1" 200 OK
 INFO:     145.76.19.119:49521 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     176.65.148.52:52050 - "GET /store/public/assets/auth/img/logo.png HTTP/1.1" 404 Not Found
+INFO:     145.76.19.105:65029 - "GET /values/add_temperature?timestamp=2025-06-05T13:37:08Z&device_id=1&temperature=-1073741824 HTTP/1.1" 200 OK
