@@ -422,3 +422,4 @@ INFO:     145.76.19.105:65029 - "GET /values/add_temperature?timestamp=2025-06-0
 INFO:     145.76.19.105:65029 - "GET /values/add_temperature?timestamp=2025-06-05T13:37:18Z&device_id=1&temperature=536870912 HTTP/1.1" 200 OK
 INFO:     145.76.19.105:65029 - "GET /values/add_temperature?timestamp=2025-06-05T13:37:19Z&device_id=1&temperature=536870912 HTTP/1.1" 200 OK
 INFO:     145.76.19.105:65029 - "GET /values/add_temperature?timestamp=2025-06-05T13:37:20Z&device_id=1&temperature=-2147483648 HTTP/1.1" 200 OK
+INFO:     79.124.58.198:34964 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not Found
