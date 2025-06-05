@@ -57,3 +57,4 @@ INFO:     78.153.140.177:57204 - "GET /.config HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:34808 - "GET /doc/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:39552 - "GET /css/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:47866 - "GET /framework/.env HTTP/1.1" 404 Not Found
+INFO:     142.93.173.39:37132 - "GET /.env HTTP/1.1" 404 Not Found
