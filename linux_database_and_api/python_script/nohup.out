@@ -2705,3 +2705,16 @@ INFO:     145.239.154.82:48110 - "GET /dniapi/userInfos HTTP/1.1" 404 Not Found
 INFO:     145.239.154.82:48116 - "GET / HTTP/1.1" 200 OK
 INFO:     145.239.154.82:48212 - "GET /api/v2/about HTTP/1.1" 404 Not Found
 INFO:     145.239.154.82:48214 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48340 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48342 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48494 - "GET /user HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48694 - "GET /human.aspx?arg12=infotech HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48846 - "GET /dana-cached/hc/HostCheckerInstaller.osx HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:48972 - "GET /dana-na/nc/nc_gina_ver.txt HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:49118 - "GET /%2BCSCOE%2B/logon.html HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:49250 - "GET /CFIDE/componentutils/ HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:49408 - "GET /geoserver/index.html HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:49532 - "GET /geoserver/ HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:49636 - "GET /geoserver/web/wicket/bookmarkable/org.geoserver.web.AboutGeoServerPage HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:49762 - "GET /Account/Login HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:49886 - "GET /cgi-bin/info.cgi HTTP/1.1" 404 Not Found
