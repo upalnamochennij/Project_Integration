@@ -191,3 +191,5 @@ INFO:     116.198.228.143:47980 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/
 INFO:     116.198.228.143:47980 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
 INFO:     116.198.228.143:47980 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
 INFO:     116.198.228.143:47980 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     116.198.228.143:47980 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     116.198.228.143:47980 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
