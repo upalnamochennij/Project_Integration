@@ -2693,3 +2693,5 @@ INFO:     198.55.98.76:41810 - "GET /.git/index HTTP/1.1" 404 Not Found
 INFO:     157.230.113.60:40308 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     157.230.113.60:40338 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     145.76.19.105:60490 - "GET /values/add_steps?timestamp=2025-06-05T16:01:05Z&device_id=1&steps=0 HTTP/1.1" 200 OK
+INFO:     213.209.143.71:28514 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     213.209.143.71:28906 - "POST / HTTP/1.1" 405 Method Not Allowed
