@@ -157,3 +157,4 @@ INFO:     167.94.138.189:54720 - "GET /robots.txt HTTP/1.1" 404 Not Found
 INFO:     167.94.138.189:54722 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     167.94.138.189:54744 - "PRI %2A HTTP/2.0" 404 Not Found
 WARNING:  Invalid HTTP request received.
+INFO:     116.198.228.143:47980 - "POST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1" 404 Not Found
