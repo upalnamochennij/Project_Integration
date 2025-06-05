@@ -97,3 +97,5 @@ INFO:     93.123.109.231:58702 - "GET /.env.template HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:58714 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:50768 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:50794 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:50832 - "GET /.env.development.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:50848 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
