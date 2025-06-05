@@ -68,3 +68,4 @@ INFO:     93.123.109.231:36590 - "GET /.env.bak HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:36592 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:36602 - "GET /build/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:36618 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:36632 - "GET /.env.secret HTTP/1.1" 404 Not Found
