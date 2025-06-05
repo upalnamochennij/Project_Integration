@@ -2690,3 +2690,4 @@ INFO:     145.76.19.105:52111 - "GET /values/add_temperature?timestamp=2025-06-0
 INFO:     145.76.19.105:52111 - "GET /values/add_temperature?timestamp=2025-06-05T15:11:22Z&device_id=1&temperature=-1610612736 HTTP/1.1" 200 OK
 INFO:     20.65.192.101:58478 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
 INFO:     198.55.98.76:41810 - "GET /.git/index HTTP/1.1" 404 Not Found
+INFO:     157.230.113.60:40308 - "GET /.env HTTP/1.1" 404 Not Found
