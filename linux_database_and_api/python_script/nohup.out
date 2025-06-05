@@ -35,3 +35,6 @@ INFO:     78.153.140.177:37322 - "GET /.env.example HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:43804 - "GET /app_dev.php/_profiler/phpinfo HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:50218 - "GET /?phpinfo=-1 HTTP/1.1" 200 OK
 INFO:     78.153.140.177:56216 - "GET /?url=.env HTTP/1.1" 200 OK
+INFO:     78.153.140.177:43950 - "GET /staging/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:56796 - "GET /app_dev.php/_profiler/open?file=app/config/parameters.yml HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:41952 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
