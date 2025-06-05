@@ -46,3 +46,5 @@ INFO:     78.153.140.177:55044 - "GET /.env.production HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:34472 - "GET /.env.save HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:48696 - "GET /demo/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:58732 - "GET /img/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:40038 - "GET /vendor/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:49354 - "GET /php-info.php HTTP/1.1" 404 Not Found
