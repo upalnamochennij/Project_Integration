@@ -26,3 +26,4 @@ INFO:     172.105.128.11:6194 - "GET / HTTP/1.1" 200 OK
 INFO:     135.237.127.54:44304 - "GET /owa/auth/x.js HTTP/1.1" 404 Not Found
 INFO:     138.91.109.125:52676 - "GET /version HTTP/1.1" 404 Not Found
 INFO:     198.55.98.76:47850 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     45.82.78.254:36728 - "GET / HTTP/1.1" 200 OK
