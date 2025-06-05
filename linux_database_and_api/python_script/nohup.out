@@ -100,3 +100,4 @@ INFO:     93.123.109.231:50794 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not
 INFO:     93.123.109.231:50832 - "GET /.env.development.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:50848 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:50896 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:50898 - "GET /www/.git/config HTTP/1.1" 404 Not Found
