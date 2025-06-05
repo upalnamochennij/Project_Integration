@@ -72,3 +72,4 @@ INFO:     93.123.109.231:36632 - "GET /.env.secret HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:36644 - "GET /.env.config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:44154 - "GET /.env.default HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:44170 - "GET /.env.preprod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:44180 - "GET /files/.git/config HTTP/1.1" 404 Not Found
