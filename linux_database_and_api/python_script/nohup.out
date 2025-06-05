@@ -117,3 +117,4 @@ INFO:     93.123.109.231:53800 - "GET /.env.uat HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:53808 - "GET /.env.dist HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:53814 - "GET /.env_sample HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:53816 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     167.94.145.106:40526 - "GET / HTTP/1.1" 200 OK
