@@ -140,3 +140,4 @@ INFO:     196.251.70.87:33754 - "GET /.env.save HTTP/1.1" 404 Not Found
 INFO:     65.49.20.66:41984 - "GET / HTTP/1.1" 200 OK
 INFO:     65.49.20.66:44294 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     65.49.20.66:10332 - "GET / HTTP/1.1" 200 OK
+INFO:     65.49.20.66:59408 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
