@@ -5,6 +5,7 @@
 #include "IComponent.h"
 #include <vector>
 #include <time.h>
+#include <Adafruit_Sensor.h>
 
 #include "SensorDataParsing.h"
 
@@ -25,8 +26,11 @@ class Mpu6050_Integration : public IComponent {
 
     sensors_event_t readAccel(); //returns an object, that contains accelo and gyro data in its fields.
     sensors_event_t readGyro();
+    void getEvent();
 
     sensors_event_t _accelValue,_gyroValue,_tempValue;
+
+    //for step detection
     float accelThreshold = 1.2;  // Порог ускорения (g)
     unsigned long stepDelay = 300; // Минимальное время между шагами (мс)
     unsigned long lastStepTime = 0;
@@ -34,7 +38,6 @@ class Mpu6050_Integration : public IComponent {
 
     private:
     Adafruit_MPU6050 _mpu;
-    //std::vector<sensors_event_t> temp_values;
     bool _isCompActive = false;
 };
 

@@ -2,11 +2,11 @@
 // Created by bloom on 18.05.2025.
 //
 #include "Mpu6050_Integration.h"
-
 #include <iostream>
 #include <math.h>
 
 using namespace std;
+extern SemaphoreHandle_t mutex;
 
 void Mpu6050_Integration::initComponent() {
     if (!_mpu.begin()) {
@@ -39,13 +39,16 @@ bool Mpu6050_Integration::isActive() {
     return false;
 }
 
-sensors_event_t Mpu6050_Integration::readAccel() {
+void Mpu6050_Integration::getEvent() {
     _mpu.getEvent(&_accelValue, &_gyroValue, &_tempValue);
+}
+
+
+sensors_event_t Mpu6050_Integration::readAccel() {
     return _accelValue;
 }
 
 sensors_event_t Mpu6050_Integration::readGyro() {
-    _mpu.getEvent(&_accelValue, &_gyroValue, &_tempValue);
     return _gyroValue;
 }
 
@@ -69,12 +72,9 @@ int Mpu6050_Integration::detectStep(sensors_event_t &Accel) {
         lastStepTime = currentTime;
         Serial.print("Step detected!");
         Serial.println(step);
-    }
-    else step = 0;
+    } else step = 0;
+
     return step;
 }
 
-// bool Mpu6050_Integration::detectFall(SensorDataParsing &data) {
-//
-// }
 

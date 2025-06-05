@@ -69,9 +69,7 @@ Parser obj_parser(ssid, password);
 void heartrate_SP02_Task(void *pvParameters) {
     SensorDataParsing DataHeart;
     while (true) {
-        //xSemaphoreTake(mutex, portMAX_DELAY);
-        obj_heart.readData(); // reads both SP02 and heartrate
-        //xSemaphoreGive(mutex)
+        obj_heart.readData();
 
         DataHeart.heartrate = obj_heart._heartRate;
         DataHeart.sp02 = obj_heart._sp02_value;
@@ -93,9 +91,16 @@ void heartrate_SP02_Task(void *pvParameters) {
 
 void displayDataOLED(void *pvParameters) {
     while (true) {
-        obj_oled.bodyTemp = dataForOLED.temperature;
+        if (dataForOLED.temperature < 0) {
+            obj_oled.bodyTemp = 0;
+        } else obj_oled.bodyTemp = dataForOLED.temperature;
+
         obj_oled.stepCount = dataForOLED.steps;
         obj_oled.heartRate = dataForOLED.heartrate;
+
+        // obj_oled.bodyTemp = 1;
+        // obj_oled.stepCount = 1;
+        // obj_oled.heartRate = 1;
 
         obj_oled.checkButton();
         obj_oled.checkRotation();
@@ -107,9 +112,7 @@ void displayDataOLED(void *pvParameters) {
 void temperatureTask(void *pvParameters) {
     SensorDataParsing DataTemp; // initial way of doing it
     while (true) {
-        //xSemaphoreTake(mutex, portMAX_DELAY);
         float temper = obj_temp.readTemp();
-        //xSemaphoreGive(mutex);
 
         DataTemp.temperature = temper;
         dataForOLED.temperature = temper;
@@ -125,7 +128,7 @@ void temperatureTask(void *pvParameters) {
     }
 }
 
-// void checkAlertTask(void *pvParameters) {
+// void checkAlertTask(void *pvParameters) { //Initiali alertTask
 //     while (true) {
 //         Serial.println("Entering checkAlertTask method\n");
 //         auto type = obj_alarm.checkAlertType(dataForOLED);
@@ -135,66 +138,61 @@ void temperatureTask(void *pvParameters) {
 //     }
 // }
 
+void checkFallTask(void *pvParameters) {
+    SensorDataParsing alertData;
+    while (true) {
+        Serial.println("Entering checkFallTask method\n");
+        obj_mpu.getEvent();
+        auto accel = obj_mpu.readAccel();
+        auto gyro = obj_mpu.readGyro();
+
+        alertData.dTypeEnum = SensorDataParsing::ACCELERATION_AND_GYRO;
+        alertData.accel_x = accel.acceleration.x;
+        alertData.accel_y = accel.acceleration.y;
+        alertData.accel_z = accel.acceleration.z;
+        alertData.gyro_x = gyro.gyro.x;
+        alertData.gyro_y = gyro.gyro.y;
+        alertData.gyro_z = gyro.gyro.z;
+
+        std::string timest = obj_parser.getCurrentTime();
+        strcpy(alertData.datetime, timest.c_str());
+
+        bool isFalling = obj_alarm.checkForFall(alertData);
+        if (isFalling == true) {
+            Serial.println("FALL DETECTED\n");
+            xQueueSend(dataQueue, &alertData, portMAX_DELAY);
+        }else Serial.println("NO FALL\n");
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+}
+
 void stepsTask(void *pvParameters) {
     SensorDataParsing DataSteps;
     unsigned long lastDetectedTime = millis();
-
     while (true) {
+        obj_mpu.getEvent();
         auto accel = obj_mpu.readAccel();
         int step = obj_mpu.detectStep(accel);
-        if (step == 1) {
-            DataSteps.steps = step;
-            dataForOLED.steps = step;
 
-            DataSteps.dTypeEnum = SensorDataParsing::STEPS;
-            strcpy(DataSteps.dataType, "Steps"); //for datatype
-            std::string timest = obj_parser.getCurrentTime();
-            strcpy(DataSteps.datetime, timest.c_str()); // for datetime
+        DataSteps.steps += step;
+        dataForOLED.steps += step;
 
-            if (millis() - lastDetectedTime >= 300000) {
-                Serial.println("Steps: " + String(DataSteps.steps));
-                xQueueSend(dataQueue, &DataSteps, portMAX_DELAY);
-                lastDetectedTime = millis();
-            }
+        DataSteps.dTypeEnum = SensorDataParsing::STEPS;
+        strcpy(DataSteps.dataType, "Steps"); //for datatype
+        std::string timest = obj_parser.getCurrentTime();
+        strcpy(DataSteps.datetime, timest.c_str()); // for datetime
+        Serial.println("Waiting till 5 minutes pass");
+
+        if (millis() - lastDetectedTime >= 300000) {
+            Serial.println("Steps: " + String(DataSteps.steps));
+            xQueueSend(dataQueue, &DataSteps, portMAX_DELAY);
+            lastDetectedTime = millis();
+            DataSteps.steps = 0;
+            dataForOLED.steps = 0;
         }
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
-
-void accelGyroTask(void *pvParameters) {
-    SensorDataParsing AccelGyro;
-    unsigned long lastTime = millis();
-    while (true) {
-        //xSemaphoreTake(mutex, portMAX_DELAY);
-        auto accel = obj_mpu.readAccel();
-        auto gyro = obj_mpu.readGyro();
-        //xSemaphoreGive(mutex);
-
-        AccelGyro.dTypeEnum = SensorDataParsing::ACCELERATION_AND_GYRO;
-        AccelGyro.accel_x = accel.acceleration.x;
-        AccelGyro.accel_y = accel.acceleration.y;
-        AccelGyro.accel_z = accel.acceleration.z;
-        AccelGyro.gyro_x = gyro.gyro.x;
-        AccelGyro.gyro_y = gyro.gyro.y;
-        AccelGyro.gyro_z = gyro.gyro.z;
-
-        dataForOLED.accel_x = accel.acceleration.x;
-        dataForOLED.accel_y = accel.acceleration.y;
-        dataForOLED.accel_z = accel.acceleration.z;
-        dataForOLED.gyro_x = gyro.gyro.x;
-        dataForOLED.gyro_y = gyro.gyro.y;
-        dataForOLED.gyro_z = gyro.gyro.z;
-        strcpy(AccelGyro.dataType, "Accel & Gyro"); //for datatype
-        std::string timest = obj_parser.getCurrentTime();
-        strcpy(AccelGyro.datetime, timest.c_str()); // for datetime
-
-        //if (millis() - lastTime >= 100000) {}
-        xQueueSend(dataQueue, &AccelGyro, portMAX_DELAY);
-
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-    }
-}
-
 
 void sendToApiTask(void *pvParameters) {
     SensorDataParsing ReceivedData;
@@ -211,38 +209,32 @@ void sendToApiTask(void *pvParameters) {
     }
 }
 
-
 void setup() {
     Serial.begin(9600);
     Wire.begin();
     Wire.setClock(400000); //400khz ultra fast
-    delay(100);
 
-    while (mutex == nullptr) {
+    if (mutex == nullptr) {
         Serial.println("mutex was not created");
-        if (mutex != nullptr) break;
+        while (true);
     }
 
     xSemaphoreTake(mutex, portMAX_DELAY);
     obj_heart.initComponent();
     xSemaphoreGive(mutex);
-    delay(100);
 
     xSemaphoreTake(mutex, portMAX_DELAY);
     obj_oled.initComponent();
     xSemaphoreGive(mutex);
-    delay(100);
     obj_oled.connectToWifi(ssid, password);
 
     xSemaphoreTake(mutex, portMAX_DELAY);
     obj_mpu.initComponent();
     xSemaphoreGive(mutex);
-    delay(100);
 
     xSemaphoreTake(mutex, portMAX_DELAY);
     obj_temp.initComponent();
     xSemaphoreGive(mutex);
-    delay(100);
 
     configTime(3600, 3600, "pool.ntp.org", "time.nist.gov");
 
@@ -252,17 +244,17 @@ void setup() {
 
     dataQueue = xQueueCreate(10, sizeof(SensorDataParsing));
 
-    // xTaskCreate(heartrate_SP02_Task, "heartrate_SP02_Task", 4096,
-    //             NULL, 2, NULL);
-    xTaskCreate(accelGyroTask, "accelGyroTask", 4096,
+    xTaskCreate(heartrate_SP02_Task, "heartrate_SP02_Task", 8192,
                 NULL, 2, NULL);
-    // xTaskCreate(temperatureTask, "temperatureTask", 4096,
-    //             NULL, 2, NULL);
-    xTaskCreate(stepsTask, "stepsTask", 4096,
+    xTaskCreate(temperatureTask, "temperatureTask", 8192,
+                NULL, 2, NULL);
+    xTaskCreate(stepsTask, "stepsTask", 8192,
                 NULL, 2, NULL);
     xTaskCreate(displayDataOLED, "displayDataOLED", 8192,
-                NULL, 3, NULL);
+                NULL, 2, NULL);
     xTaskCreate(sendToApiTask, "sendToApiTask", 8192,
+                NULL, 2, NULL);
+    xTaskCreate(checkFallTask, "checkFallTask", 8192,
                 NULL, 2, NULL);
     // xTaskCreate(checkAlertTask, "checkAlertTask", 8192,
     //             NULL, 2, NULL);

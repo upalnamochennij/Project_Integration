@@ -2,6 +2,7 @@
 // Created by bloom on 21.05.2025.
 //
 #include "TemperatureSensor.h"
+extern SemaphoreHandle_t mutex;
 
 void TemperatureSensor::initComponent() {
     bool status = _tempSensor.begin();
@@ -32,7 +33,7 @@ unsigned int TemperatureSensor::getMode() {
 }
 
 void TemperatureSensor::setMode(unsigned int mode) {
-    if (mode == 00 || mode == 01 || mode == 10 || mode == 11 ) {
+    if (mode == 00 || mode == 01 || mode == 10 || mode == 11) {
         _measReg.mode = mode;
     }
     throw std::invalid_argument("choose correct mode: 00, 01, 10, 11");
@@ -44,17 +45,9 @@ bool TemperatureSensor::isActive() {
 }
 
 float TemperatureSensor::readTemp() {
-    if (!_isActive) return false;
     return _tempSensor.readTemperature();
 }
 
 bool TemperatureSensor::withinLimits() {
     return true;
 }
-
-
-
-
-
-
-

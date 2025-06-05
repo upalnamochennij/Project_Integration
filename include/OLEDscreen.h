@@ -54,8 +54,8 @@ class OLEDscreen : public IComponent{
         MAIN_MENU,
         HEART_RATE_SCREEN,
         STEPS_SCREEN,
-        BODY_TEMP_SCREEN,
-        CLEAR_SCREEN
+        BODY_TEMP_SCREEN
+        // PLACEHOLDER_SCREEN удален
     } _screenState = HOME_SCREEN;
 
     private:

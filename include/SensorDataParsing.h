@@ -6,12 +6,12 @@
 
 struct SensorDataParsing {
     char dataType[30];
+    char datetime[30];
     int32_t sp02;
     int32_t heartrate;
     float temperature;
     float accel_x, accel_y, accel_z;
     float gyro_x, gyro_y, gyro_z;
-    char datetime[30];
     int steps;
 
     enum dataType{

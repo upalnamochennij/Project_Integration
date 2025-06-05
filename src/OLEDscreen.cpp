@@ -90,7 +90,6 @@ void OLEDscreen::connectToWifi(const char *ssid, const char *password) {
     }
 }
 
-
 void OLEDscreen::drawHomeScreen() {
     char timeStr[9];
     if (wifiConnected && getLocalTime(&timeinfo)) {
@@ -150,7 +149,6 @@ void OLEDscreen::drawMainMenu() {
         oled_u8.drawStr(10, y, menuItems[i]);
         oled_u8.setDrawColor(1); // Reset to normal
     }
-
     oled_u8.sendBuffer();
 }
 
@@ -287,6 +285,11 @@ void OLEDscreen::drawBodyTempScreen() {
     oled_u8.sendBuffer();
 }
 
+void OLEDscreen::drawClearScreen() {
+    oled_u8.clearBuffer();
+    oled_u8.sendBuffer();
+}
+
 void OLEDscreen::drawPlaceholderScreen() {
     oled_u8.clearBuffer();
     oled_u8.drawFrame(0, 0, 128, 64);
@@ -319,11 +322,6 @@ void OLEDscreen::drawPlaceholderScreen() {
     oled_u8.sendBuffer();
 }
 
-void OLEDscreen::drawClearScreen() {
-    oled_u8.clearBuffer();
-    oled_u8.sendBuffer();
-}
-
 void OLEDscreen::checkButton() {
     if (digitalRead(BUTTON_PIN) == LOW && !buttonPressed) {
         delay(50); // Debounce
@@ -340,30 +338,33 @@ void OLEDscreen::checkButton() {
                 case MAIN_MENU:
                     // Handle menu selection
                     switch (menuPosition) {
-                        case 0: // Heart Rate
+                    case 0: // Heart Rate
                             _screenState = HEART_RATE_SCREEN;
                             Serial.println("Switched to Heart Rate Screen");
                             break;
-                        case 1: // Steps
+                    case 1: // Steps
                             _screenState = STEPS_SCREEN;
                             Serial.println("Switched to Steps Screen");
                             break;
-                        case 2: // Body Temp
+                    case 2: // Body Temp
                             _screenState = BODY_TEMP_SCREEN;
                             Serial.println("Switched to Body Temp Screen");
                             break;
-                        case 4: // Back to Home
+                    case 3: // Back to Home (теперь позиция 3 вместо 4)
                             _screenState = HOME_SCREEN;
                             Serial.println("Returned to Home Screen");
                             break;
+                            // case 4 удален (была PLACEHOLDER_SCREEN)
                     }
                     break;
 
                 case HEART_RATE_SCREEN:
                 case STEPS_SCREEN:
                 case BODY_TEMP_SCREEN:
-                default:
-                    throw std::invalid_argument("Invalid Screen State");
+                    // PLACEHOLDER_SCREEN удален из этого списка
+                    _screenState = MAIN_MENU;
+                    Serial.println("Returned to Main Menu");
+                    break;
             }
         }
     } else if (digitalRead(BUTTON_PIN) == HIGH) {
@@ -373,9 +374,9 @@ void OLEDscreen::checkButton() {
 
 void OLEDscreen::checkRotation() {
     if (_screenState == MAIN_MENU) {
-        // Calculate menu size dynamically
-        const char *menuItems[] = {"Heart Rate", "Steps", "Body Temp", "Option 4", "Back to Home"};
-        const int numMenuItems = sizeof(menuItems) / sizeof(menuItems[0]);
+        // Обновленный массив меню (удален "Option 4")
+        const char *menuItems[] = {"Heart Rate", "Steps", "Body Temp", "Back to Home"};
+        const int numMenuItems = sizeof(menuItems) / sizeof(menuItems[0]); // Теперь 4 элемента
 
         int currentEncA = digitalRead(ROTARY_ENCODER_A_PIN);
         int currentEncB = digitalRead(ROTARY_ENCODER_B_PIN);
@@ -383,7 +384,7 @@ void OLEDscreen::checkRotation() {
         // Detect falling edge on CLK (pin A)
         if (lastEncA == HIGH && currentEncA == LOW) {
             if (currentEncB == HIGH) {
-                // Rotate RIGHT (clockwise) tp move DOWN in menu
+                // Rotate RIGHT (clockwise) to move DOWN in menu
                 menuPosition++;
                 if (menuPosition >= numMenuItems) menuPosition = 0; // Wrap to top
                 Serial.print("RIGHT rotation - Menu position: ");
@@ -417,9 +418,9 @@ void OLEDscreen::setCurrentScreen() {
         case BODY_TEMP_SCREEN:
             drawBodyTempScreen();
             break;
-        case CLEAR_SCREEN:
-            drawClearScreen();
-            break;
+        // case CLEAR_SCREEN:
+        //     drawClearScreen();
+        //     break;
     }
     delay(10);
 }

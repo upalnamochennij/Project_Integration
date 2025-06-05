@@ -21,20 +21,16 @@ AlarmModule::alertEnum AlarmModule::checkAlertType(SensorDataParsing &globalData
     if (accelZ < 0.4 && gyroX > 30) {
         Serial.println("Drawing fall alarm screen\n");
         concreteAlert = FALL;
-    }
-    else if (globalData.temperature > 37) {
+    } else if (globalData.temperature > 37) {
         Serial.println("Drawing default alarm screen\n");
         concreteAlert = TEMPERATURE;
-    }
-    else if (globalData.heartrate > 120 ) {
+    } else if (globalData.heartrate > 120) {
         Serial.println("Drawing default alarm screen\n");
         concreteAlert = HEARTRATE;
-    }
-    else if (globalData.sp02 < 60) {
+    } else if (globalData.sp02 < 60) {
         Serial.println("Drawing default alarm screen\n");
         concreteAlert = SP02;
-    }
-    else concreteAlert = WITHIN_NORM;
+    } else concreteAlert = WITHIN_NORM;
 
     return concreteAlert;
 }
@@ -59,4 +55,21 @@ void AlarmModule::selectAlert(const alertEnum &alertType) {
             Serial.println("UNKNOWN");
     }
 }
+
+bool AlarmModule::checkForFall(SensorDataParsing &globalData) {
+    bool fallStatus = false;
+    float accelX = globalData.accel_x / 9.8; //1g = 9.8
+    float accelY = globalData.accel_y / 9.8;
+    float accelZ = globalData.accel_z / 9.8;
+
+    float total_accel = sqrt(accelX * accelX
+                             + accelY * accelY
+                             + accelZ * accelZ);
+    if (total_accel < FALL_THRESHOLD) {
+        fallStatus = true;
+    } else fallStatus = false;
+
+    return fallStatus;
+}
+
 
