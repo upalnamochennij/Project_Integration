@@ -153,3 +153,4 @@ WARNING:  Invalid HTTP request received.
 INFO:     167.94.138.189:39212 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     167.94.138.189:39220 - "PRI %2A HTTP/2.0" 404 Not Found
 WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.189:54720 - "GET /robots.txt HTTP/1.1" 404 Not Found
