@@ -59,3 +59,5 @@ INFO:     78.153.140.177:39552 - "GET /css/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:47866 - "GET /framework/.env HTTP/1.1" 404 Not Found
 INFO:     142.93.173.39:37132 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     142.93.173.39:37146 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:47210 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
