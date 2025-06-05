@@ -113,3 +113,4 @@ INFO:     93.123.109.231:45730 - "GET /settings/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:45744 - "GET /data/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:45764 - "GET /.env.dev HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:45780 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:53800 - "GET /.env.uat HTTP/1.1" 404 Not Found
