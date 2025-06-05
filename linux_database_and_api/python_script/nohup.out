@@ -80,3 +80,4 @@ INFO:     93.123.109.231:44272 - "GET /.env.staging.local HTTP/1.1" 404 Not Foun
 INFO:     93.123.109.231:44284 - "GET /app/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:44286 - "GET /static../.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:44304 - "GET /config/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:44330 - "GET /.env.test HTTP/1.1" 404 Not Found
