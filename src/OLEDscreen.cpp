@@ -132,7 +132,8 @@ void OLEDscreen::drawMainMenu() {
     oled_u8.drawLine(0, 15, 128, 15);
 
     //  menu items
-    const char *menuItems[] = {"Heart Rate", "Steps", "Body Temp", "Option 4", "Back to Home"};
+    //const char *menuItems[] = {"Heart Rate", "Steps", "Body Temp", "Option 4", "Back to Home"}; //initial w placeholder option4
+    const char *menuItems[] = {"Heart Rate", "Steps", "Body Temp", "Back to Home"};
     const int numMenuItems = sizeof(menuItems) / sizeof(menuItems[0]); // Calculate number of items automatically
 
     for (int i = 0; i < numMenuItems; i++) {
