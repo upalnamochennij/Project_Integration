@@ -2718,3 +2718,13 @@ INFO:     145.239.154.82:49532 - "GET /geoserver/ HTTP/1.1" 404 Not Found
 INFO:     145.239.154.82:49636 - "GET /geoserver/web/wicket/bookmarkable/org.geoserver.web.AboutGeoServerPage HTTP/1.1" 404 Not Found
 INFO:     145.239.154.82:49762 - "GET /Account/Login HTTP/1.1" 404 Not Found
 INFO:     145.239.154.82:49886 - "GET /cgi-bin/info.cgi HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:49998 - "GET /xml/info.xml HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:50140 - "GET /magento_version HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:50270 - "GET /api/v1/check-version HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:50408 - "GET /fog/management/index.php?node=client&sub=logininfo HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:50562 - "GET /helpdesk/WebObjects/Helpdesk.woa HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:50696 - "GET /cluster/list.query HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:50824 - "GET /apps/zxtm/login.cgi HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:50948 - "GET /api/server/version HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:51100 - "GET /administrator/manifests/files/joomla.xml HTTP/1.1" 404 Not Found
+INFO:     145.239.154.82:51206 - "GET /language/en-GB/en-GB.xml HTTP/1.1" 404 Not Found
