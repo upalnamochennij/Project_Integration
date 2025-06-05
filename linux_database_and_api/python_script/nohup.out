@@ -84,3 +84,5 @@ INFO:     93.123.109.231:44330 - "GET /.env.test HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:44342 - "GET /core/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:34416 - "GET /src/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:34468 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:34506 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:34524 - "GET /media/.git/config HTTP/1.1" 404 Not Found
