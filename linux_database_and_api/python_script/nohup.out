@@ -40,3 +40,5 @@ INFO:     78.153.140.177:56796 - "GET /app_dev.php/_profiler/open?file=app/confi
 INFO:     78.153.140.177:41952 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:51832 - "GET /info/ HTTP/1.1" 404 Not Found
 INFO:     78.153.140.177:58738 - "GET /app/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:37086 - "GET /phpinfo/ HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:48908 - "GET /dev/.env HTTP/1.1" 404 Not Found
