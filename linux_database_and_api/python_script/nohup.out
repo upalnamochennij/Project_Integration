@@ -90,3 +90,4 @@ INFO:     93.123.109.231:34532 - "GET /config/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:58630 - "GET /media../.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:58636 - "GET /project/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.231:58652 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.231:58660 - "GET /public/.git/config HTTP/1.1" 404 Not Found
