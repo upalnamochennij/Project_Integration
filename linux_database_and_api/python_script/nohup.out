@@ -28,3 +28,5 @@ INFO:     138.91.109.125:52676 - "GET /version HTTP/1.1" 404 Not Found
 INFO:     198.55.98.76:47850 - "GET /.env.save HTTP/1.1" 404 Not Found
 INFO:     45.82.78.254:36728 - "GET / HTTP/1.1" 200 OK
 INFO:     78.153.140.177:44090 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:54676 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.177:45590 - "GET /backend/.env HTTP/1.1" 404 Not Found
