@@ -159,3 +159,7 @@ INFO:     167.94.138.189:54744 - "PRI %2A HTTP/2.0" 404 Not Found
 WARNING:  Invalid HTTP request received.
 INFO:     116.198.228.143:47980 - "POST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1" 404 Not Found
 INFO:     116.198.228.143:47980 - "POST /cgi-bin/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/bin/sh HTTP/1.1" 404 Not Found
+INFO:     116.198.228.143:47980 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     116.198.228.143:47980 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     116.198.228.143:47980 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     116.198.228.143:47980 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
