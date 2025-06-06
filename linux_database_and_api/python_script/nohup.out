@@ -2858,3 +2858,4 @@ INFO:     185.242.226.163:42305 - "GET / HTTP/1.1" 200 OK
 INFO:     172.202.117.124:33176 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
 INFO:     78.187.89.212:58924 - "GET / HTTP/1.0" 200 OK
 INFO:     57.129.64.237:58152 - "GET / HTTP/1.1" 200 OK
+INFO:     196.251.85.74:50990 - "GET /shop/.env HTTP/1.1" 404 Not Found
