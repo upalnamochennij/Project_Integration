@@ -2866,3 +2866,4 @@ INFO:     172.234.217.129:38892 - "GET / HTTP/1.1" 200 OK
 INFO:     185.156.73.50:11250 - "GET /vpn/index.html HTTP/1.1" 404 Not Found
 INFO:     185.156.73.50:11887 - "GET /vpn/index.html HTTP/1.1" 404 Not Found
 INFO:     45.131.155.254:59242 - "GET / HTTP/1.1" 200 OK
+INFO:     20.80.83.86:57646 - "GET /autodiscover/autodiscover.json?@zdi/Powershell HTTP/1.1" 404 Not Found
