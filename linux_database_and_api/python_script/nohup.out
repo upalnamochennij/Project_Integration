@@ -2896,3 +2896,5 @@ INFO:     78.153.140.151:54390 - "GET /templates/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:59858 - "GET /system/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:35622 - "GET /stag/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:40760 - "GET /public_html/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:46086 - "GET /.env.development HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:54478 - "GET /portal/.env HTTP/1.1" 404 Not Found
