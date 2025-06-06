@@ -2901,3 +2901,4 @@ INFO:     78.153.140.151:54478 - "GET /portal/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:60250 - "GET /project/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:38872 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:42704 - "GET /app/config/parameters.yml HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:48000 - "GET /exapi/.env HTTP/1.1" 404 Not Found
