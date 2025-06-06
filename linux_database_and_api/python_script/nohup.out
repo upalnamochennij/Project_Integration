@@ -2848,3 +2848,4 @@ WARNING:  Invalid HTTP request received.
 INFO:     196.251.85.74:48728 - "GET /.env.dev HTTP/1.1" 404 Not Found
 INFO:     20.203.40.116:2852 - "GET / HTTP/1.1" 200 OK
 INFO:     45.156.128.43:47657 - "GET / HTTP/1.1" 200 OK
+INFO:     195.178.110.125:46164 - "GET /.git/config HTTP/1.1" 404 Not Found
