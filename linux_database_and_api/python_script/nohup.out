@@ -2878,3 +2878,7 @@ INFO:     78.153.140.151:35792 - "GET /backend/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:40648 - "GET /admin/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:43804 - "GET /.env.example HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:48652 - "GET /app_dev.php/_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:54874 - "GET /?phpinfo=-1 HTTP/1.1" 200 OK
+INFO:     78.153.140.151:59838 - "GET /docs/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:34608 - "GET /old/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:39730 - "GET /.env.local HTTP/1.1" 404 Not Found
