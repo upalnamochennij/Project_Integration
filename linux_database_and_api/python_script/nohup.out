@@ -2809,3 +2809,4 @@ INFO:     176.65.138.171:33192 - "POST /php-cgi/php-cgi.exe?%ADd+cgi.force_redir
 INFO:     196.251.70.87:38648 - "GET /.git/index HTTP/1.1" 404 Not Found
 INFO:     70.39.75.149:36844 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     70.39.75.149:36866 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     195.3.221.137:57856 - "GET / HTTP/1.1" 200 OK
