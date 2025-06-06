@@ -2873,3 +2873,8 @@ INFO:     78.153.140.224:54846 - "GET /api/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.224:56522 - "GET /backend/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.224:59360 - "GET /admin/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:55746 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:60148 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:35792 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:40648 - "GET /admin/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:43804 - "GET /.env.example HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:48652 - "GET /app_dev.php/_profiler/phpinfo HTTP/1.1" 404 Not Found
