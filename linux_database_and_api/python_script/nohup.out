@@ -2863,3 +2863,5 @@ INFO:     185.156.73.51:34038 - "GET /%2BCSCOE%2B/logon.html HTTP/1.1" 404 Not F
 INFO:     79.124.8.119:59400 - "GET /admin/login.asp HTTP/1.1" 404 Not Found
 INFO:     200.140.48.178:50771 - "GET / HTTP/1.1" 200 OK
 INFO:     172.234.217.129:38892 - "GET / HTTP/1.1" 200 OK
+INFO:     185.156.73.50:11250 - "GET /vpn/index.html HTTP/1.1" 404 Not Found
+INFO:     185.156.73.50:11887 - "GET /vpn/index.html HTTP/1.1" 404 Not Found
