@@ -2851,3 +2851,4 @@ INFO:     45.156.128.43:47657 - "GET / HTTP/1.1" 200 OK
 INFO:     195.178.110.125:46164 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     70.39.75.161:51782 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     70.39.75.161:51800 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:50331 - "GET /values/get_values HTTP/1.1" 200 OK
