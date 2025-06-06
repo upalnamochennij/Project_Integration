@@ -2839,3 +2839,5 @@ INFO:     162.142.125.42:32908 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     162.142.125.42:51058 - "PRI %2A HTTP/2.0" 404 Not Found
 WARNING:  Invalid HTTP request received.
 INFO:     162.142.125.42:55820 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     162.142.125.42:42748 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
