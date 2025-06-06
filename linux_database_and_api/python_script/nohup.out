@@ -2887,3 +2887,6 @@ INFO:     78.153.140.151:49486 - "GET /config.js HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:53958 - "GET /new/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:60364 - "GET /frontend/web/debug/default/view HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:38386 - "GET /_static/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:49218 - "GET /download/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:56092 - "GET /saas/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:34406 - "GET /.env.json HTTP/1.1" 404 Not Found
