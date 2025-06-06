@@ -2814,3 +2814,4 @@ INFO:     80.66.88.26:53418 - "GET /sslvpn_logon.shtml HTTP/1.1" 404 Not Found
 INFO:     172.105.128.11:15538 - "GET / HTTP/1.1" 200 OK
 INFO:     3.87.55.116:25420 - "GET / HTTP/1.1" 200 OK
 INFO:     66.228.53.78:57060 - "GET / HTTP/1.1" 200 OK
+INFO:     196.251.85.74:51466 - "GET /.env.backup HTTP/1.1" 404 Not Found
