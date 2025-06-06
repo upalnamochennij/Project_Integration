@@ -2882,3 +2882,6 @@ INFO:     78.153.140.151:54874 - "GET /?phpinfo=-1 HTTP/1.1" 200 OK
 INFO:     78.153.140.151:59838 - "GET /docs/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:34608 - "GET /old/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:39730 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:45312 - "GET /cms/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:49486 - "GET /config.js HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:53958 - "GET /new/.env HTTP/1.1" 404 Not Found
