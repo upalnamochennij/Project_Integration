@@ -2800,3 +2800,5 @@ INFO:     64.62.197.129:14941 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     64.62.197.126:18373 - "GET / HTTP/1.1" 200 OK
 INFO:     45.156.128.128:56935 - "GET / HTTP/1.1" 200 OK
 INFO:     64.62.197.127:63261 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     188.89.88.249:62570 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     188.89.88.249:62570 - "GET /favicon.ico HTTP/1.1" 404 Not Found
