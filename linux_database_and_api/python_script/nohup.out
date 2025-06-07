@@ -2992,3 +2992,6 @@ INFO:     195.184.76.20:49599 - "GET / HTTP/1.1" 200 OK
 INFO:     93.123.109.230:50460 - "GET / HTTP/1.1" 200 OK
 WARNING:  Invalid HTTP request received.
 INFO:     93.123.109.230:50576 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.230:50590 - "GET /.env.template HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:50598 - "GET /.env.uat HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:50600 - "GET /.env.live HTTP/1.1" 404 Not Found
