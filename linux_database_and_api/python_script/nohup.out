@@ -3000,3 +3000,6 @@ INFO:     93.123.109.230:42842 - "GET /settings/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:42862 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:42874 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:42880 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42906 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42512 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42516 - "GET /files/.git/config HTTP/1.1" 404 Not Found
