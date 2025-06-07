@@ -3029,3 +3029,4 @@ INFO:     93.123.109.230:59676 - "GET /.env_sample HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:59680 - "GET /api/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54500 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54502 - "GET /core/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:54510 - "GET /static../.git/config HTTP/1.1" 404 Not Found
