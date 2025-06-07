@@ -10282,3 +10282,5 @@ INFO:     86.87.128.118:63757 - "GET /values/add_temperature?timestamp=2025-06-0
 INFO:     86.87.128.118:63757 - "GET /values/add_MPU?timestamp=2025-06-07T18:55:40Z&device_id=1002&gyro_x=-0.032242&gyro_y=-0.028911&gyro_z=-0.037838&accel_x=-0.739808&accel_y=0.833182&accel_z=8.544906 HTTP/1.1" 422 Unprocessable Entity
 INFO:     86.87.128.118:63757 - "GET /values/add_temperature?timestamp=2025-06-07T18:55:40Z&device_id=1002&temperature=23.920000 HTTP/1.1" 422 Unprocessable Entity
 INFO:     86.87.128.118:63757 - "GET /values/add_temperature?timestamp=2025-06-07T18:55:42Z&device_id=1002&temperature=23.930000 HTTP/1.1" 422 Unprocessable Entity
+INFO:     86.87.128.118:63757 - "GET /values/add_temperature?timestamp=2025-06-07T18:55:43Z&device_id=1002&temperature=23.940001 HTTP/1.1" 422 Unprocessable Entity
+INFO:     86.87.128.118:63757 - "GET /values/add_temperature?timestamp=2025-06-07T18:55:44Z&device_id=1002&temperature=23.959999 HTTP/1.1" 422 Unprocessable Entity
