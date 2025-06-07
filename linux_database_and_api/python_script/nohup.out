@@ -3069,3 +3069,5 @@ INFO:     35.203.210.80:58974 - "GET / HTTP/1.1" 200 OK
 INFO:     20.98.140.180:39570 - "GET /owa/auth/logon.aspx HTTP/1.1" 404 Not Found
 INFO:     162.142.125.213:60678 - "GET / HTTP/1.1" 200 OK
 INFO:     162.142.125.213:55266 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     162.142.125.213:55294 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
