@@ -3041,3 +3041,5 @@ INFO:     93.123.109.230:37096 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37100 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37108 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37136 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37138 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37154 - "GET /.env.preprod HTTP/1.1" 404 Not Found
