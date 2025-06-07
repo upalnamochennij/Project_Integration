@@ -3047,3 +3047,4 @@ INFO:     93.123.109.230:37172 - "GET /.env.staging.local HTTP/1.1" 404 Not Foun
 INFO:     93.123.109.230:54050 - "GET /app/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54060 - "GET /.env.dev HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54062 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     195.184.76.214:48239 - "GET /favicon.ico HTTP/1.1" 404 Not Found
