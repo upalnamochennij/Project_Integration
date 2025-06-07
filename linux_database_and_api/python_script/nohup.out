@@ -3035,3 +3035,7 @@ INFO:     93.123.109.230:54520 - "GET /.env.config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54534 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37022 - "GET /.env.backup HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37058 - "GET /configuration/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37070 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37086 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37096 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37100 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
