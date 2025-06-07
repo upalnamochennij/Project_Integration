@@ -3019,3 +3019,4 @@ INFO:     93.123.109.230:58690 - "GET /.env.secret HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:58694 - "GET /.env.production.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:58704 - "GET /config/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:58716 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:58726 - "GET /.env HTTP/1.1" 404 Not Found
