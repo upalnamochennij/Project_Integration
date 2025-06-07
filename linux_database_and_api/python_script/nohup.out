@@ -2932,3 +2932,6 @@ INFO:     78.153.140.179:54124 - "GET /well-known/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.179:59154 - "GET /old.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.179:34450 - "GET /environments/local/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.179:37342 - "GET /environments/production/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:42682 - "GET /scripts/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:47318 - "GET /styles/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:53732 - "GET /inc/.env HTTP/1.1" 404 Not Found
