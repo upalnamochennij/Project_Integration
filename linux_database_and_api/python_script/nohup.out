@@ -3003,3 +3003,10 @@ INFO:     93.123.109.230:42880 - "GET /media/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:42906 - "GET /.env.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:42512 - "GET /.env.production HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:42516 - "GET /files/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42522 - "GET /media../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42528 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42530 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42532 - "GET /.env.ci HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42538 - "GET /build/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42550 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:42566 - "GET /data/.git/config HTTP/1.1" 404 Not Found
