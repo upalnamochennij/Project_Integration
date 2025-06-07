@@ -6009,3 +6009,5 @@ INFO:     86.87.128.118:61396 - "GET /values/add_PulseOxygen?timestamp=2025-06-0
 INFO:     86.87.128.118:61396 - "GET /values/add_PulseOxygen?timestamp=2025-06-07T15:09:49Z&device_id=1&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
 INFO:     86.87.128.118:61396 - "GET /values/add_PulseOxygen?timestamp=2025-06-07T15:09:50Z&device_id=1&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
 INFO:     86.87.128.118:61396 - "GET /values/add_PulseOxygen?timestamp=2025-06-07T15:09:51Z&device_id=1&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:61396 - "GET /values/add_PulseOxygen?timestamp=2025-06-07T15:09:53Z&device_id=1&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:61396 - "GET /values/add_PulseOxygen?timestamp=2025-06-07T15:09:54Z&device_id=1&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
