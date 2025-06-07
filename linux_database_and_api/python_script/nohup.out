@@ -7747,3 +7747,6 @@ INFO:     86.87.128.118:49723 - "GET /values/add_temperature?timestamp=2025-06-0
 INFO:     86.87.128.118:49723 - "GET /values/add_temperature?timestamp=2025-06-07T16:48:07Z&device_id=1&temperature=-536870912 HTTP/1.1" 200 OK
 INFO:     86.87.128.118:49723 - "GET /values/add_temperature?timestamp=2025-06-07T16:48:08Z&device_id=1&temperature=-2147483648 HTTP/1.1" 200 OK
 INFO:     86.87.128.118:49723 - "GET /values/add_temperature?timestamp=2025-06-07T16:48:09Z&device_id=1&temperature=536870912 HTTP/1.1" 200 OK
+INFO:     178.62.209.53:36688 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:62847 - "GET /values/add_temperature?timestamp=2025-06-07T16:51:32Z&device_id=1&temperature=536870912 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62847 - "GET /values/add_temperature?timestamp=2025-06-07T16:51:32Z&device_id=1&temperature=536870912 HTTP/1.1" 200 OK
