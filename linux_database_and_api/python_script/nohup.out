@@ -3025,3 +3025,4 @@ INFO:     93.123.109.230:59636 - "GET /.env.test HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:59646 - "GET /config/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:59660 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:59662 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:59676 - "GET /.env_sample HTTP/1.1" 404 Not Found
