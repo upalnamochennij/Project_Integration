@@ -3050,3 +3050,5 @@ INFO:     93.123.109.230:54062 - "GET /.env.dist HTTP/1.1" 404 Not Found
 INFO:     195.184.76.214:48239 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     185.242.226.163:49073 - "GET / HTTP/1.1" 200 OK
 INFO:     43.138.5.244:54978 - "GET /stats HTTP/1.1" 404 Not Found
+INFO:     43.138.5.244:54978 - "GET /openapi/v2 HTTP/1.1" 404 Not Found
+INFO:     43.138.5.244:54978 - "GET /api HTTP/1.1" 404 Not Found
