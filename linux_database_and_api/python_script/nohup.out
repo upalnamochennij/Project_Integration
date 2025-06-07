@@ -2905,3 +2905,4 @@ INFO:     78.153.140.151:48000 - "GET /exapi/.env HTTP/1.1" 404 Not Found
 INFO:     213.209.143.71:16308 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     213.209.143.71:17400 - "POST / HTTP/1.1" 405 Method Not Allowed
 INFO:     172.236.228.224:29640 - "GET / HTTP/1.1" 200 OK
+INFO:     165.232.136.244:35146 - "GET /.env HTTP/1.1" 404 Not Found
