@@ -2909,3 +2909,7 @@ INFO:     165.232.136.244:35146 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     165.232.136.244:35168 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     172.236.228.224:10254 - "GET / HTTP/1.1" 200 OK
 INFO:     78.153.140.179:42486 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:46026 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:49658 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:57638 - "GET /admin/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:60536 - "GET /.env.example HTTP/1.1" 404 Not Found
