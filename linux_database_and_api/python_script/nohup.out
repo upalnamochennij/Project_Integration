@@ -3039,3 +3039,5 @@ INFO:     93.123.109.230:37070 - "GET /.env.bak HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37086 - "GET /public/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37096 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37100 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37108 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37136 - "GET /server/.git/config HTTP/1.1" 404 Not Found
