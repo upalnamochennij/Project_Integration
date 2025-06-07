@@ -10158,3 +10158,4 @@ INFO:     86.87.128.118:63260 - "GET /values/get_all_values HTTP/1.1" 404 Not Fo
 INFO:     86.87.128.118:55563 - "GET /values/add_temperature?timestamp=2025-06-07T18:51:40Z&device_id=1002&temperature=536870912 HTTP/1.1" 200 OK
 INFO:     86.87.128.118:55563 - "GET /values/add_temperature?timestamp=2025-06-07T18:51:41Z&device_id=1002&temperature=536870912 HTTP/1.1" 200 OK
 INFO:     86.87.128.118:55563 - "GET /values/add_temperature?timestamp=2025-06-07T18:51:42Z&device_id=1002&temperature=536870912 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:55563 - "GET /values/add_temperature?timestamp=2025-06-07T18:51:43Z&device_id=1002&temperature=536870912 HTTP/1.1" 200 OK
