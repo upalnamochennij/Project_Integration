@@ -2943,3 +2943,9 @@ INFO:     196.251.85.74:52134 - "GET /dashboard/.env HTTP/1.1" 404 Not Found
 INFO:     138.197.16.14:37942 - "GET / HTTP/1.1" 200 OK
 INFO:     196.251.73.96:55358 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     47.236.76.100:34380 - "POST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:34380 - "POST /cgi-bin/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/bin/sh HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:34380 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:34380 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:34380 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:34380 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:34380 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
