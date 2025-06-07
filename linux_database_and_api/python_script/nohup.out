@@ -3871,3 +3871,5 @@ INFO:     86.87.128.118:62551 - "GET /values/add_temperature?timestamp=2025-06-0
 INFO:     86.87.128.118:62551 - "GET /values/add_temperature?timestamp=2025-06-07T14:13:57Z&device_id=1&temperature=-536870912 HTTP/1.1" 200 OK
 INFO:     86.87.128.118:62551 - "GET /values/add_temperature?timestamp=2025-06-07T14:13:58Z&device_id=1&temperature=-536870912 HTTP/1.1" 200 OK
 INFO:     86.87.128.118:62551 - "GET /values/add_temperature?timestamp=2025-06-07T14:13:59Z&device_id=1&temperature=-536870912 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62551 - "GET /values/add_temperature?timestamp=2025-06-07T14:14:00Z&device_id=1&temperature=-536870912 HTTP/1.1" 200 OK
+INFO:     86.87.128.118:62551 - "GET /values/add_temperature?timestamp=2025-06-07T14:14:01Z&device_id=1&temperature=-536870912 HTTP/1.1" 200 OK
