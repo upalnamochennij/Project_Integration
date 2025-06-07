@@ -2918,3 +2918,7 @@ INFO:     78.153.140.179:41036 - "GET /?phpinfo=-1 HTTP/1.1" 200 OK
 INFO:     78.153.140.179:45236 - "GET /getcfg.php HTTP/1.1" 404 Not Found
 INFO:     78.153.140.179:51140 - "GET /cp/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.179:55318 - "GET /ads/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:41016 - "GET /config/aws.yml HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:45074 - "GET /staticfiles/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:48460 - "GET /opt/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:53458 - "GET /Api/.env HTTP/1.1" 404 Not Found
