@@ -2938,3 +2938,4 @@ INFO:     78.153.140.179:53732 - "GET /inc/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.179:57188 - "GET /.env_bak HTTP/1.1" 404 Not Found
 INFO:     78.153.140.179:33566 - "GET /.env-sample HTTP/1.1" 404 Not Found
 INFO:     78.153.140.179:37718 - "GET /fastlane/.env HTTP/1.1" 404 Not Found
+INFO:     34.22.221.223:55380 - "GET / HTTP/1.1" 200 OK
