@@ -3034,3 +3034,4 @@ INFO:     93.123.109.230:54518 - "GET /www/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54520 - "GET /.env.config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54534 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37022 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37058 - "GET /configuration/.env HTTP/1.1" 404 Not Found
