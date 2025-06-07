@@ -2989,3 +2989,5 @@ INFO:     47.236.76.100:34380 - "GET /index.php?lang=../../../../../../../../tmp
 INFO:     47.236.76.100:34380 - "GET /containers/json HTTP/1.1" 404 Not Found
 WARNING:  Invalid HTTP request received.
 INFO:     195.184.76.20:49599 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.230:50460 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
