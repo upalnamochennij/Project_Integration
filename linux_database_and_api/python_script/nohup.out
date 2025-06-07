@@ -10334,3 +10334,4 @@ INFO:     86.87.128.118:63757 - "GET /values/add_temperature?timestamp=2025-06-0
 INFO:     86.87.128.118:63757 - "GET /values/add_temperature?timestamp=2025-06-07T18:56:29Z&device_id=1002&temperature=23.980000 HTTP/1.1" 422 Unprocessable Entity
 INFO:     86.87.128.118:63757 - "GET /values/add_PulseOxygen?timestamp=2025-06-07T18:56:30Z&device_id=1002&SPO2=98&heartrate=100 HTTP/1.1" 200 OK
 INFO:     86.87.128.118:63757 - "GET /values/add_temperature?timestamp=2025-06-07T18:56:30Z&device_id=1002&temperature=23.980000 HTTP/1.1" 422 Unprocessable Entity
+INFO:     86.87.128.118:63757 - "GET /values/add_temperature?timestamp=2025-06-07T18:56:31Z&device_id=1002&temperature=23.980000 HTTP/1.1" 422 Unprocessable Entity
