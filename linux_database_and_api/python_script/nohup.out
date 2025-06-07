@@ -2983,3 +2983,7 @@ INFO:     47.236.76.100:34380 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP
 INFO:     47.236.76.100:34380 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
 INFO:     47.236.76.100:34380 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
 INFO:     47.236.76.100:34380 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:34380 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:34380 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:34380 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     47.236.76.100:34380 - "GET /containers/json HTTP/1.1" 404 Not Found
