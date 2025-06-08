@@ -11282,3 +11282,5 @@ INFO:     167.94.138.196:40772 - "PRI %2A HTTP/2.0" 404 Not Found
 WARNING:  Invalid HTTP request received.
 INFO:     167.94.138.196:40784 - "GET /security.txt HTTP/1.1" 404 Not Found
 INFO:     167.94.138.196:40790 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.196:40792 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
