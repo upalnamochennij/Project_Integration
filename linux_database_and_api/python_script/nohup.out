@@ -11267,3 +11267,4 @@ INFO:     222.228.108.160:41332 - "GET / HTTP/1.0" 200 OK
 INFO:     20.163.59.190:36426 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
 INFO:     213.209.143.71:27028 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     213.209.143.71:28660 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     78.153.140.177:40316 - "GET /.env HTTP/1.1" 404 Not Found
