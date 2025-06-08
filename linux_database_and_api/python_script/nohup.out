@@ -11338,3 +11338,4 @@ INFO:     93.123.109.230:34800 - "GET /.env.stage HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:34814 - "GET /public/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:44968 - "GET /.env.prod HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:44980 - "GET /.env_sample HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:44996 - "GET /.env.production HTTP/1.1" 404 Not Found
