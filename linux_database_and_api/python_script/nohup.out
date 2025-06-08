@@ -11353,3 +11353,7 @@ INFO:     93.123.109.230:57782 - "GET /.env.production.local HTTP/1.1" 404 Not F
 INFO:     93.123.109.230:57794 - "GET /prod/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:57800 - "GET /core/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:44616 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:44630 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:44632 - "GET /.env.live HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:44644 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:44650 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
