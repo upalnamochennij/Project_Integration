@@ -11325,3 +11325,5 @@ INFO:     93.123.109.230:52052 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:52056 - "GET /project/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:52058 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:52082 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:52084 - "GET /.env.template HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:52092 - "GET /.env.uat HTTP/1.1" 404 Not Found
