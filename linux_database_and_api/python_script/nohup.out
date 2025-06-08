@@ -11390,3 +11390,4 @@ INFO:     65.49.1.20:2013 - "GET / HTTP/1.1" 200 OK
 INFO:     65.49.1.20:11601 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
 INFO:     185.242.226.163:37989 - "GET / HTTP/1.1" 200 OK
 INFO:     159.223.73.185:60416 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     159.223.73.185:60438 - "GET /.git/config HTTP/1.1" 404 Not Found
