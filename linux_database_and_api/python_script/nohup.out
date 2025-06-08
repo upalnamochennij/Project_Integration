@@ -11404,3 +11404,5 @@ INFO:     198.55.98.76:38812 - "GET /.env.save HTTP/1.1" 404 Not Found
 INFO:     86.87.128.118:54333 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     170.39.218.2:39994 - "GET / HTTP/1.1" 200 OK
 WARNING:  Invalid HTTP request received.
+INFO:     170.39.218.2:40110 - "GET / HTTP/1.1" 200 OK
+INFO:     170.39.218.2:40116 - "GET /.git/config HTTP/1.1" 404 Not Found
