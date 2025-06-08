@@ -11437,3 +11437,6 @@ INFO:     78.153.140.151:60974 - "GET /cron/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:38700 - "GET /localhost/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:42912 - "GET /.gitlab-ci/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:47636 - "GET /laravel/.env.production HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:53030 - "GET /local/.env.prod HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:58010 - "GET /public/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:44234 - "GET /frontend/.env HTTP/1.1" 404 Not Found
