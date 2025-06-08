@@ -11369,3 +11369,7 @@ INFO:     93.123.109.230:53658 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:53662 - "GET /.env.backup HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:53664 - "GET /.env.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:53678 - "GET /config/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:53690 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37894 - "GET /app/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37896 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37904 - "GET /.env.dist HTTP/1.1" 404 Not Found
