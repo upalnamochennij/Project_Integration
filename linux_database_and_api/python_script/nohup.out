@@ -11364,3 +11364,4 @@ INFO:     93.123.109.230:44686 - "GET /files/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:44698 - "GET /.env.bak HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:44710 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:44742 - "GET /.env.config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:53654 - "GET /.env.dev HTTP/1.1" 404 Not Found
