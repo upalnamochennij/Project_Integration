@@ -11315,3 +11315,6 @@ INFO:     79.124.58.198:42844 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not 
 INFO:     96.126.104.20:49360 - "GET /MRwF HTTP/1.1" 404 Not Found
 INFO:     172.236.228.229:11684 - "GET / HTTP/1.1" 200 OK
 INFO:     212.156.113.182:17392 - "GET /script HTTP/1.1" 404 Not Found
+INFO:     212.156.113.182:17399 - "GET /login HTTP/1.1" 404 Not Found
+INFO:     212.156.113.182:17403 - "GET /manager/html HTTP/1.1" 404 Not Found
+INFO:     212.156.113.182:17410 - "GET /users/sign_in HTTP/1.1" 404 Not Found
