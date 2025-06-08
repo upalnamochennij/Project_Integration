@@ -11373,3 +11373,6 @@ INFO:     93.123.109.230:53690 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37894 - "GET /app/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37896 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:37904 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37910 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37918 - "GET /.env.staging.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:37922 - "GET /media../.git/config HTTP/1.1" 404 Not Found
