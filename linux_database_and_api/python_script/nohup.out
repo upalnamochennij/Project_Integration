@@ -11346,3 +11346,5 @@ INFO:     93.123.109.230:57734 - "GET /.env.save HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:57750 - "GET /build/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:57758 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:57760 - "GET /settings/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:57762 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:57772 - "GET /.env.ci HTTP/1.1" 404 Not Found
