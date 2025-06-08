@@ -11320,3 +11320,5 @@ INFO:     212.156.113.182:17403 - "GET /manager/html HTTP/1.1" 404 Not Found
 INFO:     212.156.113.182:17410 - "GET /users/sign_in HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:51916 - "GET / HTTP/1.1" 200 OK
 WARNING:  Invalid HTTP request received.
+INFO:     93.123.109.230:52044 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.230:52052 - "GET /.git/config HTTP/1.1" 404 Not Found
