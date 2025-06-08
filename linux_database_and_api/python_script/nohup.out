@@ -11387,3 +11387,4 @@ INFO:     198.55.98.76:46438 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     65.49.1.17:32111 - "GET / HTTP/1.1" 200 OK
 INFO:     65.49.1.21:60179 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     65.49.1.20:2013 - "GET / HTTP/1.1" 200 OK
+INFO:     65.49.1.20:11601 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
