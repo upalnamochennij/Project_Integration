@@ -11433,3 +11433,7 @@ INFO:     78.153.140.151:46374 - "GET /.env.backup HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:48104 - "GET /Dev/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:50428 - "GET /appsettings.json HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:53902 - "GET /api/test HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:60974 - "GET /cron/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:38700 - "GET /localhost/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:42912 - "GET /.gitlab-ci/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:47636 - "GET /laravel/.env.production HTTP/1.1" 404 Not Found
