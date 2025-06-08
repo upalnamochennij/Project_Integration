@@ -11429,3 +11429,7 @@ INFO:     78.153.140.151:56204 - "GET /docker/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:33422 - "GET /web/debug/default/view HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:38346 - "GET /etc/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:41930 - "GET /env/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:46374 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:48104 - "GET /Dev/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:50428 - "GET /appsettings.json HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:53902 - "GET /api/test HTTP/1.1" 404 Not Found
