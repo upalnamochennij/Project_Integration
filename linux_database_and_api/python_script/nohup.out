@@ -11322,3 +11322,5 @@ INFO:     93.123.109.230:51916 - "GET / HTTP/1.1" 200 OK
 WARNING:  Invalid HTTP request received.
 INFO:     93.123.109.230:52044 - "GET / HTTP/1.1" 200 OK
 INFO:     93.123.109.230:52052 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:52056 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:52058 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
