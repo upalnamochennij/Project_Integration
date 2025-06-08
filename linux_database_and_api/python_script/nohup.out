@@ -11378,3 +11378,4 @@ INFO:     93.123.109.230:37918 - "GET /.env.staging.local HTTP/1.1" 404 Not Foun
 INFO:     93.123.109.230:37922 - "GET /media../.git/config HTTP/1.1" 404 Not Found
 INFO:     213.209.143.71:48292 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     213.209.143.71:49466 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     45.135.193.65:48192 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
