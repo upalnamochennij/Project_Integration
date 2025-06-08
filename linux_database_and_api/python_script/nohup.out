@@ -11384,3 +11384,4 @@ INFO:     196.251.73.96:53010 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     45.135.193.65:33560 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
 INFO:     45.79.172.21:23182 - "GET / HTTP/1.1" 200 OK
 INFO:     198.55.98.76:46438 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     65.49.1.17:32111 - "GET / HTTP/1.1" 200 OK
