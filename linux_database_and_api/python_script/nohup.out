@@ -11335,3 +11335,5 @@ INFO:     93.123.109.230:34778 - "GET /api/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:34780 - "GET /.env.development.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:34794 - "GET /.env.secret HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:34800 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:34814 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:44968 - "GET /.env.prod HTTP/1.1" 404 Not Found
