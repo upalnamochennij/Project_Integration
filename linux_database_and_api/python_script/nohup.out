@@ -11424,3 +11424,8 @@ INFO:     78.153.140.151:39684 - "GET /?phpinfo=-1 HTTP/1.1" 200 OK
 INFO:     78.153.140.151:43328 - "GET /client_secrets.json HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:37674 - "GET /pinfo.php HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:44674 - "GET /misc/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:51194 - "GET /content/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:56204 - "GET /docker/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:33422 - "GET /web/debug/default/view HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:38346 - "GET /etc/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:41930 - "GET /env/.env HTTP/1.1" 404 Not Found
