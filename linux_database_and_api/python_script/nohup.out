@@ -11359,3 +11359,5 @@ INFO:     93.123.109.230:44644 - "GET /.env.testing HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:44650 - "GET /backup/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:44652 - "GET /api/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:44660 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:44676 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:44686 - "GET /files/.git/config HTTP/1.1" 404 Not Found
