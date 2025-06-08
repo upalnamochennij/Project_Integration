@@ -11415,3 +11415,6 @@ INFO:     118.194.233.182:51834 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
 INFO:     118.194.233.182:49900 - "GET /config.json HTTP/1.1" 404 Not Found
 INFO:     176.66.72.48:52290 - "GET / HTTP/1.0" 200 OK
 INFO:     78.153.140.151:33478 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:38068 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:43230 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:50522 - "GET /admin/.env HTTP/1.1" 404 Not Found
