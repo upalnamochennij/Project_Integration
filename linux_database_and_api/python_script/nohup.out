@@ -11309,3 +11309,4 @@ INFO:     104.234.115.60:34244 - "GET / HTTP/1.1" 200 OK
 INFO:     104.234.115.60:55830 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     172.236.228.86:17572 - "GET / HTTP/1.1" 200 OK
 INFO:     176.65.138.171:56748 - "POST /php-cgi/php-cgi.exe?%ADd+cgi.force_redirect%3D0+%ADd+disable_functions%3D%22%22+%ADd+allow_url_include%3D1+%ADd+auto_prepend_file%3Dphp://input HTTP/1.1" 404 Not Found
+INFO:     66.228.53.174:42438 - "GET / HTTP/1.1" 200 OK
