@@ -11401,3 +11401,4 @@ INFO:     152.32.170.230:54112 - "GET /robots.txt HTTP/1.1" 404 Not Found
 INFO:     196.251.85.74:37938 - "GET /www/.env HTTP/1.1" 404 Not Found
 INFO:     74.235.104.219:48200 - "GET / HTTP/1.1" 200 OK
 INFO:     198.55.98.76:38812 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     86.87.128.118:54333 - "GET /values/get_values HTTP/1.1" 200 OK
