@@ -11445,3 +11445,4 @@ INFO:     78.153.140.151:52318 - "GET /v2/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:55526 - "GET /lab/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:58248 - "GET /.vscode/.env HTTP/1.1" 404 Not Found
 INFO:     188.89.88.249:55600 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     57.129.64.237:37488 - "GET / HTTP/1.1" 200 OK
