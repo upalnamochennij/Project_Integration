@@ -11398,3 +11398,4 @@ INFO:     152.32.170.230:53722 - "GET / HTTP/1.1" 200 OK
 INFO:     152.32.170.230:53886 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     152.32.170.230:54114 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
 INFO:     152.32.170.230:54112 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     196.251.85.74:37938 - "GET /www/.env HTTP/1.1" 404 Not Found
