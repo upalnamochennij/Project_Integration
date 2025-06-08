@@ -11440,3 +11440,7 @@ INFO:     78.153.140.151:47636 - "GET /laravel/.env.production HTTP/1.1" 404 Not
 INFO:     78.153.140.151:53030 - "GET /local/.env.prod HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:58010 - "GET /public/.env HTTP/1.1" 404 Not Found
 INFO:     78.153.140.151:44234 - "GET /frontend/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:48636 - "GET /locally/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:52318 - "GET /v2/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:55526 - "GET /lab/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:58248 - "GET /.vscode/.env HTTP/1.1" 404 Not Found
