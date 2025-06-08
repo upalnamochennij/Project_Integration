@@ -11328,3 +11328,7 @@ INFO:     93.123.109.230:52082 - "GET /src/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:52084 - "GET /.env.template HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:52092 - "GET /.env.uat HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:34744 - "GET /.env.default HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:34750 - "GET /data/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:34760 - "GET /static../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:34772 - "GET /server/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:34778 - "GET /api/.git/config HTTP/1.1" 404 Not Found
