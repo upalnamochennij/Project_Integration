@@ -11395,3 +11395,6 @@ INFO:     45.135.193.65:34102 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     152.32.225.108:14848 - "GET / HTTP/1.1" 200 OK
 WARNING:  Invalid HTTP request received.
 INFO:     152.32.170.230:53722 - "GET / HTTP/1.1" 200 OK
+INFO:     152.32.170.230:53886 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     152.32.170.230:54114 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     152.32.170.230:54112 - "GET /robots.txt HTTP/1.1" 404 Not Found
