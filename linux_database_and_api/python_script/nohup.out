@@ -11829,3 +11829,4 @@ INFO:     188.89.88.249:58799 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     204.76.203.208:44588 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
 INFO:     204.76.203.208:48016 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
 INFO:     198.55.98.76:38080 - "GET /.git/index HTTP/1.1" 404 Not Found
+INFO:     204.76.203.208:42154 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
