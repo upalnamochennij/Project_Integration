@@ -11983,3 +11983,7 @@ INFO:     217.154.226.200:59646 - "GET /?phpinfo=-1 HTTP/1.1" 200 OK
 INFO:     217.154.226.200:59790 - "GET /__info.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:59950 - "GET /_info-backoffice.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:60089 - "GET /_info.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:60197 - "GET /_phpinf.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:60401 - "GET /_phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:60545 - "GET /_poopinfo.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:60745 - "GET /.__info.php HTTP/1.1" 404 Not Found
