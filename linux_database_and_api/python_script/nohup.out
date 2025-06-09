@@ -11487,3 +11487,4 @@ INFO:     204.76.203.208:50286 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
 INFO:     196.251.72.29:59208 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     196.251.85.74:35284 - "GET /core/.env HTTP/1.1" 404 Not Found
 INFO:     34.152.42.145:29254 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     172.104.11.4:64832 - "GET / HTTP/1.1" 200 OK
