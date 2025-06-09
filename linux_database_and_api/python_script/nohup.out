@@ -11875,3 +11875,6 @@ INFO:     217.154.226.200:63139 - "GET /.env.prod HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:63254 - "POST /.env.prod HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:63396 - "GET /.env.production HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:63482 - "POST /.env.production HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:63628 - "GET /.env.development%20 HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:63841 - "POST /.env.development%20 HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:64023 - "GET /laravel/.env%20 HTTP/1.1" 404 Not Found
