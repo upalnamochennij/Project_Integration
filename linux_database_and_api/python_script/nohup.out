@@ -11517,3 +11517,6 @@ INFO:     93.123.109.230:55668 - "GET /.env.ci HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:38476 - "GET /build/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:38486 - "GET /files/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:38500 - "GET /media../.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:38520 - "GET /project/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:38536 - "GET /src/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:38548 - "GET /.env.prod HTTP/1.1" 404 Not Found
