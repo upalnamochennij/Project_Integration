@@ -11943,3 +11943,4 @@ INFO:     217.154.226.200:60599 - "GET /debug/default/view HTTP/1.1" 404 Not Fou
 INFO:     217.154.226.200:60743 - "GET /frontend/web/debug/default/view HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:60903 - "GET /web/debug/default/view HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:60970 - "GET /sapi/debug/default/view HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:64341 - "GET /assets/env.js HTTP/1.1" 404 Not Found
