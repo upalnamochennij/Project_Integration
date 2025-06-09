@@ -11522,3 +11522,4 @@ INFO:     93.123.109.230:38536 - "GET /src/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:38548 - "GET /.env.prod HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:38550 - "GET /prod/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:38552 - "GET /data/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:38568 - "GET /config.json HTTP/1.1" 404 Not Found
