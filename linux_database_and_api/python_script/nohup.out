@@ -11501,3 +11501,4 @@ INFO:     93.123.109.230:54368 - "GET /api/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54374 - "GET /.env.dev HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54388 - "GET /.env.dist HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:48748 - "GET /.env.preprod HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:48756 - "GET /.env.staging.local HTTP/1.1" 404 Not Found
