@@ -11964,3 +11964,5 @@ INFO:     217.154.226.200:50718 - "GET /config.js HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:50896 - "GET /api/config.js HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:51119 - "GET /app/config.js HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:53738 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:54857 - "GET /app_dev.php/_profiler/open?file=app/config/parameters.yml HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:54998 - "GET /_profiler/open?file=app/config/parameters.yml HTTP/1.1" 404 Not Found
