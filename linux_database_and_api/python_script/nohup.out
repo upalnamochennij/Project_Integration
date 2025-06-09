@@ -11863,3 +11863,5 @@ INFO:     217.154.226.200:60225 - "POST /lib/phpunit/phpunit/Util/PHP/eval-stdin
 INFO:     217.154.226.200:60559 - "POST /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:60729 - "POST /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:60978 - "POST /libraries/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:61210 - "GET / HTTP/1.1" 200 OK
+INFO:     217.154.226.200:61581 - "GET /.DS_Store HTTP/1.1" 404 Not Found
