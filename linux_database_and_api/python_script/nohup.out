@@ -11805,3 +11805,13 @@ INFO:     51.195.190.33:57360 - "GET /admin.shtml HTTP/1.1" 404 Not Found
 INFO:     51.195.190.33:57862 - "GET /index.pl HTTP/1.1" 404 Not Found
 INFO:     51.195.190.33:58336 - "GET /inicio.php HTTP/1.1" 404 Not Found
 INFO:     51.195.190.33:58878 - "GET /home.jsp HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:59368 - "GET /index.jsa HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:59820 - "GET /home.shtml HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:60254 - "GET default.asp HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:60722 - "GET /main.asp HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:32944 - "GET /menu.jsa HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:33370 - "GET /menu.jsp HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:33802 - "GET /localstart.jhtml HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:34264 - "GET /main.aspx HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:34654 - "GET /home.html HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:35044 - "GET /localstart.cgi HTTP/1.1" 404 Not Found
