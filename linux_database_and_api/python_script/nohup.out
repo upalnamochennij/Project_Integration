@@ -11577,3 +11577,4 @@ INFO:     51.20.123.11:39662 - "GET /www/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:42646 - "GET /docker/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:42650 - "GET /docker/app/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:42664 - "GET /env.backup HTTP/1.1" 404 Not Found
+INFO:     51.20.123.11:48032 - "GET /xampp/phpinfo.php HTTP/1.1" 404 Not Found
