@@ -11612,3 +11612,4 @@ INFO:     188.89.88.249:52247 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     31.171.153.72:49216 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     159.203.17.59:37984 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     159.203.17.59:37988 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     172.105.128.11:32844 - "GET / HTTP/1.1" 200 OK
