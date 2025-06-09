@@ -11526,3 +11526,4 @@ INFO:     93.123.109.230:38568 - "GET /config.json HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:38770 - "GET /docker-compose.prod.yml HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:38776 - "GET /.env.development.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:38792 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:38796 - "GET /.env.secret HTTP/1.1" 404 Not Found
