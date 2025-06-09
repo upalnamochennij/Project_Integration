@@ -11580,3 +11580,4 @@ INFO:     51.20.123.11:42664 - "GET /env.backup HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:48032 - "GET /xampp/phpinfo.php HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:54250 - "GET /lara/info.php HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:48158 - "GET /lara/phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     51.20.123.11:52652 - "GET /.vscode/.env HTTP/1.1" 404 Not Found
