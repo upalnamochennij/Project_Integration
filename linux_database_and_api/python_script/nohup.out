@@ -11994,3 +11994,4 @@ INFO:     217.154.226.200:61290 - "GET /02-info.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:61362 - "GET /1_1_PhpInfo.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:61594 - "GET /5info.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:61746 - "GET / HTTP/1.1" 200 OK
+INFO:     217.154.226.200:51952 - "GET /api/index.php/v1/config/application?public=true HTTP/1.1" 404 Not Found
