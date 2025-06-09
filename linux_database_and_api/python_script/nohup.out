@@ -11587,3 +11587,4 @@ INFO:     51.20.123.11:60626 - "GET /laravel/core/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:49018 - "GET /mail/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:49024 - "GET /mailer/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:40246 - "GET /nginx/.env HTTP/1.1" 404 Not Found
+INFO:     51.20.123.11:40258 - "GET /public/.env HTTP/1.1" 404 Not Found
