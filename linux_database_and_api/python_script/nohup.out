@@ -11969,3 +11969,6 @@ INFO:     217.154.226.200:54998 - "GET /_profiler/open?file=app/config/parameter
 INFO:     217.154.226.200:55191 - "GET /app/config/parameters.yml HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:55315 - "GET /config/parameters.yml HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:55477 - "GET /parameters.yml HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:58072 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:58210 - "GET /app_dev.php/_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:58359 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
