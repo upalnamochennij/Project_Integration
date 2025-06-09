@@ -11485,3 +11485,4 @@ INFO:     66.228.53.4:60642 - "GET / HTTP/1.1" 200 OK
 INFO:     86.87.128.118:50380 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     204.76.203.208:50286 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
 INFO:     196.251.72.29:59208 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     196.251.85.74:35284 - "GET /core/.env HTTP/1.1" 404 Not Found
