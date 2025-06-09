@@ -11901,3 +11901,7 @@ INFO:     217.154.226.200:50532 - "GET /docker/.env HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:50695 - "POST /docker/.env HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:50870 - "GET /cms/.env HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:50988 - "POST /cms/.env HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:51202 - "GET /script/.env HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:51329 - "POST /script/.env HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:51483 - "GET /live_env%20 HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:51647 - "POST /live_env%20 HTTP/1.1" 404 Not Found
