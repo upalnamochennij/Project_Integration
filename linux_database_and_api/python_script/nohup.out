@@ -11567,3 +11567,4 @@ INFO:     51.20.123.11:48284 - "GET /env/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:45534 - "GET /dev/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:56368 - "GET /new/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:56374 - "GET /new/.env.local HTTP/1.1" 404 Not Found
+INFO:     51.20.123.11:40496 - "GET /new/.env.production HTTP/1.1" 404 Not Found
