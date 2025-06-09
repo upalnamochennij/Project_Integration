@@ -11488,3 +11488,5 @@ INFO:     196.251.72.29:59208 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     196.251.85.74:35284 - "GET /core/.env HTTP/1.1" 404 Not Found
 INFO:     34.152.42.145:29254 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
 INFO:     172.104.11.4:64832 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.230:54200 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
