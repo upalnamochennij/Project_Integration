@@ -11837,3 +11837,5 @@ INFO:     204.76.203.208:59860 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
 INFO:     52.224.242.102:45790 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
 INFO:     196.251.86.80:42310 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     207.246.65.92:59638 - "GET /login.php HTTP/1.0" 404 Not Found
+INFO:     188.89.88.249:50886 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     188.89.88.249:50886 - "GET /favicon.ico HTTP/1.1" 404 Not Found
