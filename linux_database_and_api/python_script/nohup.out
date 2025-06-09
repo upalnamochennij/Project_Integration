@@ -11840,3 +11840,4 @@ INFO:     207.246.65.92:59638 - "GET /login.php HTTP/1.0" 404 Not Found
 INFO:     188.89.88.249:50886 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     188.89.88.249:50886 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     188.89.88.249:50886 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     81.42.224.135:48490 - "GET / HTTP/1.0" 200 OK
