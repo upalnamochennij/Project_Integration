@@ -11498,3 +11498,4 @@ INFO:     93.123.109.230:54342 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54348 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54364 - "GET /server/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54368 - "GET /api/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:54374 - "GET /.env.dev HTTP/1.1" 404 Not Found
