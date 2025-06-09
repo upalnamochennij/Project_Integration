@@ -11972,3 +11972,7 @@ INFO:     217.154.226.200:55477 - "GET /parameters.yml HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:58072 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:58210 - "GET /app_dev.php/_profiler/phpinfo HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:58359 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:58459 - "GET /info.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:58694 - "GET /owncloud/apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:58897 - "GET /?phpinfo=1 HTTP/1.1" 200 OK
+INFO:     217.154.226.200:59052 - "GET /tool/view/phpinfo.view.php HTTP/1.1" 404 Not Found
