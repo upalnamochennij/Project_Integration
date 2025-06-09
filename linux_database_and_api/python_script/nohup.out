@@ -11563,3 +11563,4 @@ INFO:     51.20.123.11:37224 - "GET / HTTP/1.1" 200 OK
 INFO:     51.20.123.11:33258 - "GET /phpinfo HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:33264 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:58568 - "GET /portal/.env HTTP/1.1" 404 Not Found
+INFO:     51.20.123.11:48284 - "GET /env/.env HTTP/1.1" 404 Not Found
