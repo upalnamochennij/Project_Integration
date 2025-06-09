@@ -11464,3 +11464,4 @@ INFO:     134.209.32.116:52142 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     20.65.193.243:52712 - "GET /autodiscover/autodiscover.json?@zdi/Powershell HTTP/1.1" 404 Not Found
 INFO:     48.217.87.78:37706 - "GET /owa/auth/logon.aspx HTTP/1.1" 404 Not Found
 INFO:     204.76.203.208:52286 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     185.100.87.136:53590 - "GET / HTTP/1.1" 200 OK
