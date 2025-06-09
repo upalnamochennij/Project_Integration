@@ -11935,3 +11935,5 @@ INFO:     217.154.226.200:55513 - "GET /enviroments/.env HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:55717 - "POST /enviroments/.env HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:55929 - "GET / HTTP/1.1" 200 OK
 INFO:     217.154.226.200:56017 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     217.154.226.200:57365 - "GET /frontend_dev.php/%24 HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:57531 - "GET /debug/default/view?panel=config/frontend_dev.php HTTP/1.1" 404 Not Found
