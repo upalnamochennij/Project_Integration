@@ -11602,3 +11602,4 @@ INFO:     51.20.123.11:41128 - "GET /development/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:44704 - "GET /backend/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:39830 - "GET /api/shared/config/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:60448 - "GET /api/config.env HTTP/1.1" 404 Not Found
+INFO:     51.20.123.11:42036 - "GET /.env.production.local HTTP/1.1" 404 Not Found
