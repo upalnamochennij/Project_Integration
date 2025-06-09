@@ -11490,3 +11490,9 @@ INFO:     34.152.42.145:29254 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
 INFO:     172.104.11.4:64832 - "GET / HTTP/1.1" 200 OK
 INFO:     93.123.109.230:54200 - "GET / HTTP/1.1" 200 OK
 WARNING:  Invalid HTTP request received.
+INFO:     93.123.109.230:54296 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.230:54312 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:54322 - "GET /public/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:54326 - "GET /.env.sandbox HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:54342 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:54348 - "GET /cms/.git/config HTTP/1.1" 404 Not Found
