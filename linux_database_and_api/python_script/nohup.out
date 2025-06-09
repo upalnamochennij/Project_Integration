@@ -11909,3 +11909,8 @@ INFO:     217.154.226.200:51805 - "GET /application/.env HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:51945 - "POST /application/.env HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:52076 - "GET /.env.project%20 HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:52184 - "POST /.env.project%20 HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:52395 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:52549 - "POST /.env.dist HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:52712 - "GET /back/.env HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:52881 - "POST /back/.env HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:52987 - "GET /core/.env HTTP/1.1" 404 Not Found
