@@ -11794,3 +11794,14 @@ INFO:     51.195.190.33:52938 - "GET /MagicInfo/config.js HTTP/1.1" 404 Not Foun
 INFO:     51.195.190.33:53322 - "GET /inicio.asp HTTP/1.1" 404 Not Found
 INFO:     51.195.190.33:53478 - "GET /plugin/webs_model_cfg.js HTTP/1.1" 404 Not Found
 INFO:     51.195.190.33:53876 - "GET /index.aspx HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:54060 - "GET /Main_Login.asp HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:54404 - "GET /menu.pl HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:54896 - "GET /admin.pl HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:55426 - "GET /default.cgi HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:55888 - "GET /inicio.html HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:56348 - "GET /index.shtml HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:56860 - "GET /main.html HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:57360 - "GET /admin.shtml HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:57862 - "GET /index.pl HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:58336 - "GET /inicio.php HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:58878 - "GET /home.jsp HTTP/1.1" 404 Not Found
