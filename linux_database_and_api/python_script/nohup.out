@@ -11980,3 +11980,6 @@ INFO:     217.154.226.200:59195 - "GET /phpinfo HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:59294 - "GET /symfony/public/_profiler/phpinfo HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:59460 - "GET /html/phpinfo.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:59646 - "GET /?phpinfo=-1 HTTP/1.1" 200 OK
+INFO:     217.154.226.200:59790 - "GET /__info.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:59950 - "GET /_info-backoffice.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:60089 - "GET /_info.php HTTP/1.1" 404 Not Found
