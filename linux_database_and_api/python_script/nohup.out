@@ -11991,3 +11991,6 @@ INFO:     217.154.226.200:60889 - "GET /.info.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:60987 - "GET /0.0_phpinfo.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:61193 - "GET /00_server_info.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:61290 - "GET /02-info.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:61362 - "GET /1_1_PhpInfo.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:61594 - "GET /5info.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:61746 - "GET / HTTP/1.1" 200 OK
