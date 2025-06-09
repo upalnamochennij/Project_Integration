@@ -11987,3 +11987,7 @@ INFO:     217.154.226.200:60197 - "GET /_phpinf.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:60401 - "GET /_phpinfo.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:60545 - "GET /_poopinfo.php HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:60745 - "GET /.__info.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:60889 - "GET /.info.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:60987 - "GET /0.0_phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:61193 - "GET /00_server_info.php HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:61290 - "GET /02-info.php HTTP/1.1" 404 Not Found
