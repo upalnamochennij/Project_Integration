@@ -11531,3 +11531,6 @@ INFO:     93.123.109.230:38798 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:38810 - "GET /.env.default HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:34734 - "GET /.env.production.local HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:34748 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:34754 - "GET /admin/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:34756 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:34762 - "GET /.env.save HTTP/1.1" 404 Not Found
