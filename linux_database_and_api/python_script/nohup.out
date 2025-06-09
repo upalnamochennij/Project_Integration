@@ -11570,3 +11570,4 @@ INFO:     51.20.123.11:56374 - "GET /new/.env.local HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:40496 - "GET /new/.env.production HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:41366 - "GET /_phpinfo.php HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:43900 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     51.20.123.11:36844 - "GET /_profiler/phpinfo/info.php HTTP/1.1" 404 Not Found
