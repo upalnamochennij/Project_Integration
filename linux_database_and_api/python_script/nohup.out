@@ -11582,3 +11582,4 @@ INFO:     51.20.123.11:54250 - "GET /lara/info.php HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:48158 - "GET /lara/phpinfo.php HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:52652 - "GET /.vscode/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:52686 - "GET /js/.env HTTP/1.1" 404 Not Found
+INFO:     51.20.123.11:60600 - "GET /laravel/.env HTTP/1.1" 404 Not Found
