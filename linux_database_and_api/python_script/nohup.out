@@ -11614,3 +11614,34 @@ INFO:     159.203.17.59:37984 - "GET /.env HTTP/1.1" 404 Not Found
 INFO:     159.203.17.59:37988 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     172.105.128.11:32844 - "GET / HTTP/1.1" 200 OK
 INFO:     204.76.203.208:37018 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     51.195.190.33:45370 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     51.195.190.33:45386 - "GET /CSS/Miniweb.css HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:45378 - "GET /login.php HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:45452 - "GET /health HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:45388 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:45382 - "GET /cgi-mod/header_logo.cgi?size=big HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:45384 - "SSTP_DUPLEX_POST /sra_%7BBA195980-CD49-458b-9E23-C84EE0ADCD75%7D/ HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:45400 - "GET /home.aspx HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:45402 - "GET /Portal0000.htm HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:45456 - "POST /scripts/WPnBr.dll HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:45408 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:45406 - "GET /nmaplowercheck1749484016 HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46076 - "GET /L8mk HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46078 - "GET /Portal/Portal.mwsl HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46236 - "GET /start.cgi HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46206 - "GET / HTTP/1.1" 200 OK
+INFO:     51.195.190.33:46202 - "GET /dniapi/userInfos HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46242 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46238 - "GET /__Additional HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46244 - "GET /rest/applinks/1.0/manifest HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46390 - "GET / HTTP/1.0" 200 OK
+INFO:     51.195.190.33:46394 - "GET /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42 HTTP/1.1" 200 OK
+INFO:     51.195.190.33:46400 - "POST /sdk HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46402 - "GET / HTTP/1.1" 200 OK
+INFO:     51.195.190.33:46396 - "GET /server-status HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46562 - "GET /docs/cplugError.html/ HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46684 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46680 - "GET /api/v2/about HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46692 - "GET /localstart.aspx HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46854 - "GET /confluence/rest/applinks/1.0/manifest HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:46856 - "GET /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000 HTTP/1.1" 200 OK
