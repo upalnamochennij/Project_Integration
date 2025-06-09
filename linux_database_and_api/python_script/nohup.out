@@ -11513,3 +11513,4 @@ INFO:     93.123.109.230:55624 - "GET /settings/.env HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:55640 - "GET /assets../.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:55654 - "GET /dev/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:55660 - "GET /media/.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:55668 - "GET /.env.ci HTTP/1.1" 404 Not Found
