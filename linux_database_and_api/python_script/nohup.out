@@ -11540,3 +11540,4 @@ INFO:     93.123.109.230:54528 - "GET /static../.git/config HTTP/1.1" 404 Not Fo
 INFO:     93.123.109.230:54532 - "GET /www/.git/config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54542 - "GET /.env.config HTTP/1.1" 404 Not Found
 INFO:     93.123.109.230:54552 - "GET /.env.dev.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.230:54560 - "GET /.env_sample HTTP/1.1" 404 Not Found
