@@ -11595,3 +11595,4 @@ INFO:     51.20.123.11:37758 - "GET /admin/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:52694 - "GET /prod/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:52698 - "GET /.env.bak HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:47434 - "GET /api/shared/config/config.env HTTP/1.1" 404 Not Found
+INFO:     51.20.123.11:47456 - "GET /api/shared/config.env HTTP/1.1" 404 Not Found
