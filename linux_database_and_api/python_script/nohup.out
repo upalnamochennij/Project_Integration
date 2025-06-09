@@ -11574,3 +11574,4 @@ INFO:     51.20.123.11:36844 - "GET /_profiler/phpinfo/info.php HTTP/1.1" 404 No
 INFO:     51.20.123.11:45642 - "GET /awstats/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:45648 - "GET /conf/.env HTTP/1.1" 404 Not Found
 INFO:     51.20.123.11:39662 - "GET /www/.env HTTP/1.1" 404 Not Found
+INFO:     51.20.123.11:42646 - "GET /docker/.env HTTP/1.1" 404 Not Found
