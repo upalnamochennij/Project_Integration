@@ -11881,3 +11881,7 @@ INFO:     217.154.226.200:64023 - "GET /laravel/.env%20 HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:64218 - "POST /laravel/.env%20 HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:64364 - "GET /admin-app/.env%20 HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:64485 - "POST /admin-app/.env%20 HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:64631 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:64860 - "POST /api/.env HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:64956 - "GET /app/.env%20 HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:65138 - "POST /app/.env%20 HTTP/1.1" 404 Not Found
