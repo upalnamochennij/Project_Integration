@@ -11557,3 +11557,4 @@ INFO:     172.235.40.131:33696 - "GET / HTTP/1.1" 200 OK
 INFO:     96.126.104.20:46192 - "GET /x79t HTTP/1.1" 404 Not Found
 INFO:     79.124.58.198:59094 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not Found
 INFO:     213.209.143.71:1844 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     213.209.143.71:2926 - "POST / HTTP/1.1" 405 Method Not Allowed
