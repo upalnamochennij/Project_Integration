@@ -11944,3 +11944,8 @@ INFO:     217.154.226.200:60743 - "GET /frontend/web/debug/default/view HTTP/1.1
 INFO:     217.154.226.200:60903 - "GET /web/debug/default/view HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:60970 - "GET /sapi/debug/default/view HTTP/1.1" 404 Not Found
 INFO:     217.154.226.200:64341 - "GET /assets/env.js HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:64509 - "GET /config/config.js HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:64667 - "GET /web/config.js HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:64763 - "GET /src/config.js HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:64881 - "GET /src/api/config.js HTTP/1.1" 404 Not Found
+INFO:     217.154.226.200:65023 - "GET /web/api/config.js HTTP/1.1" 404 Not Found
