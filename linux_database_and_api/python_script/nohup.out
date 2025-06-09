@@ -11815,3 +11815,12 @@ INFO:     51.195.190.33:33802 - "GET /localstart.jhtml HTTP/1.1" 404 Not Found
 INFO:     51.195.190.33:34264 - "GET /main.aspx HTTP/1.1" 404 Not Found
 INFO:     51.195.190.33:34654 - "GET /home.html HTTP/1.1" 404 Not Found
 INFO:     51.195.190.33:35044 - "GET /localstart.cgi HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:35434 - "GET /menu.php HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:35942 - "GET /index.jsp HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:36388 - "GET /index.cgi HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:36866 - "GET /home.jsa HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:37290 - "GET /base.inc HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:37718 - "GET /default.jsp HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:38154 - "GET /start.php HTTP/1.1" 404 Not Found
+INFO:     51.195.190.33:39008 - "GET / HTTP/1.0" 200 OK
+INFO:     51.195.190.33:39568 - "GET / HTTP/1.1" 200 OK
