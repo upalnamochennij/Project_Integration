@@ -15450,3 +15450,4 @@ INFO:     145.76.65.193:54373 - "GET /Log_in/check_password_by_username?username
 INFO:     145.76.209.78:53803 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     145.76.209.78:53803 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     15.235.189.157:55745 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.155.90.220:25608 - "GET / HTTP/1.1" 200 OK
