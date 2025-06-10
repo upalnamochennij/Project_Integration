@@ -15447,3 +15447,5 @@ INFO:     145.76.65.193:54343 - "GET /Log_in/check_password_by_user_name?user_na
 INFO:     145.76.65.193:54365 - "GET /Log_in/check_password_by_username?user_name=john&password=secret HTTP/1.1" 422 Unprocessable Entity
 INFO:     145.76.65.193:54373 - "GET /Log_in/check_password_by_username?username=john&password=secret HTTP/1.1" 200 OK
 INFO:     145.76.65.193:54373 - "GET /Log_in/check_password_by_username?username=john&password=bullshit HTTP/1.1" 200 OK
+INFO:     145.76.209.78:53803 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.209.78:53803 - "GET /favicon.ico HTTP/1.1" 404 Not Found
