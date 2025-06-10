@@ -12008,3 +12008,4 @@ INFO:     207.246.65.92:38450 - "GET /login.php HTTP/1.0" 404 Not Found
 INFO:     185.242.226.163:38287 - "GET / HTTP/1.1" 200 OK
 INFO:     196.251.88.60:53552 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
 INFO:     143.198.37.78:45706 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     143.198.37.78:45718 - "GET /.env HTTP/1.1" 404 Not Found
