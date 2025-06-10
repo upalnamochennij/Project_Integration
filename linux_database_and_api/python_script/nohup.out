@@ -16086,3 +16086,6 @@ INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-1
 INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-10T12:06:27Z&device_id=1&temperature=-1073741824 HTTP/1.1" 200 OK
 INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-10T12:06:28Z&device_id=1&temperature=-1073741824 HTTP/1.1" 200 OK
 INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-10T12:06:29Z&device_id=1&temperature=536870912 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-10T12:06:30Z&device_id=1&temperature=536870912 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:53534 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T12:06:30Z&device_id=1&SPO2=-999&heartrate=250 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-10T12:06:31Z&device_id=1&temperature=536870912 HTTP/1.1" 200 OK
