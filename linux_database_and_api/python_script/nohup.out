@@ -14488,3 +14488,5 @@ INFO:     145.76.65.193:52463 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     145.76.65.193:52463 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     145.76.19.105:65208 - "GET /values/add_temperature?timestamp=2025-06-10T10:56:09Z&device_id=1002&temperature=20.889999 HTTP/1.1" 422 Unprocessable Entity
 INFO:     145.76.19.105:65208 - "GET /values/add_temperature?timestamp=2025-06-10T10:56:10Z&device_id=1002&temperature=20.889999 HTTP/1.1" 422 Unprocessable Entity
+INFO:     145.76.19.105:65208 - "GET /values/add_temperature?timestamp=2025-06-10T10:56:11Z&device_id=1002&temperature=20.889999 HTTP/1.1" 422 Unprocessable Entity
+INFO:     145.76.19.105:65208 - "GET /values/add_temperature?timestamp=2025-06-10T10:56:12Z&device_id=1002&temperature=20.889999 HTTP/1.1" 422 Unprocessable Entity
