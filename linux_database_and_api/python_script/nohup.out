@@ -15284,3 +15284,4 @@ INFO:     145.76.19.105:65208 - "GET /values/add_temperature?timestamp=2025-06-1
 INFO:     145.76.19.105:65208 - "GET /values/add_temperature?timestamp=2025-06-10T11:08:02Z&device_id=1002&temperature=21.420000 HTTP/1.1" 422 Unprocessable Entity
 INFO:     145.76.19.105:65208 - "GET /values/add_temperature?timestamp=2025-06-10T11:08:03Z&device_id=1002&temperature=21.420000 HTTP/1.1" 422 Unprocessable Entity
 INFO:     145.76.19.105:65208 - "GET /values/add_temperature?timestamp=2025-06-10T11:08:04Z&device_id=1002&temperature=21.420000 HTTP/1.1" 422 Unprocessable Entity
+INFO:     145.76.19.105:65208 - "GET /values/add_temperature?timestamp=2025-06-10T11:08:05Z&device_id=1002&temperature=21.410000 HTTP/1.1" 422 Unprocessable Entity
