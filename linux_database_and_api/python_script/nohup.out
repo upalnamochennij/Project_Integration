@@ -14,3 +14,5 @@ INFO:     145.76.65.193:58260 - "GET /users/get_all HTTP/1.1" 200 OK
 INFO:     145.76.65.193:58260 - "GET /users/get_all HTTP/1.1" 200 OK
 INFO:     145.76.65.193:58260 - "GET /users/get_all HTTP/1.1" 200 OK
 INFO:     145.76.65.193:58264 - "GET /users/get_all HTTP/1.1" 200 OK
+INFO:     213.209.143.71:15974 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     213.209.143.71:16732 - "POST / HTTP/1.1" 405 Method Not Allowed
