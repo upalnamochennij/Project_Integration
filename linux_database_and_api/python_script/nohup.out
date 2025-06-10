@@ -12000,3 +12000,5 @@ INFO:     204.76.203.208:57064 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
 WARNING:  Invalid HTTP request received.
 INFO:     154.212.141.152:53654 - "GET / HTTP/1.1" 200 OK
 INFO:     121.5.231.252:57308 - "GET / HTTP/1.1" 200 OK
+INFO:     213.209.143.71:29740 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     213.209.143.71:31184 - "POST / HTTP/1.1" 405 Method Not Allowed
