@@ -15441,3 +15441,4 @@ INFO:     145.76.19.105:65208 - "GET /values/add_temperature?timestamp=2025-06-1
 INFO:     145.76.65.193:53965 - "GET /Log_in/create_Log_In?user_id=1&username=john&password=secret HTTP/1.1" 200 OK
 INFO:     145.76.65.193:54089 - "GET /Log_in/check_password_by_username?user_id=1&password=secret HTTP/1.1" 422 Unprocessable Entity
 INFO:     145.76.65.193:54264 - "GET /Log_in/check_password_by_userid?user_id=1&password=secret HTTP/1.1" 404 Not Found
+INFO:     145.76.65.193:54288 - "GET /Log_in/check_password_by_user_id?user_id=1&password=secret HTTP/1.1" 200 OK
