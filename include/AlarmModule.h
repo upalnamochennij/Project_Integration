@@ -27,15 +27,12 @@ public:
 
     //эти два мб не будут использоваться
     alertEnum checkAlertType(SensorDataParsing &globalData);
-
-    //берет данные из dataForOLED и в разных случаях чет выводит
     void selectAlert(const alertEnum &alertType);
 
     bool checkForFall(SensorDataParsing &globalData);
 
 private:
-    const float FALL_THRESHOLD = 0.9; // Минимальное ускорение при падении (g)
-    // было 0.3 как нормальное значение,но для теста поставлю 0.9
+    const float FALL_THRESHOLD = 0.9; // minimal acceleration threshold if falling; было 0.3 как нормальное значение,но для теста поставлю 0.9
     OLEDscreen *oledDisplay;
 };
 

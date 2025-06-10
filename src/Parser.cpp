@@ -59,7 +59,7 @@ void Parser::sendData(SensorDataParsing &sensordata) {
             break;
         case SensorDataParsing::TEMPERATURE:
             snprintf(payload_max, sizeof(payload_max),
-                     "%s/values/add_temperature?timestamp=%s&device_id=%d&temperature=%d",
+                     "%s/values/add_temperature?timestamp=%s&device_id=%d&temperature=%f",
                      _serverName.c_str(),
                      sensordata.datetime,
                      this->device_id,
@@ -69,7 +69,7 @@ void Parser::sendData(SensorDataParsing &sensordata) {
             break;
         case SensorDataParsing::ACCELERATION_AND_GYRO:
             snprintf(payload_max, sizeof(payload_max),
-                     "%s/values/add_MPU?timestamp=%s&device_id=%d&gyro_x=%d&gyro_y=%d&gyro_z=%d&accel_x=%d&accel_y=%d&accel_z=%d",
+                     "%s/values/add_MPU?timestamp=%s&device_id=%d&gyro_x=%f&gyro_y=%f&gyro_z=%f&accel_x=%f&accel_y=%f&accel_z=%f",
                      _serverName.c_str(),
                      sensordata.datetime,
                      this->device_id,

@@ -43,7 +43,6 @@ void Mpu6050_Integration::getEvent() {
     _mpu.getEvent(&_accelValue, &_gyroValue, &_tempValue);
 }
 
-
 sensors_event_t Mpu6050_Integration::readAccel() {
     return _accelValue;
 }

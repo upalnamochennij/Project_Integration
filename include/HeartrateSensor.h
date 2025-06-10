@@ -22,14 +22,10 @@ class HeartrateSensor : public IComponent{
     int8_t  _sp02_valid = false;
     int32_t _heartRate = 0;
     int8_t  _heartRateValid = false;
-    int bufferIndex = 0;
 
     private:
     MAX30105 _heartSensor;
     bool _isCompActive = false;
-
-    long lastbeat = 0; //maybe useless
-    float bpm = 0; // maybee useless
 
     byte ledBrightness = 60; //Options: 0=Off to 255=50mA
     byte sampleAverage = 2; //Options: 1, 2, 4, 8, 16, 32

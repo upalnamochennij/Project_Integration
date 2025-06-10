@@ -1,4 +1,4 @@
-#include <Arduino.h>
+﻿#include <Arduino.h>
 #include "IComponent.h"
 #include "Adafruit_VEML7700.h"
 #include "Adafruit_BME280.h"
@@ -70,11 +70,15 @@ void heartrate_SP02_Task(void *pvParameters) {
     SensorDataParsing DataHeart;
     while (true) {
         obj_heart.readData();
+        if (obj_heart._heartRateValid || obj_heart._sp02_valid) {
+            DataHeart.heartrate = obj_heart._heartRate;
+            DataHeart.sp02 = obj_heart._sp02_value;
+        } else {
+            DataHeart.heartrate = 0;
+            DataHeart.sp02 = 0;
+        }
 
-        DataHeart.heartrate = obj_heart._heartRate;
-        DataHeart.sp02 = obj_heart._sp02_value;
         DataHeart.dTypeEnum = SensorDataParsing::HEARTRATE_AND_SP02;
-
         dataForOLED.heartrate = obj_heart._heartRate;
         dataForOLED.sp02 = obj_heart._sp02_value;
 
@@ -91,21 +95,14 @@ void heartrate_SP02_Task(void *pvParameters) {
 
 void displayDataOLED(void *pvParameters) {
     while (true) {
-        if (dataForOLED.temperature < 0) {
-            obj_oled.bodyTemp = 0;
-        } else obj_oled.bodyTemp = dataForOLED.temperature;
-
+        obj_oled.bodyTemp = dataForOLED.temperature;
         obj_oled.stepCount = dataForOLED.steps;
-        obj_oled.heartRate = dataForOLED.heartrate;
-
-        // obj_oled.bodyTemp = 1;
-        // obj_oled.stepCount = 1;
-        // obj_oled.heartRate = 1;
+        obj_oled.heartRate = obj_heart._heartRate;
 
         obj_oled.checkButton();
         obj_oled.checkRotation();
         obj_oled.setCurrentScreen();
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS); //если 100 то реагирует экран быстро
     }
 }
 
@@ -113,7 +110,6 @@ void temperatureTask(void *pvParameters) {
     SensorDataParsing DataTemp; // initial way of doing it
     while (true) {
         float temper = obj_temp.readTemp();
-
         DataTemp.temperature = temper;
         dataForOLED.temperature = temper;
 
@@ -183,7 +179,7 @@ void stepsTask(void *pvParameters) {
         strcpy(DataSteps.datetime, timest.c_str()); // for datetime
         Serial.println("Waiting till 5 minutes pass");
 
-        if (millis() - lastDetectedTime >= 300000) {
+        if (millis() - lastDetectedTime >= 100000) {
             Serial.println("Steps: " + String(DataSteps.steps));
             xQueueSend(dataQueue, &DataSteps, portMAX_DELAY);
             lastDetectedTime = millis();
@@ -214,33 +210,39 @@ void setup() {
     Wire.begin();
     Wire.setClock(400000); //400khz ultra fast
 
-    if (mutex == nullptr) {
+    while (mutex == nullptr) {
         Serial.println("mutex was not created");
         while (true);
     }
 
-    xSemaphoreTake(mutex, portMAX_DELAY);
     obj_heart.initComponent();
-    xSemaphoreGive(mutex);
-
-    xSemaphoreTake(mutex, portMAX_DELAY);
     obj_oled.initComponent();
-    xSemaphoreGive(mutex);
     obj_oled.connectToWifi(ssid, password);
-
-    xSemaphoreTake(mutex, portMAX_DELAY);
     obj_mpu.initComponent();
-    xSemaphoreGive(mutex);
-
-    xSemaphoreTake(mutex, portMAX_DELAY);
     obj_temp.initComponent();
-    xSemaphoreGive(mutex);
+
+    // xSemaphoreTake(mutex, portMAX_DELAY);
+    // obj_heart.initComponent();
+    // xSemaphoreGive(mutex);
+    //
+    // xSemaphoreTake(mutex, portMAX_DELAY);
+    // obj_oled.initComponent();
+    // xSemaphoreGive(mutex);
+    // obj_oled.connectToWifi(ssid, password);
+    //
+    // xSemaphoreTake(mutex, portMAX_DELAY);
+    // obj_mpu.initComponent();
+    // xSemaphoreGive(mutex);
+    //
+    // xSemaphoreTake(mutex, portMAX_DELAY);
+    // obj_temp.initComponent();
+    // xSemaphoreGive(mutex);
 
     configTime(3600, 3600, "pool.ntp.org", "time.nist.gov");
 
     obj_parser.connectToWifi();
     obj_parser.setServer(serverName);
-    obj_parser.setDevice(1);
+    obj_parser.setDevice(1002);
 
     dataQueue = xQueueCreate(10, sizeof(SensorDataParsing));
 
@@ -251,7 +253,7 @@ void setup() {
     xTaskCreate(stepsTask, "stepsTask", 8192,
                 NULL, 2, NULL);
     xTaskCreate(displayDataOLED, "displayDataOLED", 8192,
-                NULL, 2, NULL);
+                NULL, 3, NULL);
     xTaskCreate(sendToApiTask, "sendToApiTask", 8192,
                 NULL, 2, NULL);
     xTaskCreate(checkFallTask, "checkFallTask", 8192,
