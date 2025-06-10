@@ -1,67 +1,72 @@
--- Tabel: Users  
-CREATE TABLE Users (  
-    user_id INTEGER PRIMARY KEY AUTOINCREMENT,  
-    user_first_name CHAR(50),  
-    user_last_name CHAR(50),  
-    user_birth_date DATE NOT NULL,  
-    user_weight INTEGER NOT NULL,  
-    user_height INTEGER NOT NULL  
-);  
+-- Tabel: Users
+CREATE TABLE Users (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_first_name CHAR(50),
+    user_last_name CHAR(50),
+    user_birth_date DATE NOT NULL,
+    user_weight INTEGER NOT NULL,
+    user_height INTEGER NOT NULL
+);
 
--- Tabel: Log_In  
-CREATE TABLE Log_In (  
-    user_id INTEGER PRIMARY KEY NOT NULL,  
-    Login_name CHAR(50) NOT NULL,  
-    Login_password CHAR(50) NOT NULL,  
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)  
-);  
+-- Tabel: Log_In
+CREATE TABLE Log_In (
+    user_id INTEGER PRIMARY KEY NOT NULL,
+    Login_name CHAR(50) NOT NULL,
+    Login_password CHAR(50) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
 
--- Tabel: Devices  
-CREATE TABLE Devices (  
-    device_id INTEGER PRIMARY KEY AUTOINCREMENT,  
-    user_id INTEGER NOT NULL,  
-    registration_date DATE NOT NULL,  
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)  
-);  
+-- Tabel: Devices
+CREATE TABLE Devices (
+    device_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    registration_date DATE NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
 
--- Tabel: MPU_information (float waardes voor gyro en accel)  
-CREATE TABLE MPU_information (  
-    timestamp TIMESTAMP NOT NULL,  
-    device_id INTEGER NOT NULL,  
-    gyro_x FLOAT NOT NULL,  
-    gyro_y FLOAT NOT NULL,  
-    gyro_z FLOAT NOT NULL,  
-    accel_x FLOAT NOT NULL,  
-    accel_y FLOAT NOT NULL,  
-    accel_z FLOAT NOT NULL,  
-    PRIMARY KEY (timestamp, device_id),  
-    FOREIGN KEY (device_id) REFERENCES Devices(device_id)  
-);  
+-- Tabel: MPU_information
+CREATE TABLE MPU_information (
+    timestamp TIMESTAMP NOT NULL,
+    device_id INTEGER NOT NULL,
+    gyro_x FLOAT NOT NULL,
+    gyro_y FLOAT NOT NULL,
+    gyro_z FLOAT NOT NULL,
+    accel_x FLOAT NOT NULL,
+    accel_y FLOAT NOT NULL,
+    accel_z FLOAT NOT NULL,
+    PRIMARY KEY (timestamp, device_id),
+    FOREIGN KEY (device_id) REFERENCES Devices(device_id)
+);
 
--- Tabel: temperature (float temperatuur)  
-CREATE TABLE temperature (  
-    timestamp TIMESTAMP NOT NULL,  
-    device_id INTEGER NOT NULL,  
-    temperature FLOAT NOT NULL,  
-    PRIMARY KEY (timestamp, device_id),  
-    FOREIGN KEY (device_id) REFERENCES Devices(device_id)  
-);  
+-- Tabel: temperature
+CREATE TABLE temperature (
+    timestamp TIMESTAMP NOT NULL,
+    device_id INTEGER NOT NULL,
+    temperature FLOAT NOT NULL,
+    PRIMARY KEY (timestamp, device_id),
+    FOREIGN KEY (device_id) REFERENCES Devices(device_id)
+);
 
--- Tabel: pulse_oxygen  
-CREATE TABLE pulse_oxygen (  
-    timestamp TIMESTAMP NOT NULL,  
-    device_id INTEGER NOT NULL,  
-    SPO2 INT NOT NULL,  
-    heartrate INT NOT NULL,  
-    PRIMARY KEY (timestamp, device_id),  
-    FOREIGN KEY (device_id) REFERENCES Devices(device_id)  
-);  
+-- Tabel: pulse_oxygen
+CREATE TABLE pulse_oxygen (
+    timestamp TIMESTAMP NOT NULL,
+    device_id INTEGER NOT NULL,
+    SPO2 INT NOT NULL,
+    heartrate INT NOT NULL,
+    PRIMARY KEY (timestamp, device_id),
+    FOREIGN KEY (device_id) REFERENCES Devices(device_id)
+);
 
--- Tabel: steps  
-CREATE TABLE steps (  
-    timestamp TIMESTAMP NOT NULL,  
-    device_id INTEGER NOT NULL,  
-    steps INT NOT NULL,  
-    PRIMARY KEY (timestamp, device_id),  
-    FOREIGN KEY (device_id) REFERENCES Devices(device_id)  
-);  
+-- Tabel: steps
+CREATE TABLE steps (
+    timestamp TIMESTAMP NOT NULL,
+    device_id INTEGER NOT NULL,
+    steps INT NOT NULL,
+    PRIMARY KEY (timestamp, device_id),
+    FOREIGN KEY (device_id) REFERENCES Devices(device_id)
+);
+
+-- Zet startwaarden voor autoincrement ID's
+DELETE FROM sqlite_sequence;
+INSERT INTO sqlite_sequence (name, seq) VALUES ('Users', 1000000);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('Devices', 1000000);

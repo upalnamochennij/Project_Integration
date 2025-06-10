@@ -62,8 +62,8 @@ async def create_device(
 async def get_devices():
     query = "SELECT * FROM Devices"
     try:
-        users = await database.fetch_all(query=query)
-        return {"device": [dict(user) for user in users]}
+        devices = await database.fetch_all(query=query)
+        return {"devices": [dict(d) for d in devices]}
     except Exception as e:
         return {"message": "Failed to fetch device", "error": str(e)}
 
@@ -81,7 +81,7 @@ async def get_device(
         "user_id": user_id
     }
     try:
-        users = await database.fetch_one(query=query, values=values)
-        return {"device": [dict(user) for user in users]}
+        devices = await database.fetch_all(query=query, values=values)
+        return {"devices": [dict(d) for d in devices]}
     except Exception as e:
         return {"message": "Failed to fetch device", "error": str(e)}

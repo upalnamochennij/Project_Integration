@@ -16,9 +16,7 @@ class UserCreate(BaseModel):
 async def create_user_get(
     user_first_name: str,
     user_last_name: str,
-    user_birth_date: date,
-    user_weight: int,
-    user_height: int
+    user_birth_date: date
 ):
     check_query = """
     SELECT 1 FROM Users
@@ -29,7 +27,9 @@ async def create_user_get(
     insert_query = """
     INSERT INTO Users (user_first_name, user_last_name, user_birth_date, user_weight, user_height)
     VALUES (:user_first_name, :user_last_name, :user_birth_date, :user_weight, :user_height)
+    RETURNING user_id
     """
+
     check_values = {
         "user_first_name": user_first_name,
         "user_last_name": user_last_name,
@@ -39,8 +39,8 @@ async def create_user_get(
         "user_first_name": user_first_name,
         "user_last_name": user_last_name,
         "user_birth_date": user_birth_date,
-        "user_weight": user_weight,
-        "user_height": user_height,
+        "user_weight": 0,
+        "user_height": 0,
     }
 
     try:
@@ -48,11 +48,16 @@ async def create_user_get(
         if existing_user:
             return {"message": "User already exists"}
 
-        await database.execute(query=insert_query, values=insert_values)
-        return {"message": "User created successfully"}
+        user_id_row = await database.fetch_one(query=insert_query, values=insert_values)
+        return {
+            "message": "User created successfully",
+            "user_id": user_id_row["user_id"]
+        }
 
     except Exception as e:
         return {"message": f"Failed to create user: {str(e)}"}
+
+
 
 
 #get all data for debugging
@@ -68,7 +73,7 @@ async def read_users():
 #get data from one user with user_id
 @router.get("/get_user")
 async def get_user(
-    user_first_name: int
+    user_id: int
 ):
     query = """
     SELECT * FROM Users

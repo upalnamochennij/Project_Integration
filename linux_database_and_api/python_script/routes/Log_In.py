@@ -44,15 +44,13 @@ async def check_password_by_username(username: str, password: str):
         return result["Login_password"] == password
     return False
 
-#get password with user_id
-@router.get("/check_password_by_user_id")
-async def check_password_by_user_id(user_id: int, password: str):
-    query = "SELECT Login_password FROM Log_In WHERE user_id = :user_id"
-    result = await database.fetch_one(query=query, values={"user_id": user_id})
-
-    if result:
-        return result["Login_password"] == password
-    return False
+@router.get("/check_user_id_by_username")
+async def get_username_by_user_id(username: str):
+    query = "SELECT user_id FROM Log_In WHERE Login_name = :username"
+    result = await database.fetch_one(query=query, values={"username": username})
+    
+    return {"user_id": result["user_id"]}
+    
 
 #check if username exists (already)
 @router.get("/check_username_exists")
@@ -60,4 +58,4 @@ async def check_username_exists(username: str):
     query = "SELECT 1 FROM Log_In WHERE Login_name = :username"
     result = await database.fetch_one(query=query, values={"username": username})
 
-    return {"exists": bool(result)}
+    return bool(result)

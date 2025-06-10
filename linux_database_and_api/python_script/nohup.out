@@ -1,127 +1,20 @@
-INFO:     Started server process [923152]
+INFO:     Started server process [1000923]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
-INFO:     145.76.65.193:58249 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58249 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58249 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58250 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58254 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58260 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58260 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58260 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58260 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58260 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58260 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     145.76.65.193:58264 - "GET /users/get_all HTTP/1.1" 200 OK
-INFO:     213.209.143.71:15974 - "GET /.env HTTP/1.1" 404 Not Found
-INFO:     213.209.143.71:16732 - "POST / HTTP/1.1" 405 Method Not Allowed
-INFO:     95.214.55.45:38132 - "GET / HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59325 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     188.166.16.179:56813 - "GET /admin/config.php HTTP/1.0" 404 Not Found
 WARNING:  Invalid HTTP request received.
-WARNING:  Invalid HTTP request received.
-INFO:     66.228.53.46:3554 - "GET / HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:05Z&device_id=1002&temperature=21.590000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:07Z&device_id=1002&temperature=21.590000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:08Z&device_id=1002&temperature=21.590000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:09Z&device_id=1002&temperature=21.590000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:10Z&device_id=1002&temperature=21.600000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:11Z&device_id=1002&temperature=21.610001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:12Z&device_id=1002&temperature=21.610001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:30:12Z&device_id=1002&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:13Z&device_id=1002&temperature=21.610001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:14Z&device_id=1002&temperature=21.620001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:15Z&device_id=1002&temperature=21.620001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:16Z&device_id=1002&temperature=21.620001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:17Z&device_id=1002&temperature=21.629999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:18Z&device_id=1002&temperature=21.629999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:19Z&device_id=1002&temperature=21.629999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:30:19Z&device_id=1002&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:20Z&device_id=1002&temperature=21.639999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:21Z&device_id=1002&temperature=21.639999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:22Z&device_id=1002&temperature=21.650000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:23Z&device_id=1002&temperature=21.650000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:24Z&device_id=1002&temperature=21.650000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:25Z&device_id=1002&temperature=21.660000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:26Z&device_id=1002&temperature=21.660000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:30:26Z&device_id=1002&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:27Z&device_id=1002&temperature=21.660000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:28Z&device_id=1002&temperature=21.660000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:29Z&device_id=1002&temperature=21.660000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:30Z&device_id=1002&temperature=21.660000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:31Z&device_id=1002&temperature=21.660000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:32Z&device_id=1002&temperature=21.660000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:33Z&device_id=1002&temperature=21.670000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:30:33Z&device_id=1002&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:34Z&device_id=1002&temperature=21.670000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:35Z&device_id=1002&temperature=21.670000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:36Z&device_id=1002&temperature=21.680000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:37Z&device_id=1002&temperature=21.680000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:38Z&device_id=1002&temperature=21.709999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:39Z&device_id=1002&temperature=21.709999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:40Z&device_id=1002&temperature=21.719999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:41Z&device_id=1002&temperature=21.719999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:30:41Z&device_id=1002&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:42Z&device_id=1002&temperature=21.719999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:43Z&device_id=1002&temperature=21.730000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:44Z&device_id=1002&temperature=21.730000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:45Z&device_id=1002&temperature=21.740000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:46Z&device_id=1002&temperature=21.760000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:47Z&device_id=1002&temperature=21.760000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:48Z&device_id=1002&temperature=21.770000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:30:48Z&device_id=1002&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:49Z&device_id=1002&temperature=21.760000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:50Z&device_id=1002&temperature=21.770000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:51Z&device_id=1002&temperature=21.770000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:52Z&device_id=1002&temperature=21.770000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:53Z&device_id=1002&temperature=21.770000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:54Z&device_id=1002&temperature=21.760000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:55Z&device_id=1002&temperature=21.770000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:30:55Z&device_id=1002&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:56Z&device_id=1002&temperature=21.750000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:57Z&device_id=1002&temperature=21.750000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:58Z&device_id=1002&temperature=21.750000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:30:59Z&device_id=1002&temperature=21.750000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:00Z&device_id=1002&temperature=21.740000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_MPU?timestamp=2025-06-10T14:31:00Z&device_id=1002&gyro_x=-0.093928&gyro_y=-0.261933&gyro_z=-0.128035&accel_x=0.152630&accel_y=6.250662&accel_z=2.068590 HTTP/1.1" 422 Unprocessable Entity
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:01Z&device_id=1002&temperature=21.740000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:02Z&device_id=1002&temperature=21.750000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:31:02Z&device_id=1002&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:61997 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:03Z&device_id=1002&temperature=21.740000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:09Z&device_id=1002&temperature=21.719999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:10Z&device_id=1002&temperature=21.719999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:11Z&device_id=1002&temperature=21.719999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:12Z&device_id=1002&temperature=21.730000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:13Z&device_id=1002&temperature=21.730000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:14Z&device_id=1002&temperature=21.730000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:15Z&device_id=1002&temperature=21.730000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:31:15Z&device_id=1002&SPO2=0&heartrate=0 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:16Z&device_id=1002&temperature=21.740000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:17Z&device_id=1002&temperature=21.740000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:18Z&device_id=1002&temperature=21.750000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:19Z&device_id=1002&temperature=21.750000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:20Z&device_id=1002&temperature=21.750000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:21Z&device_id=1002&temperature=21.760000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:22Z&device_id=1002&temperature=21.770000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:31:23Z&device_id=1002&SPO2=39&heartrate=136 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:23Z&device_id=1002&temperature=21.780001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:24Z&device_id=1002&temperature=21.780001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:25Z&device_id=1002&temperature=21.780001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:26Z&device_id=1002&temperature=21.780001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:27Z&device_id=1002&temperature=21.780001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_MPU?timestamp=2025-06-10T14:31:28Z&device_id=1002&gyro_x=0.030377&gyro_y=0.056357&gyro_z=0.766613&accel_x=-2.094927&accel_y=1.086968&accel_z=8.123527 HTTP/1.1" 422 Unprocessable Entity
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:28Z&device_id=1002&temperature=21.790001 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:29Z&device_id=1002&temperature=21.799999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:31:30Z&device_id=1002&SPO2=88&heartrate=107 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:30Z&device_id=1002&temperature=21.799999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:31Z&device_id=1002&temperature=21.799999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:32Z&device_id=1002&temperature=21.809999 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_MPU?timestamp=2025-06-10T14:31:33Z&device_id=1002&gyro_x=-0.093928&gyro_y=-0.261933&gyro_z=-0.128035&accel_x=0.152630&accel_y=6.250662&accel_z=2.068590 HTTP/1.1" 422 Unprocessable Entity
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:33Z&device_id=1002&temperature=21.820000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:35Z&device_id=1002&temperature=21.820000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:36Z&device_id=1002&temperature=21.840000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:37Z&device_id=1002&temperature=21.840000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T14:31:38Z&device_id=1002&SPO2=87&heartrate=166 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:38Z&device_id=1002&temperature=21.850000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:39Z&device_id=1002&temperature=21.840000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:40Z&device_id=1002&temperature=21.850000 HTTP/1.1" 200 OK
-INFO:     145.76.19.105:53795 - "GET /values/add_temperature?timestamp=2025-06-10T14:31:41Z&device_id=1002&temperature=21.850000 HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59357 - "GET /users/get_all HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59358 - "GET /users/update_measurements/?user_id=1&user_weight=70&user_height=175 HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59359 - "GET /users/get_all HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59359 - "GET /users/get_all HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59362 - "GET /users/update_measurements/?user_id=1&user_weight=70&user_height=175 HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59362 - "GET /users/update_measurements/?user_id=1&user_weight=70&user_height=175 HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59364 - "GET /users/get_all HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59378 - "GET /users/update_measurements/?user_id=1&user_weight=70&user_height=175 HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59378 - "GET /users/get_all HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59378 - "GET /users/update_measurements/?user_id=1&user_weight=70&user_height=175 HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59379 - "GET /users/update_measurements/?user_id=1000001&user_weight=75&user_height=180 HTTP/1.1" 200 OK
+INFO:     188.89.122.139:59391 - "GET /users/get_all HTTP/1.1" 200 OK
+INFO:     5.183.209.244:42916 - "GET / HTTP/1.1" 200 OK

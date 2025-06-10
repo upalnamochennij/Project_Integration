@@ -228,7 +228,7 @@ async def add_PulseOxygen(
 #retrieving data if device exists
 
 #where clause for filtering each value
-where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time AND device_id == :device_id"
+where_clause = " WHERE timestamp >= :start_time AND timestamp <= :end_time AND device_id = :device_id"
 
 @router.get("/get_values")
 async def get_values():
@@ -363,4 +363,8 @@ async def get_total_steps(
     }
 
     result = await database.fetch_one(query=query, values=values)
-    return {"device_id": device_id, "total_steps": result["total_steps"] or 0}
+    total = result["total_steps"] if result else 0
+    return {"device_id": device_id, "total_steps": total}
+
+
+    
