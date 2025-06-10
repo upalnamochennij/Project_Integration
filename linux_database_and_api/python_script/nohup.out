@@ -16145,3 +16145,4 @@ INFO:     145.76.19.105:54581 - "GET /values/add_PulseOxygen?timestamp=1970-01-0
 INFO:     145.76.19.105:54581 - "GET /values/add_temperature?timestamp=1970-01-01T01:00:30Z&device_id=1&temperature=0 HTTP/1.1" 200 OK
 INFO:     145.76.65.193:57482 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     145.76.65.193:57493 - "GET /users/get_all_users HTTP/1.1" 404 Not Found
+INFO:     145.76.65.193:57493 - "GET /users/get_all_user HTTP/1.1" 404 Not Found
