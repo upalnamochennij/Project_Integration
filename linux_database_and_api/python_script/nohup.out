@@ -16251,3 +16251,8 @@ INFO:     145.76.209.78:54668 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     145.76.209.78:54700 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     145.76.209.78:54700 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     145.76.19.105:54992 - "GET /values/add_temperature?timestamp=2025-06-10T12:23:34Z&device_id=1&temperature=1073741824 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:54992 - "GET /values/add_temperature?timestamp=2025-06-10T12:23:35Z&device_id=1&temperature=1610612736 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:54992 - "GET /values/add_temperature?timestamp=2025-06-10T12:23:36Z&device_id=1&temperature=-2147483648 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:54992 - "GET /values/add_temperature?timestamp=2025-06-10T12:23:37Z&device_id=1&temperature=1073741824 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:54992 - "GET /values/add_temperature?timestamp=2025-06-10T12:23:38Z&device_id=1&temperature=1073741824 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:54992 - "GET /values/add_temperature?timestamp=2025-06-10T12:23:39Z&device_id=1&temperature=1610612736 HTTP/1.1" 200 OK
