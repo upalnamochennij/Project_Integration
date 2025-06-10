@@ -21587,3 +21587,9 @@ INFO:     145.76.19.105:62926 - "GET /values/add_temperature?timestamp=2025-06-1
 INFO:     145.76.19.105:62926 - "GET /values/add_temperature?timestamp=2025-06-10T13:43:16Z&device_id=1002&temperature=21.580000 HTTP/1.1" 422 Unprocessable Entity
 INFO:     145.76.19.105:62926 - "GET /values/add_temperature?timestamp=2025-06-10T13:43:17Z&device_id=1002&temperature=21.580000 HTTP/1.1" 422 Unprocessable Entity
 INFO:     145.76.19.105:62926 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T13:43:17Z&device_id=1002&SPO2=-999&heartrate=51 HTTP/1.1" 200 OK
+INFO:     Started server process [902244]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 80): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
