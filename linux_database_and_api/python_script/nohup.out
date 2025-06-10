@@ -16249,3 +16249,4 @@ INFO:     145.76.19.105:50022 - "GET /values/add_temperature?timestamp=2025-06-1
 INFO:     79.124.58.198:46840 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 OK
 INFO:     145.76.209.78:54668 - "GET /values/get_values HTTP/1.1" 200 OK
 INFO:     145.76.209.78:54700 - "GET /values/get_values HTTP/1.1" 200 OK
+INFO:     145.76.209.78:54700 - "GET /values/get_values HTTP/1.1" 200 OK
