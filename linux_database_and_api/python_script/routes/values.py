@@ -8,13 +8,13 @@ router = APIRouter()
 #basemodels for sending back
 class MPUInformation(BaseModel):
     timestamp: datetime
-    device_id: int
-    gyro_x: int
-    gyro_y: int
-    gyro_z: int
-    accel_x: int
-    accel_y: int
-    accel_z: int
+    device_id: float
+    gyro_x: float
+    gyro_y: float
+    gyro_z: float
+    accel_x: float
+    accel_y: float
+    accel_z: float
 
 class Temperature(BaseModel):
     timestamp: datetime
@@ -77,13 +77,13 @@ async def add_steps(
 @router.get("/add_MPU")
 async def add_mpu(
     timestamp: datetime,
-    device_id: int,
-    gyro_x: int,
-    gyro_y: int,
-    gyro_z: int,
-    accel_x: int,
-    accel_y: int,
-    accel_z: int,
+    device_id: float,
+    gyro_x: float,
+    gyro_y: float,
+    gyro_z: float,
+    accel_x: float,
+    accel_y: float,
+    accel_z: float,
 ):
     # does device excist?
     device_check_query = "SELECT 1 FROM Devices WHERE device_id = :device_id"
