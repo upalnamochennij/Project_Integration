@@ -19,7 +19,7 @@ class MPUInformation(BaseModel):
 class Temperature(BaseModel):
     timestamp: datetime
     device_id: int
-    temperature: int
+    temperature: float
 
 class PulseOxygen(BaseModel):
     timestamp: datetime
