@@ -12020,3 +12020,5 @@ INFO:     204.76.203.208:54640 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
 INFO:     196.251.85.74:34602 - "GET /cgi-bin/.env HTTP/1.1" 404 Not Found
 INFO:     170.39.218.2:49052 - "GET / HTTP/1.1" 200 OK
 WARNING:  Invalid HTTP request received.
+INFO:     170.39.218.2:49126 - "GET / HTTP/1.1" 200 OK
+INFO:     170.39.218.2:49132 - "GET /.git/config HTTP/1.1" 404 Not Found
