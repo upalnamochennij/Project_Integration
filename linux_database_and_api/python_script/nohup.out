@@ -15452,3 +15452,4 @@ INFO:     145.76.209.78:53803 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     15.235.189.157:55745 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     192.155.90.220:25608 - "GET / HTTP/1.1" 200 OK
 INFO:     104.234.115.15:44330 - "GET / HTTP/1.1" 200 OK
+INFO:     145.76.19.105:51921 - "GET /values/add_temperature?timestamp=2025-06-10T11:50:45Z&device_id=1002&temperature=21.700001 HTTP/1.1" 422 Unprocessable Entity
