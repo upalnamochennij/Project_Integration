@@ -15971,3 +15971,6 @@ INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-1
 INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-10T12:04:46Z&device_id=1&temperature=-2147483648 HTTP/1.1" 200 OK
 INFO:     204.76.203.208:50206 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
 INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-10T12:04:47Z&device_id=1&temperature=-1073741824 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-10T12:04:48Z&device_id=1&temperature=-1073741824 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:53534 - "GET /values/add_PulseOxygen?timestamp=2025-06-10T12:04:49Z&device_id=1&SPO2=-999&heartrate=65 HTTP/1.1" 200 OK
+INFO:     145.76.19.105:53534 - "GET /values/add_temperature?timestamp=2025-06-10T12:04:49Z&device_id=1&temperature=536870912 HTTP/1.1" 200 OK
