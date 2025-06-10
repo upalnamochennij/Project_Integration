@@ -15443,3 +15443,4 @@ INFO:     145.76.65.193:54089 - "GET /Log_in/check_password_by_username?user_id=
 INFO:     145.76.65.193:54264 - "GET /Log_in/check_password_by_userid?user_id=1&password=secret HTTP/1.1" 404 Not Found
 INFO:     145.76.65.193:54288 - "GET /Log_in/check_password_by_user_id?user_id=1&password=secret HTTP/1.1" 200 OK
 INFO:     145.76.65.193:54303 - "GET /Log_in/check_password_by_user_id?user_id=1&password=bullshit HTTP/1.1" 200 OK
+INFO:     145.76.65.193:54343 - "GET /Log_in/check_password_by_user_name?user_name=john&password=secret HTTP/1.1" 404 Not Found
