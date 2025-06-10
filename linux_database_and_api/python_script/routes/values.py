@@ -134,7 +134,7 @@ async def add_mpu(
 async def add_temperature(
     timestamp: datetime,
     device_id: int,
-    temperature: int,
+    temperature: float,
 ):
     # does the device exist?
     device_check_query = "SELECT 1 FROM Devices WHERE device_id = :device_id"
